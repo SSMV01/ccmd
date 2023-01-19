@@ -1,7 +1,7 @@
 ## CCMD
 ### customcmd
 
-### Note: This program is under development and has not been tested completely.
+### This program is under development and has not been tested completely.
 
 ## Requirements
 
@@ -10,11 +10,11 @@
 </ul>
 
 # Installation
-<p>1. Download the source code from <a href='https://github.com/SSMV01/ccmd/releases'>releases</a> and save it at the <i>/home/(user)/</i> directory :</p>
-<p>Note: Saving the ccmd folder at <i>/home/(user)/</i> is a necessity.</p>
+<p>1. Download the source code from <a href='https://github.com/SSMV01/ccmd/releases'>releases</a> and save it at the <i>/home/(user)/</i> directory as <i>ccmd</i>:</p>
+<p>Saving the folder as 'ccmd' is a necessity</p>
+<p>Saving the ccmd folder at <i>/home/(user)/</i> is a necessity.</p>
 
 <p>2. <code>cd</code> into the <i>ccmd</i> directory:</p>
-<p>Note: We recommend you to save the folder as 'ccmd' for easy access</p>
 
 ```
 cd ccmd
@@ -26,7 +26,7 @@ cd ccmd
 sudo bash init.sh
 ```
 
-<p>Note: <code>sudo</code> is necessary to access the '/bin' folder</p>
+<p><code>sudo</code> is necessary to access the '/bin' folder</p>
 
 <p>4. Set your target file (csv file)'s path.</p>
 <p>See: <a href='https://github.com/SSMV01/ccmd/#setting-the-location-of-the-csv-file'>Setting the location of the csv file</a></p>
@@ -102,13 +102,13 @@ Actual Command: <Command To Replace>
 Replacement Command: <Your Command name>
 ```
 
-<p> Note: You dont have to use <code>_(s)</code> for spaces here in <i>Replacement Command</i></p>
+<p>You dont have to use <code>_(s)</code> for spaces here in <i>Replacement Command</i></p>
 
 <p>3. Press <b>Enter</b> to save.</p>
 
 ### <u>Check Output and run commands</u>
 <p>Write these commands in the <i>cmds.csv</i> file or when you run <i>-new</i></p>
-<p>Note: You can only use this feature in the <i>Actual commands</i> part</p>
+<p>You can only use this feature in the <i>Actual commands</i> part</p>
 <p>Syntax:</p>
 
 <p>If output is equal to:</p>
@@ -216,7 +216,7 @@ ccmd --opencsv
 bash uninstall.sh
 ```
 
-<p>Note: Do not use <i>sudo</i> here</p>
+<p>Do not use <i>sudo</i> here</p>
 
 ---
 <br>
