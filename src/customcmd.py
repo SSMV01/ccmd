@@ -24,14 +24,14 @@ def main():
         sys.exit(0)
     elif '--target' in sys.argv:
         set_target_file()
-    elif '--opencsv' in sys.argv:
-        os.system(f'xdg-open {csv_file}')
-        sys.exit(0)
 
     if csv_file.isspace() or csv_file == '':
         logging.error("No file specified in 'cmds_target.txt'.")
         logging.info("Use '--target' to specify the location of the csv file.")
         sys.exit(2)
+    elif '--opencsv' in sys.argv:
+        os.system(f'xdg-open {csv_file}')
+        sys.exit(0)
     elif '-new' in sys.argv:
         create_command(csv_file)
     elif '-o' in sys.argv:
