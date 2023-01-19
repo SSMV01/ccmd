@@ -14,6 +14,7 @@
 <p>Note: Saving the ccmd folder at <i>/home/(user)/</i> is a necessity.</p>
 
 <p>2. <code>cd</code> into the <i>ccmd</i> directory:</p>
+<p>Note: We recommend you to save the folder as 'ccmd' for easy access</p>
 
 ```
 cd ccmd
