@@ -18,7 +18,7 @@
 <p>2. <code>cd</code> into the <i>ccmd</i> directory:</p>
 
 ```
-cd CCMD
+cd ccmd
 ```
 
 <p>3. Run the <i>init.sh</i> file with <code>bash</code>:</p>
