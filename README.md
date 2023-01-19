@@ -2,6 +2,8 @@
 ### customcmd
 <br>
 
+### Note: This program has not been tested completely.
+
 # Requirements
 
 <ul>
