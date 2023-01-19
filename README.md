@@ -9,8 +9,6 @@
 <li><h3>python3</h3></li>
 </ul>
 
-<br>
-
 # Installation
 <p>1. Download the source code from <a href='https://github.com/SSMV01/ccmd/releases'>releases</a> and save it at the <i>/home/(user)/</i> directory :</p>
 <p>Note: Saving the ccmd folder at <i>/home/(user)/</i> is a necessity.</p>
