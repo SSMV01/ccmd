@@ -2,6 +2,7 @@
 ### customcmd
 
 ### This program is under development and has not been tested completely.
+### Only works on linux
 
 ## Requirements
 
