@@ -10,7 +10,7 @@ def set_target_file():
     if len(sys.argv) == 3:
         cmds_file_location = sys.argv[-1]
         if cmds_file_location == 'default':
-            cmds_file_location = f'home/{getlogin()}/ccmd/bin/cmds.csv'
+            cmds_file_location = f'/home/{getlogin()}/ccmd/bin/cmds.csv'
 
         try:
             with open(f'/home/{getlogin()}/ccmd/bin/cmds_target.txt', 'w') as target_file:
