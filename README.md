@@ -213,8 +213,10 @@ ccmd --opencsv
 <p>Run the <i>uninstall.sh</i> file location the ccmd directory</p>
 
 ```
-sudo bash uninstall.sh
+bash uninstall.sh
 ```
+
+<p>Note: Do not use <i>sudo</i> here</p>
 
 ---
 <br>
