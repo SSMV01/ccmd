@@ -1,18 +1,23 @@
-# CustomCmd
+## CCMD
+### customcmd
+<br>
 
-### NOTE: This application only supports linux and has only been tested on linux_x64 ([Kali Linux](https://www.kali.org/) and [Linux Mint](https://linuxmint.com/) to be specific)
+# Requirements
+
+<ul>
+<li><h2>python3</h2></li>
+</ul>
+
+<br>
 
 # Installation
-<p>1. Run the following command in the directory you want to install <b>CustomCmd</b>:</p>
+<p>1. Download (link) and save it at the <i>/home/(user)/</i> directory :</p>
+<p>Note: Saving the ccmd folder at <i>/home/(user)/</i> is a necessity.</p>
+
+<p>2. <code>cd</code> into the <i>ccmd</i> directory:</p>
 
 ```
-git clone https://github.com/SSMV01/CustomCmd
-```
-
-<p>2. <code>cd</code> into the <i>CustomCmd</i> directory:</p>
-
-```
-cd CustomCmd
+cd CCMD
 ```
 
 <p>3. Run the <i>init.sh</i> file with <code>bash</code>:</p>
@@ -41,6 +46,44 @@ ccmd <command(s)> <option(s)...>
 
 <br>
 
+### <u>Writing your command directly into the cmds.csv file</u>
+<br>
+
+---
+
+### Syntax
+
+```
+Actual Command,Your_command_name
+```
+
+<p>USE <code>_(s)</code> for spaces ONLY for <i>Your command</i>s</p>
+<p> Do not use spaces after the <i>Actual Command</i>.</p>
+
+---
+
+<br>
+
+<br>
+<p>1. Open the <b>cmds.csv</b> file located in the <i>bin</i> folder</p>
+
+See: [Opening the cmds.csv file from the terminal](https://github.com/SSMV01/CCMD#opening-the-cmdscsv-file-from-the-terminal)
+
+<p>2. Write the Actual Commands first, then Your command seperated by a comma.<p>
+<p>USE <code>_(s)</code> for spaces ONLY FOR 'YOUR COMMAND NAMES'</p>
+<p><b>Write only one pair of command per row.</b></p>
+
+```
+Actual Command-1,Your_Command_name-1
+Actual Command-2,Your_Command_name-2
+...
+...
+```
+
+<p>3. Save and close the file once you are done.</p>
+
+<br>
+
 ### <u>Creating commands from terminal</u>
 <br>
 <p>1. Use <b>-new</b>:</p>
@@ -59,39 +102,6 @@ Replacement Command: <Your Command name>
 <p> Note: You dont have to use <code>_(s)</code> for spaces here in <i>Replacement Command</i></p>
 
 <p>3. Press <b>Enter</b> to save.</p>
-
-### <u>Writing your command directly into the cmds.csv file</u>
-<br>
-
----
-
-### Syntax
-
-```
-Acutal Command,Your_command_name
-```
-
-<p>USE <code>_(s)</code> for spaces ONLY for <i>Your command</i>s</p>
-
----
-
-<br>
-
-See: [Opening the cmds.csv file from the terminal](https://github.com/SSMV01/CustomCmd#opening-the-cmdscsv-file-from-the-terminal)
-<br>
-<p>1. Open the <b>cmds.csv</b> file located in the <i>bin</i> folder</p>
-<p>2. Write the Actual Commands first, then Your command seperated by a comma.<p>
-<p>use <code>_(s)</code> for spaces <b>ONLY FOR 'YOUR COMMAND NAMES'</b></p>
-<p><b>Write only one pair of command per row.</b></p>
-
-```
-Actual Command-1,Your_Command_name-1
-Actual Command-2,Your_Command_name-2
-...
-...
-```
-
-<p>3. Save and close the file once you are done.</p>
 
 ### <u>Check Output and run commands</u>
 <p>Write these commands in the <i>cmds.csv</i> file or when you run <i>-new</i></p>
@@ -127,6 +137,18 @@ Actual Command ?: string to check in output || command to run if output contains
 ccmd --opencsv
 ```
 
+## Setting the location of the csv file
+
+```
+ccmd --target (Path to csv file)
+```
+
+If you don't have a specific csv file you want to use:
+
+```
+ccmd --target default
+```
+
 ## Using Your Commands
 
 <br>
@@ -140,16 +162,21 @@ ccmd --opencsv
 ```
 ccmd <Your Command>
 ```
-<p><b>If your command contains space use double quotes:</b></p>
+<p><b>If your command contains space use double quotes or <code>_(s)</code>underscores:</b></p>
 
 ```
 ccmd "<Your Command>"
+```
+OR
+
+```
+ccmd Your_Command
 ```
 ### <u>Using multiple commands</u>
 <br>
 
 ```
-ccmd <Command 1> <Command 2> ...
+ccmd <command 1> <command 2> ...
 ```
 
 ### <u>Using -o and -oS</u>
@@ -158,13 +185,13 @@ ccmd <Command 1> <Command 2> ...
 <p> <i>-o</i> writes the output(s) to the specified file <b>AND</b> also runs the command in your terminal.
 
 ```
-ccmd <Command(s)> -o <path to file>
+ccmd <command(s)> -o <out_file>
 ```
 
 <p> <i>-oS</i> writes the output(s) to the specified file but <b>DOES NOT</b> run the command in your terminal.
 
 ```
-ccmd <Command(s)> -oS <path to file>
+ccmd <command(s)> -oS <out_file>
 ```
 
 ## Removing Commands
@@ -184,4 +211,4 @@ ccmd --opencsv
 ### Info
 <p><i>Version</i>: 0.1.0</p>
 <p><i>Author</i>: <a href="https://github.com/SSMV01">SSMV01</a></p>
-<p>Copyright © 2023 SSMV.</p>
+<p>MIT License</p>
