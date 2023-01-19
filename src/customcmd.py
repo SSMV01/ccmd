@@ -9,7 +9,7 @@ logging.basicConfig(format="%(levelname)s: %(message)s")
 logging.getLogger().setLevel(logging.INFO)
 
 try:
-    with open(f'/home/{os.getlogin()}/customcmd/bin/cmds_target.txt', 'r') as target_file:
+    with open(f'/home/{os.getlogin()}/ccmd/bin/cmds_target.txt', 'r') as target_file:
         csv_file = target_file.read()
 except FileNotFoundError:
     logging.error(f"Could not find 'cmds_target' at /home/{os.getlogin()}/customcmd/bin/cmds_target.")
@@ -24,7 +24,6 @@ def main():
         sys.exit(0)
     elif '--target' in sys.argv:
         set_target_file()
-        sys.exit(0)
     elif '--opencsv' in sys.argv:
         os.system(f'xdg-open {csv_file}')
         sys.exit(0)
@@ -35,16 +34,12 @@ def main():
         sys.exit(2)
     elif '-new' in sys.argv:
         create_command(csv_file)
-        sys.exit(0)
     elif '-o' in sys.argv:
         write_output(csv_file)
-        sys.exit(0)
     elif '-oS' in sys.argv:
         write_output_silent(csv_file)
-        sys.exit(0)
     else:
         run_command(csv_file)
-        sys.exit(0)
 
 
 if len(sys.argv) < 2:

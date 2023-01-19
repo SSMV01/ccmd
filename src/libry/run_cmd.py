@@ -30,18 +30,19 @@ def run_command(csv_file):
                     else:
                         notfnd.append('e')
                         rowno += 1
-            # if (command not found) error in ever row
+            # if (command not found) error in every row
             if len(notfnd) == rowno:
                 logging.error(f"Command '{sys.argv[arg]}' not found!")
                 logging.info("Use '-new' to create commands")
+        sys.exit(0)
     
     except IndexError:
         logging.error(f"Syntax error: MISSING ',' in {csv_file}")
+        sys.exit(2)
 
     except FileNotFoundError:
-        logging.error("File Not Found!")
-        logging.error("No Commands created!")
-        logging.info("Use '-new' to create commands")
+        logging.error(f"{csv_file}: File Not Found!")
+        sys.exit(2)
 
     except KeyboardInterrupt:
         logging.warn("Exiting...")
@@ -66,26 +67,32 @@ def write_output(csv_file):
                     if usr_inp == row[1].strip():
                         output_file = sys.argv[-1]
                         with open(output_file, 'a') as f:
+                            f.writelines('\n')
+                            f.writelines('-' * len(row[0]))
                             f.writelines( '\n' + row[0] + ':')
                             f.writelines(f"\nStart time: {datetime.now()}\n")
                             f.writelines('\n')
                             output = compile_command_for_output(row[0])
                             f.writelines(output + '\n')
+                            f.writelines('-' * len(row[0]))
                         compile_command_no_errs(row[0])
                         rowno += 1
                     else:
                         notfnd.append('e')
                         rowno += 1
-            # if (command not found) error in ever row
+            # if (command not found) error in every row
             if len(notfnd) == rowno:
                 logging.error(f"Command '{sys.argv[arg]}' not found!")
                 logging.info("Use '-new' to create commands")
+        sys.exit(0)
     
     except IndexError:
         logging.error(f"Syntax error: MISSING ',' in {csv_file}")
+        sys.exit(2)
 
     except FileNotFoundError as ex:
-        print(ex)
+        logging.error(f"{csv_file}: File Not Found!")
+        sys.exit(2)
 
     except KeyboardInterrupt:
         logging.warn("Exiting...")
@@ -109,26 +116,32 @@ def write_output_silent(csv_file):
                     if usr_inp == row[1].strip():
                         output_file = sys.argv[-1]
                         with open(output_file, 'a') as f:
-                            f.writelines( '\n' + row[0] + ':')
+                            f.writelines('\n')
+                            f.writelines('-' * len(row[0]))
+                            f.writelines( f'{row[0]}:')
                             f.writelines(f"\nStart time: {datetime.now()}\n")
                             f.writelines('\n')
                             output = compile_command_for_output(row[0])
                             f.writelines(output + '\n')
+                            f.writelines('-' * len(row[0]))
                         rowno += 1
                     else:
                         notfnd.append('e')
                         rowno += 1
                 
-            # if (command not found) error in ever row
+            # if (command not found) error in every row
             if len(notfnd) == rowno:
                 logging.error(f"Command '{sys.argv[arg]}' not found!")
                 logging.error("Use '-new' to create commands")
+        sys.exit(0)
     
     except IndexError:
         logging.error(f"Syntax error: MISSING ',' in {csv_file}")
+        sys.exit(2)
 
     except FileNotFoundError as ex:
-        print(ex)
+        logging.error(f"{csv_file}: File Not Found!")
+        sys.exit(2)
 
     except KeyboardInterrupt:
         logging.error("Exiting...")

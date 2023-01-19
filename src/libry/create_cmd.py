@@ -19,6 +19,8 @@ def create_command(csv_file):
             csvwriter.writerow(cmd_lst)
             logging.info("Command created.")
 
+        sys.exit(0)
+
     except KeyboardInterrupt:
         logging.warn("Exiting...")
         sys.exit(1)

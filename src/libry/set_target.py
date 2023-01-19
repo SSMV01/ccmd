@@ -9,12 +9,18 @@ logging.getLogger().setLevel(logging.INFO)
 def set_target_file():
     if len(sys.argv) == 3:
         cmds_file_location = sys.argv[-1]
+        if cmds_file_location == 'default':
+            cmds_file_location = f'home/{getlogin()}/ccmd/bin/cmds.csv'
+
         try:
-            with open(f'/home/{getlogin()}/customcmd/bin/cmds_target.txt', 'w') as target_file:
+            with open(f'/home/{getlogin()}/ccmd/bin/cmds_target.txt', 'w') as target_file:
                 target_file.write(cmds_file_location)
             logging.info("Target File Saved.")
+            sys.exit(0)
+
         except PermissionError:
             logging.error("Premission denied! Try running the command with 'sudo'.")
+            sys.exit(2)
     else:
         logging.error("File path not specified OR More than one options used.")
         logging.info("Please use only one option.")
