@@ -1,7 +1,7 @@
 ## CCMD
 ### customcmd
 
-### Note: This program has not been tested completely.
+### Note: This program is under development and has not been tested completely.
 
 ## Requirements
 
@@ -12,7 +12,7 @@
 <br>
 
 # Installation
-<p>1. Download (link) and save it at the <i>/home/(user)/</i> directory :</p>
+<p>1. Download the source code from <a href='https://github.com/SSMV01/ccmd/releases'>releases</a> and save it at the <i>/home/(user)/</i> directory :</p>
 <p>Note: Saving the ccmd folder at <i>/home/(user)/</i> is a necessity.</p>
 
 <p>2. <code>cd</code> into the <i>ccmd</i> directory:</p>
