@@ -11,7 +11,7 @@
 
 # Installation
 <p>1. Download the source code from <a href='https://github.com/SSMV01/ccmd/releases'>releases</a> and save it at the <i>/home/(user)/</i> directory as <i>ccmd</i>:</p>
-<p>Saving the folder as 'ccmd' is a necessity</p>
+<p>Saving the folder as 'ccmd' is a necessity.</p>
 <p>Saving the ccmd folder at <i>/home/(user)/</i> is a necessity.</p>
 
 <p>2. <code>cd</code> into the <i>ccmd</i> directory:</p>
