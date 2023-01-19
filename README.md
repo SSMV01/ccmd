@@ -29,6 +29,9 @@ sudo bash init.sh
 
 <p>Note: <code>sudo</code> is necessary to access the '/bin' folder</p>
 
+<p>4. Set your target file (csv file)'s path.</p>
+<p>See: <a href='https://github.com/SSMV01/ccmd/#setting-the-location-of-the-csv-file'>Setting the location of the csv file</a></p>
+
 <p>And you're all set!</p>
 
 # Usage
@@ -141,7 +144,7 @@ ccmd --opencsv
 ## Setting the location of the csv file
 
 ```
-ccmd --target (Path to csv file)
+ccmd --target <Path to csv file>
 ```
 
 If you don't have a specific csv file you want to use:
