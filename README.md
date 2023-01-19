@@ -208,6 +208,14 @@ ccmd --opencsv
 
 <p>2. Find and Erase the row.</p>
 
+## Uninstallation
+
+<p>Run the <i>uninstall.sh</i> file location the ccmd directory</p>
+
+```
+sudo bash uninstall.sh
+```
+
 ---
 <br>
 
