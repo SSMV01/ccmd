@@ -1,8 +1,6 @@
 # CustomCmd
 
-### <u>Please use this software for ethical purposes only</u>
-
-### NOTE: This application only supports linux and has only been tested on [Kali Linux](https://www.kali.org/)
+### NOTE: This application only supports linux and has only been tested on linux_x64 ([Kali Linux](https://www.kali.org/) and [Linux Mint](https://linuxmint.com/) to be specific)
 
 # Installation
 <p>1. Run the following command in the directory you want to install <b>CustomCmd</b>:</p>
@@ -184,6 +182,6 @@ ccmd --opencsv
 <br>
 
 ### Info
-<p><i>Version</i>: 0.8.11-Alpha</p>
-<p><i>Author</i>: <a href="https://github.com/SSMV01">SSMV</a></p>
-<p>Copyright © 2022 SSMV.</p>
+<p><i>Version</i>: 0.1.0</p>
+<p><i>Author</i>: <a href="https://github.com/SSMV01">SSMV01</a></p>
+<p>Copyright © 2023 SSMV.</p>
