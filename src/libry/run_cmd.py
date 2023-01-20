@@ -48,6 +48,17 @@ def run_command(csv_file):
     except KeyboardInterrupt:
         logging.warn("Exiting...")
         sys.exit(1)
+        
+def write_to_file(output_file, command_name, command):
+    with open(output_file, 'a') as f:
+        f.writelines('\n')
+        f.writelines('-' * 75)
+        f.writelines( '\n' + command_name + ':')
+        f.writelines(f"\nStart time: {datetime.now()}\n")
+        f.writelines('\n')
+        output = compile_command_for_output(command)
+        f.writelines(output + '\n')
+        f.writelines('-' * 75)
 
 def write_output(csv_file):
     try:
@@ -67,17 +78,11 @@ def write_output(csv_file):
                 for row in csvreader:
                     if usr_inp == row[1].strip():
                         run_process = multiprocessing.Process(target=compile_command_no_errs, args=(row[0], ))
-                        run_process.start()
                         output_file = sys.argv[-1]
-                        with open(output_file, 'a') as f:
-                            f.writelines('\n')
-                            f.writelines('-' * len(row[0]))
-                            f.writelines( '\n' + row[0] + ':')
-                            f.writelines(f"\nStart time: {datetime.now()}\n")
-                            f.writelines('\n')
-                            output = compile_command_for_output(row[0])
-                            f.writelines(output + '\n')
-                            f.writelines('-' * len(row[0]))
+                        write_process = multiprocessing.Process(target=write_to_file, args=(output_file, row[1], row[0], ))
+                        write_process.start()
+                        run_process.start()
+                        write_process.join()
                         run_process.join()
                         rowno += 1
                     else:
@@ -118,15 +123,7 @@ def write_output_silent(csv_file):
                 for row in csvreader:
                     if usr_inp == row[1].strip():
                         output_file = sys.argv[-1]
-                        with open(output_file, 'a') as f:
-                            f.writelines('\n')
-                            f.writelines('-' * len(row[0]))
-                            f.writelines( f'{row[0]}:')
-                            f.writelines(f"\nStart time: {datetime.now()}\n")
-                            f.writelines('\n')
-                            output = compile_command_for_output(row[0])
-                            f.writelines(output + '\n')
-                            f.writelines('-' * len(row[0]))
+                        write_to_file(output_file, row[1], row[0])
                         rowno += 1
                     else:
                         notfnd.append('e')
