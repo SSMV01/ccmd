@@ -1,7 +1,7 @@
 import sys
 import csv
 import logging
-import multiprocessing
+import threading
 from datetime import datetime
 from utils import (rm_space)
 from utils import (compile_command, compile_command_for_output, compile_command_no_errs)
@@ -77,9 +77,9 @@ def write_output(csv_file):
 
                 for row in csvreader:
                     if usr_inp == row[1].strip():
-                        run_process = multiprocessing.Process(target=compile_command_no_errs, args=(row[0], ))
+                        run_process = threading.Thread(target=compile_command_no_errs, args=(row[0], ))
                         output_file = sys.argv[-1]
-                        write_process = multiprocessing.Process(target=write_to_file, args=(output_file, row[1], row[0], ))
+                        write_process = threading.Thread(target=write_to_file, args=(output_file, row[1], row[0], ))
                         write_process.start()
                         run_process.start()
                         write_process.join()
