@@ -16,6 +16,7 @@ def if_equals(cmd=''):
 
         os.system(splitIf[0].strip()) # run first command
         if output == splitRun[0].strip(): # if output  of first command == the string
+            os.system('echo')
             os.system(splitRun[1].strip())
 
 def if_contains(cmd=''):
@@ -27,6 +28,7 @@ def if_contains(cmd=''):
 
         os.system(splitIf[0].strip())
         if splitRun[0].strip() in output: # if output  of first command contains the string
+            os.system('echo')
             os.system(splitRun[1].strip())
 
 # if it is a complex command; make sure the syntax is correct
