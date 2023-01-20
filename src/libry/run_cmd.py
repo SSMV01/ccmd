@@ -13,11 +13,7 @@ def run_command(csv_file):
     try:
         for arg in range(1, len(sys.argv)):
             # Replace spaces with _ (underscores)
-            if ' ' in sys.argv[arg]:
-                usr_inp = rm_space(sys.argv[arg])
-            else:
-                usr_inp = sys.argv[arg]
-
+            usr_inp = rm_space(sys.argv[arg]) if ' ' in sys.argv[arg] else sys.argv[arg]
             notfnd = []
             rowno = 0
 
@@ -27,16 +23,15 @@ def run_command(csv_file):
                 for row in csvreader:
                     if usr_inp == row[1].strip():
                         compile_command(row[0])
-                        rowno += 1
                     else:
                         notfnd.append('e')
-                        rowno += 1
+                    rowno += 1
             # if (command not found) error in every row
             if len(notfnd) == rowno:
                 logging.error(f"Command '{sys.argv[arg]}' not found!")
                 logging.info("Use '-new' to create commands")
         sys.exit(0)
-    
+
     except IndexError:
         logging.error(f"Syntax error: MISSING ',' in {csv_file}")
         sys.exit(2)
@@ -64,11 +59,7 @@ def write_output(csv_file):
     try:
         for arg in range(1, len(sys.argv) - 2):
             # Replace spaces with _ (underscores)
-            if ' ' in sys.argv[arg]:
-                usr_inp = rm_space(sys.argv[arg])
-            else:
-                usr_inp = sys.argv[arg]
-
+            usr_inp = rm_space(sys.argv[arg]) if ' ' in sys.argv[arg] else sys.argv[arg]
             notfnd = []
             rowno = 0
 
@@ -84,16 +75,15 @@ def write_output(csv_file):
                         run_process.start()
                         write_process.join()
                         run_process.join()
-                        rowno += 1
                     else:
                         notfnd.append('e')
-                        rowno += 1
+                    rowno += 1
             # if (command not found) error in every row
             if len(notfnd) == rowno:
                 logging.error(f"Command '{sys.argv[arg]}' not found!")
                 logging.info("Use '-new' to create commands")
         sys.exit(0)
-    
+
     except IndexError:
         logging.error(f"Syntax error: MISSING ',' in {csv_file}")
         sys.exit(2)
@@ -110,10 +100,7 @@ def write_output_silent(csv_file):
     try:
         for arg in range(1, len(sys.argv) - 2):
             # Replace spaces with _ (underscores)
-            if ' ' in sys.argv[arg]:
-                usr_inp = rm_space(sys.argv[arg])
-            else:
-                usr_inp = sys.argv[arg]
+            usr_inp = rm_space(sys.argv[arg]) if ' ' in sys.argv[arg] else sys.argv[arg]
             notfnd = []
             rowno = 0
 
@@ -124,17 +111,15 @@ def write_output_silent(csv_file):
                     if usr_inp == row[1].strip():
                         output_file = sys.argv[-1]
                         write_to_file(output_file, row[1], row[0])
-                        rowno += 1
                     else:
                         notfnd.append('e')
-                        rowno += 1
-                
+                    rowno += 1
             # if (command not found) error in every row
             if len(notfnd) == rowno:
                 logging.error(f"Command '{sys.argv[arg]}' not found!")
                 logging.error("Use '-new' to create commands")
         sys.exit(0)
-    
+
     except IndexError:
         logging.error(f"Syntax error: MISSING ',' in {csv_file}")
         sys.exit(2)

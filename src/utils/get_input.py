@@ -3,19 +3,15 @@ import logging
 logging.basicConfig(format="%(levelname)s: %(message)s")
 
 def check_input(inp=''):
-    if inp == '' or inp.isspace():
-        return 1
-    else:
-        return 0
+    return 1 if inp == '' or inp.isspace() else 0
 
 def rm_space(inp=''):
     inp = inp.split(' ')
     final_inp = '_'
-    final_inp = final_inp.join(inp)
-    return final_inp
+    return final_inp.join(inp)
 
 def get_and_check(msg):
-    print(msg + ': ')
+    print(f'{msg}: ')
     got_input = input().strip()
     if check_input(got_input) == 0:
         return got_input
@@ -24,7 +20,7 @@ def get_and_check(msg):
         return ''
 
 def get_and_check_nospace(msg):
-    print(msg + ': ')
+    print(f'{msg}: ')
     got_input = input().strip()
     if check_input(got_input) == 0:
         if ' ' in got_input:
