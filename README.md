@@ -69,7 +69,7 @@ Actual Command,Your_command_name
 <br>
 
 <br>
-<p>1. Open the <b>cmds.csv</b> file located in the <i>bin</i> folder</p>
+<p>1. Open the <b>cmds.csv</b> file located in the <i>ccmd/bin</i> folder</p>
 
 See: [Opening the cmds.csv file from the terminal](https://github.com/SSMV01/CCMD#opening-the-cmdscsv-file-from-the-terminal)
 
@@ -136,6 +136,8 @@ Actual Command ?: string to check in output || command to run if output contains
 <br>
 
 ## Opening the cmds.csv file from the terminal
+
+<p>We recommend you to use a text editor to open the csv file instead of excel like software.</p>
 
 ```
 ccmd --opencsv
