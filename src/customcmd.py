@@ -21,7 +21,6 @@ except FileNotFoundError:
 def main():
     if '-h' in sys.argv or '--help' in sys.argv:
         help()
-        sys.exit(0)
     elif '--target' in sys.argv:
         set_target_file()
 
