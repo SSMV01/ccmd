@@ -1,3 +1,5 @@
+import sys
+
 def help():
     print("""Usage: ccmd [command(s)] [option(s)...]
 \nNote: Make sure to use "" (quotes) if your commands contain ' ' (space)
@@ -13,7 +15,10 @@ For more information about the option.
     -h            Displays this message.
     --help        Same as -h.
     \nSee: 'https://github.com/SSMV01/CustomCmd/blob/main/README.md' for more information.""")
-    
+    sys.exit(0)
+
+
+# For Later
 def new_help():
     print("""Usage: ccmd -new
 Note: No other arguments are required.
