@@ -61,7 +61,7 @@ ccmd <command(s)> <option(s)...>
 Actual Command,Your_command_name
 ```
 
-<p>USE <code>_(s)</code> for spaces ONLY for <i>Your command</i>s</p>
+<p>USE <code>_(s)</code> underscores for spaces ONLY for <i>Your command</i>s</p>
 <p> Do not use spaces after the <i>Actual Command</i>.</p>
 
 ---
@@ -74,7 +74,7 @@ Actual Command,Your_command_name
 See: [Opening the cmds.csv file from the terminal](https://github.com/SSMV01/CCMD#opening-the-cmdscsv-file-from-the-terminal)
 
 <p>2. Write the Actual Commands first, then Your command seperated by a comma.<p>
-<p>USE <code>_(s)</code> for spaces ONLY FOR 'YOUR COMMAND NAMES'</p>
+<p>USE <code>_(s)</code> underscores for spaces ONLY FOR 'YOUR COMMAND NAMES'</p>
 <p><b>Write only one pair of command per row.</b></p>
 
 ```
@@ -103,7 +103,7 @@ Actual Command: <Command To Replace>
 Replacement Command: <Your Command name>
 ```
 
-<p>You dont have to use <code>_(s)</code> for spaces here in <i>Replacement Command</i></p>
+<p>You dont have to use <code>_(s)</code> underscores for spaces here in <i>Replacement Command</i></p>
 
 <p>3. Press <b>Enter</b> to save.</p>
 
@@ -163,7 +163,7 @@ ccmd --target default
 
 <br>
 
-<p>Note: Its not necessary to use <code>_(s)</code> for spaces here but you can do so to avoid the usage of <code>""</code><p>
+<p>Note: Its not necessary to use <code>_(s)</code> underscores for spaces here but you can do so to avoid the usage of <code>""</code><p>
 
 ```
 ccmd <Your Command>
