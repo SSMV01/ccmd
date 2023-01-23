@@ -8,7 +8,10 @@ from utils import (compile_command, compile_command_for_output)
 logging.basicConfig(format="%(levelname)s: %(message)s")
 logging.getLogger().setLevel(logging.INFO)
 
-def write_to_file(output_file, command_name, command):
+def write_to_file(output_file: str, command_name: str, command: str):
+    if output_file.isspace() or output_file == '' or output_file == '-o' or output_file == '-oS':
+        logging.error("No output file given.")
+        sys.exit(2)
     with open(output_file, 'a') as f:
         f.writelines('\n')
         f.writelines('-' * 75)
@@ -20,12 +23,15 @@ def write_to_file(output_file, command_name, command):
         f.writelines('-' * 75)
 
 
-def run_command(csv_file):
+def run_command(csv_file: str):
     try:
         if '-o' in sys.argv or '-oS' in sys.argv:
             if len(sys.argv) <= 3:
-                logging.error("No commands provided.")
+                logging.error("No commands OR file provided.")
                 sys.exit(2)
+            output_file = sys.argv[-1]
+            sys.argv.pop()
+            sys.argv.pop()
 
         for arg in range(1, len(sys.argv)):
             # Replace spaces with _ (underscores)
@@ -39,11 +45,9 @@ def run_command(csv_file):
                 for row in csvreader:
                     if usr_inp == row[1].strip():
                         if '-oS' in sys.argv:
-                            output_file = sys.argv[-1]
                             write_to_file(output_file, row[1], row[0])
                             sys.exit(0)
                         elif '-o' in sys.argv:
-                            output_file = sys.argv[-1]
                             write_to_file(output_file, row[1], row[0])
                         compile_command(row[0])
                     else:
@@ -54,10 +58,6 @@ def run_command(csv_file):
                 logging.error(f"Command '{sys.argv[arg]}' not found!")
                 logging.info("Use '-new' to create commands")
         sys.exit(0)
-
-    except IndexError:
-        logging.error(f"Syntax error: MISSING ',' in {csv_file}")
-        sys.exit(2)
 
     except FileNotFoundError:
         logging.error(f"{csv_file}: File Not Found!")
