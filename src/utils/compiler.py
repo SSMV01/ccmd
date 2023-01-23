@@ -46,18 +46,6 @@ def compile_command(cmd=''):
     else:
         os.system(cmd)
 
-# This is for -o too
-# Because the error messages were being print twice
-# once in compile_command_for_output() and once in compile_command()
-
-def compile_command_no_errs(cmd=''):
-    if '?=' in cmd and '||' in cmd:
-        if_equals(cmd)
-    elif '?:' in cmd and '||' in cmd:
-        if_contains(cmd)
-    elif '?:' not in cmd and '?=' not in cmd:
-        os.system(cmd)
-
 # For -o and -oS
 # Returns output of the first command; then checks if the output is equal to/contains the user provided string
 # if yes then returns the output of second command too.

@@ -3,7 +3,7 @@ import csv
 import logging
 from datetime import datetime
 from utils import (rm_space)
-from utils import (compile_command, compile_command_for_output, compile_command_no_errs)
+from utils import (compile_command, compile_command_for_output)
 # Initialize logging
 logging.basicConfig(format="%(levelname)s: %(message)s")
 logging.getLogger().setLevel(logging.INFO)

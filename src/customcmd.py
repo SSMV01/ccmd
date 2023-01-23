@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 import os
 import sys
 import logging
@@ -17,8 +16,7 @@ except FileNotFoundError:
     logging.error(f"Could not find 'cmds_target' at /home/{os.getlogin()}/customcmd/bin/cmds_target.")
     logging.info("Check if file has been deleted or moved or renamed.")
     sys.exit(2)
-    
-    
+
 
 def main():
     if '-h' in sys.argv or '--help' in sys.argv:
