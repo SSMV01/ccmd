@@ -2,7 +2,7 @@
 ### customcmd
 
 ### !Current source is unstable!
-#### Use the relesed source
+#### Use the released source
 
 ### This program is under development and has not been tested completely.
 ### Only works on linux
