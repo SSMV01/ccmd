@@ -3,7 +3,7 @@
 import os
 import sys
 import logging
-from libry import (create_command, set_target_file,  run_command, write_output, write_output_silent, help)
+from libry import (create_command, set_target_file,  run_command, help)
 # Initialize logging
 logging.basicConfig(format="%(levelname)s: %(message)s")
 logging.getLogger().setLevel(logging.INFO)
@@ -33,10 +33,6 @@ def main():
         sys.exit(0)
     elif '-new' in sys.argv:
         create_command(csv_file)
-    elif '-o' in sys.argv:
-        write_output(csv_file)
-    elif '-oS' in sys.argv:
-        write_output_silent(csv_file)
     else:
         run_command(csv_file)
 
