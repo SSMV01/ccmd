@@ -7,7 +7,7 @@ logging.basicConfig(format="%(levelname)s: %(message)s")
 # Executes the first command; then checks if the output is equal to/contains the user provided string
 # if yes then executes the second command too.
 
-def if_equals(cmd=''):
+def if_equals(cmd: str):
         splitIf = cmd.split('?=') # ["first command", "string & second command"]
         splitRun = splitIf[1].split('||') # ["string", "second command"]
         check_out = Popen(splitIf[0].split(), stdout=PIPE) # check output of first command
@@ -19,7 +19,7 @@ def if_equals(cmd=''):
             os.system('echo') # print line for readability
             os.system(splitRun[1].strip()) # run second command
 
-def if_contains(cmd=''):
+def if_contains(cmd: str):
         splitIf = cmd.split('?:')
         splitRun = splitIf[1].split('||')
         check_out = Popen(splitIf[0].split(), stdout=PIPE)
@@ -34,7 +34,7 @@ def if_contains(cmd=''):
 # if it is a complex command; make sure the syntax is correct
 # else just execute the command
 
-def compile_command(cmd=''):
+def compile_command(cmd: str):
     if '?=' in cmd and '||' in cmd:
         if_equals(cmd)
     elif '?:' in cmd and '||' in cmd:
@@ -50,7 +50,7 @@ def compile_command(cmd=''):
 # Returns output of the first command; then checks if the output is equal to/contains the user provided string
 # if yes then returns the output of second command too.
 
-def if_equals_for_output(cmd=''):
+def if_equals_for_output(cmd: str):
         splitIf = cmd.split('?=')
         splitRun = splitIf[1].split('||')
         check_out1 = Popen(splitIf[0].split(), stdout=PIPE)
@@ -66,7 +66,7 @@ def if_equals_for_output(cmd=''):
 
         return f"{output1}\n{output2}"
 
-def if_contains_for_output(cmd=''):
+def if_contains_for_output(cmd: str):
         splitIf = cmd.split('?:')
         splitRun = splitIf[1].split('||')
         check_out1 = Popen(splitIf[0].split(), stdout=PIPE)
@@ -85,7 +85,7 @@ def if_contains_for_output(cmd=''):
 # if it is a complex command; make sure the syntax is correct
 # else just return the output
 
-def compile_command_for_output(cmd=''):
+def compile_command_for_output(cmd: str):
     if '?=' in cmd and '||' in cmd:
         return if_equals_for_output(cmd)
     elif '?:' in cmd and '||' in cmd:

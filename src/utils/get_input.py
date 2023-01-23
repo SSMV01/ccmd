@@ -2,10 +2,10 @@ import logging
 # Initialize logging
 logging.basicConfig(format="%(levelname)s: %(message)s")
 
-def check_input(inp=''):
+def check_input(inp: str):
     return 1 if inp == '' or inp.isspace() else 0
 
-def rm_space(inp=''):
+def rm_space(inp: str):
     inp = inp.split(' ')
     final_inp = '_'
     return final_inp.join(inp)
