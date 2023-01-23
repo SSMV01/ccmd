@@ -50,12 +50,12 @@ ccmd <command(s)> <option(s)...>
 
 <br>
 
-### <u>Writing your command directly into the cmds.csv file</u>
+### Writing your command directly into the cmds.csv file
 <br>
 
 ---
 
-### Syntax
+#### Syntax
 
 ```
 Actual Command,Your_command_name
@@ -88,7 +88,7 @@ Actual Command-2,Your_Command_name-2
 
 <br>
 
-### <u>Creating commands from terminal</u>
+### Creating commands from terminal
 <br>
 <p>1. Use <b>-new</b>:</p>
 
@@ -107,7 +107,7 @@ Replacement Command: <Your Command name>
 
 <p>3. Press <b>Enter</b> to save.</p>
 
-### <u>Check Output and run commands</u>
+### Check Output and run commands
 <p>Write these commands in the <i>cmds.csv</i> file or when you run <i>-new</i></p>
 <p>You can only use this feature in the <i>Actual commands</i> part</p>
 <p>Syntax:</p>
@@ -134,26 +134,6 @@ Actual Command ?: string to check in output || command to run if output contains
 
 
 <br>
-
-## Opening the cmds.csv file from the terminal
-
-<p>We recommend you to use a text editor to open the csv file instead of excel like software.</p>
-
-```
-ccmd --opencsv
-```
-
-## Setting the location of the csv file
-
-```
-ccmd --target <Path to csv file>
-```
-
-If you don't have a specific csv file you want to use:
-
-```
-ccmd --target default
-```
 
 ## Using Your Commands
 
@@ -200,8 +180,33 @@ ccmd <command(s)> -o <out_file>
 ccmd <command(s)> -oS <out_file>
 ```
 
-## Removing Commands
 <br>
+
+## Opening the cmds.csv file from the terminal
+
+<p>We recommend you to use a text editor to open the csv file instead of excel like software.</p>
+
+```
+ccmd --opencsv
+```
+
+<br>
+
+## Setting the location of the csv file
+
+```
+ccmd --target <Path to csv file>
+```
+
+If you don't have a specific csv file you want to use:
+
+```
+ccmd --target default
+```
+
+<br>
+
+## Removing Commands
 
 <p>1. Open the <i>cmds.csv</i> file</p>
 
@@ -211,7 +216,23 @@ ccmd --opencsv
 
 <p>2. Find and Erase the row.</p>
 
-## Uninstallation
+<br>
+
+## Display version
+
+```
+ccmd -v
+```
+
+OR
+
+```
+ccmd --version
+```
+
+<br>
+
+# Uninstallation
 
 <p>Run the <i>uninstall.sh</i> file location the ccmd directory</p>
 
