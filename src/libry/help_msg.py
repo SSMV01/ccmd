@@ -14,6 +14,8 @@ For more information about the option.
     -oS           Write output of command(s) to file.
     -h            Displays this message.
     --help        Same as -h.
+    -v            Display the version number.
+    --version     Same as -v.
     \nSee: 'https://github.com/SSMV01/CustomCmd/blob/main/README.md' for more information.""")
     sys.exit(0)
 
