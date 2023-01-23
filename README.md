@@ -1,9 +1,6 @@
 ## CCMD
 ### customcmd
 
-### !Current source is unstable!
-#### Use the released source
-
 ### This program is under development and has not been tested completely.
 ### Only works on linux
 
@@ -249,6 +246,6 @@ bash uninstall.sh
 <br>
 
 ### Info
-<p><i>Version</i>: 0.2.2</p>
+<p><i>Version</i>: 0.2.2-alpha</p>
 <p><i>Author</i>: <a href="https://github.com/SSMV01">SSMV01</a></p>
 <p>MIT License</p>
