@@ -16,8 +16,8 @@ def if_equals(cmd=''):
 
         os.system(splitIf[0].strip()) # run first command
         if output == splitRun[0].strip(): # if output  of first command == the string
-            os.system('echo')
-            os.system(splitRun[1].strip())
+            os.system('echo') # print line for readability
+            os.system(splitRun[1].strip()) # run second command
 
 def if_contains(cmd=''):
         splitIf = cmd.split('?:')
@@ -40,9 +40,9 @@ def compile_command(cmd=''):
     elif '?:' in cmd and '||' in cmd:
         if_contains(cmd)
     elif '?=' in cmd or '?:' in cmd and '||' not in cmd:
-        logging.error("Syntax error: missing '||'")
+        logging.error(f"Syntax error in '{cmd}': missing ||")
     elif '||' in cmd and '?:' not in cmd and '?=' not in cmd:
-        logging.error("Syntax error: missing '?:' OR '?='")
+        logging.error(f"Syntax error in '{cmd}': missing ?: OR ?=")
     else:
         os.system(cmd)
 
@@ -91,11 +91,9 @@ def compile_command_for_output(cmd=''):
     elif '?:' in cmd and '||' in cmd:
         return if_contains_for_output(cmd)
     elif '?=' in cmd or '?:' in cmd and '||' not in cmd:
-        logging.error("Syntax error: missing '||'")
-        return "[-] Syntax Err: missing '||'"
+        return "[-] Syntax Err: missing ||"
     elif '||' in cmd and '?:' not in cmd and '?=' not in cmd:
-        logging.error("Syntax error: missing '?:' OR '?='")
-        return "[-] Syntax Err: missing '?:' OR '?='"
+        return "[-] Syntax Err: missing ?: OR ?="
     else:
         output = Popen(cmd.split(), stdout=PIPE)
         output = output.stdout.read()
