@@ -1,6 +1,9 @@
 ## CCMD
 ### customcmd
 
+### !Current source is unstable!
+#### Use the relesed source
+
 ### This program is under development and has not been tested completely.
 ### Only works on linux
 
