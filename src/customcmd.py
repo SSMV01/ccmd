@@ -7,7 +7,7 @@ from libry import (create_command, set_target_file,  run_command, help)
 logging.basicConfig(format="%(levelname)s: %(message)s")
 logging.getLogger().setLevel(logging.INFO)
 
-version = 'ccmd 0.2.0-alpha'
+version = 'ccmd 0.2.4-alpha'
 username = os.environ.get("LOGNAME")
 
 try:
