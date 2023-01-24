@@ -25,11 +25,18 @@ def write_to_file(output_file: str, command_name: str, command: str):
 
 def run_command(csv_file: str):
     try:
+        output_used = 0
+        output_silent_used = 0
+        output_file = sys.argv[-1]
+
         if '-o' in sys.argv or '-oS' in sys.argv:
             if len(sys.argv) <= 3:
                 logging.error("No commands OR file provided.")
                 sys.exit(2)
-            output_file = sys.argv[-1]
+            if '-o' in sys.argv:
+                output_used = 1
+            elif '-oS' in sys.argv:
+                output_silent_used = 1
             sys.argv.pop()
             sys.argv.pop()
 
@@ -44,10 +51,10 @@ def run_command(csv_file: str):
 
                 for row in csvreader:
                     if usr_inp == row[1].strip():
-                        if '-oS' in sys.argv:
+                        if output_silent_used == 1:
                             write_to_file(output_file, row[1], row[0])
                             sys.exit(0)
-                        elif '-o' in sys.argv:
+                        elif output_used == 1:
                             write_to_file(output_file, row[1], row[0])
                         compile_command(row[0])
                     else:

@@ -16,7 +16,6 @@ def if_equals(cmd: str):
 
         os.system(splitIf[0].strip()) # run first command
         if output == splitRun[0].strip(): # if output  of first command == the string
-            os.system('echo') # print line for readability
             os.system(splitRun[1].strip()) # run second command
 
 def if_contains(cmd: str):
@@ -28,7 +27,6 @@ def if_contains(cmd: str):
 
         os.system(splitIf[0].strip())
         if splitRun[0].strip() in output: # if output  of first command contains the string
-            os.system('echo')
             os.system(splitRun[1].strip())
 
 # if it is a complex command; make sure the syntax is correct
@@ -64,7 +62,7 @@ def if_equals_for_output(cmd: str):
         else:
             output2 = f"ERROR: output is not equal to '{splitRun[0].strip()}'"
 
-        return f"{output1}\n{output2}"
+        return f"{output1}\n\n{output2}"
 
 def if_contains_for_output(cmd: str):
         splitIf = cmd.split('?:')
@@ -80,7 +78,7 @@ def if_contains_for_output(cmd: str):
         else:
             output2 = f"ERROR: output does not contain '{splitRun[0].strip()}'"
         
-        return f"{output1}\n{output2}"
+        return f"{output1}\n\n{output2}"
 
 # if it is a complex command; make sure the syntax is correct
 # else just return the output

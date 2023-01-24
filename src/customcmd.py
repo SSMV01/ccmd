@@ -8,12 +8,13 @@ logging.basicConfig(format="%(levelname)s: %(message)s")
 logging.getLogger().setLevel(logging.INFO)
 
 version = 'ccmd 0.2.0-alpha'
+username = os.environ.get("LOGNAME")
 
 try:
-    with open(f'/home/{os.getlogin()}/ccmd/bin/cmds_target.txt', 'r') as target_file:
+    with open(f'/home/{username}/ccmd/bin/cmds_target.txt', 'r') as target_file:
         csv_file = target_file.read()
 except FileNotFoundError:
-    logging.error(f"Could not find 'cmds_target' at /home/{os.getlogin()}/customcmd/bin/cmds_target.")
+    logging.error(f"Could not find 'cmds_target' at /home/{username}/customcmd/bin/cmds_target.")
     logging.info("Check if file has been deleted or moved or renamed.")
     sys.exit(2)
 
