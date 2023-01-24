@@ -246,6 +246,6 @@ bash uninstall.sh
 <br>
 
 ### Info
-<p><i>Version</i>: 0.2.2-alpha</p>
+<p><i>Version</i>: 0.2.4-alpha</p>
 <p><i>Author</i>: <a href="https://github.com/SSMV01">SSMV01</a></p>
 <p>MIT License</p>
