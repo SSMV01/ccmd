@@ -50,6 +50,8 @@ def run_command(csv_file: str):
                 csvreader = csv.reader(f)
 
                 for row in csvreader:
+                    if len(row) < 2:
+                        continue
                     if usr_inp == row[1].strip():
                         if output_silent_used == 1:
                             write_to_file(output_file, row[1], row[0])
@@ -71,5 +73,5 @@ def run_command(csv_file: str):
         sys.exit(2)
 
     except KeyboardInterrupt:
-        logging.warn("Exiting...")
+        logging.info("Exiting...")
         sys.exit(1)
