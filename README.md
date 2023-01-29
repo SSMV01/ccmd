@@ -251,4 +251,4 @@ bash uninstall.sh
 ### Info
 <p><i>Version</i>: 0.2.5-alpha</p>
 <p><i>Author</i>: <a href="https://github.com/SSMV01">SSMV01</a></p>
-[![License](https://img.shields.io/github/license/SSMV01/ccmd?color=blue&style=flat-square)](https://github.com/SSMV01/ccmd)
+<p>MIT License</p>
