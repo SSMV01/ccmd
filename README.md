@@ -1,4 +1,5 @@
 ## CCMD
+[![Repo Size](https://img.shields.io/github/repo-size/SSMV01/ccmd?style=flat-square)](https://github.com/SSMV01/ccmd)
 [![Latest Release](https://img.shields.io/github/v/release/SSMV01/ccmd?display_name=tag&include_prereleases&style=flat-square)](https://github.com/SSMV01/ccmd/releases)
 [![Open Issues](https://img.shields.io/github/issues-raw/SSMV01/ccmd?style=flat-square)](https://github.com/SSMV01/ccmd/issues)
 ### customcmd
@@ -250,4 +251,4 @@ bash uninstall.sh
 ### Info
 <p><i>Version</i>: 0.2.5-alpha</p>
 <p><i>Author</i>: <a href="https://github.com/SSMV01">SSMV01</a></p>
-<p>MIT License</p>
+[![License](https://img.shields.io/github/license/SSMV01/ccmd?color=blue&style=flat-square)](https://github.com/SSMV01/ccmd)
