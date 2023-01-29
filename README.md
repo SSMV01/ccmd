@@ -76,7 +76,6 @@ Actual Command,Your_command_name
 See: [Opening the cmds.csv file from the terminal](https://github.com/SSMV01/CCMD#opening-the-cmdscsv-file-from-the-terminal)
 
 <p>2. Write the Actual Commands first, then Your command seperated by a comma.<p>
-<p>USE <code>_(s)</code> underscores for spaces ONLY for <i>Your command name</i>s</p>
 <p><b>Write only one pair of command per row.</b></p>
 
 ```
@@ -85,7 +84,7 @@ Actual Command#2,Your_Command_name#2
 ...
 ...
 ```
-
+<p>USE <code>_(s)</code> underscores for spaces ONLY for <i>Your command name</i>s</p>
 <p>3. Save and close the file once you are done.</p>
 
 <br>
@@ -127,12 +126,14 @@ Actual Command ?: string to check in output || command to run if output contains
 ```
 
 <h3>Explaination</h3>
-<p>- <i>Actual Command</i> is the command you want to initially run when you execute the custom command</p>
-<p>- <i>?=</i> checks if the output of the <i>Actual Command</i> is equal to string passed after <i>?=</i></p>
-<p>- <i>?:</i> checks if the output of the <i>Actual Command</i> contains the string passed after <i>?:</i></p>
-<p>- After the <i>?= or ?:</i> give the string that you want to check in <i>or</i> compare with the output</p>
-<p>- || executes the command given after it IF the condition is TRUE</p>
-<p>- Finally, write the command that you want to execute if the condition is true</p>
+<ul>
+<li>- <i>Actual Command</i> is the command you want to initially run when you execute the custom command</li>
+<li>- <i>?=</i> checks if the output of the <i>Actual Command</i> is equal to string passed after <i>?=</i></li>
+<li>- <i>?:</i> checks if the output of the <i>Actual Command</i> contains the string passed after <i>?:</i></li>
+<li>- After the <i>?= or ?:</i> give the string that you want to check in <i>or</i> compare with the output</li>
+<li>- || executes the command given after it IF the condition is TRUE</li>
+<li>- Finally, write the command that you want to execute if the condition is true</li>
+</ul>
 
 
 <br>
