@@ -64,25 +64,24 @@ ccmd <command(s)> <option(s)...>
 Actual Command,Your_command_name
 ```
 
-<p>USE <code>_(s)</code> underscores for spaces ONLY for <i>Your command</i>s</p>
-<p> Do not use spaces after the <i>Actual Command</i>.</p>
+<p>USE <code>_(s)</code> underscores for spaces ONLY for <i>Your command name</i>s</p>
 
 ---
 
 <br>
 
 <br>
-<p>1. Open the <b>cmds.csv</b> file located in the <i>ccmd/bin</i> folder</p>
+<p>1. Open the <i>cmds.csv</i> file located in the <i>ccmd/bin</i> folder</p>
 
 See: [Opening the cmds.csv file from the terminal](https://github.com/SSMV01/CCMD#opening-the-cmdscsv-file-from-the-terminal)
 
 <p>2. Write the Actual Commands first, then Your command seperated by a comma.<p>
-<p>USE <code>_(s)</code> underscores for spaces ONLY FOR 'YOUR COMMAND NAMES'</p>
+<p>USE <code>_(s)</code> underscores for spaces ONLY for <i>Your command name</i>s</p>
 <p><b>Write only one pair of command per row.</b></p>
 
 ```
-Actual Command-1,Your_Command_name-1
-Actual Command-2,Your_Command_name-2
+Actual Command#1,Your_Command_name#1
+Actual Command#2,Your_Command_name#2
 ...
 ...
 ```
@@ -103,10 +102,10 @@ ccmd -new
 
 ```
 Actual Command: <Command To Replace>
-Replacement Command: <Your Command name>
+Command Name: <Your Command name>
 ```
 
-<p>You dont have to use <code>_(s)</code> underscores for spaces here in <i>Replacement Command</i></p>
+<p>You dont have to use <code>_(s)</code> underscores for spaces here in <i>Command Name</i></p>
 
 <p>3. Press <b>Enter</b> to save.</p>
 
@@ -165,7 +164,7 @@ ccmd Your_Command
 <br>
 
 ```
-ccmd <command 1> <command 2> ...
+ccmd <command#1> <command#2> ...
 ```
 
 ### <u>Using -o and -oS</u>
@@ -237,7 +236,7 @@ ccmd --version
 
 # Uninstallation
 
-<p>Run the <i>uninstall.sh</i> file location the ccmd directory</p>
+<p>Run the <i>uninstall.sh</i> file located in the <i>ccmd</i> directory</p>
 
 ```
 bash uninstall.sh
