@@ -9,9 +9,9 @@ logging.getLogger().setLevel(logging.INFO)
 def create_command(csv_file):
     try: 
         actual_cmd = get_the_input("Actual Command")
-        replacement_cmd = nospace_input("Replacement Command")
+        cmd_name = nospace_input("Command Name")
 
-        cmd_lst = [actual_cmd, replacement_cmd]
+        cmd_lst = [actual_cmd, cmd_name]
 
         with open(csv_file, 'a', newline='') as f:
             csvwriter = csv.writer(f)
