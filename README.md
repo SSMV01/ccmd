@@ -1,4 +1,5 @@
 ## CCMD
+[![Latest Release](https://img.shields.io/github/v/release/SSMV01/ccmd?display_name=tag&include_prereleases&style=flat-square)](https://github.com/SSMV01/ccmd/releases)
 ### customcmd
 
 ### This program is under development and has not been tested completely.
