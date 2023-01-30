@@ -1,8 +1,8 @@
 ## CCMD
-[![Latest Release](https://img.shields.io/github/v/release/SSMV01/ccmd?display_name=tag&include_prereleases&style=flat-square)](https://github.com/SSMV01/ccmd/releases)
+[![Latest Release](https://img.shields.io/github/v/release/SSMV01/ccmd?display_name=tag&include_prereleases)](https://github.com/SSMV01/ccmd/releases)
 [![CodeFactor](https://www.codefactor.io/repository/github/ssmv01/ccmd/badge)](https://www.codefactor.io/repository/github/ssmv01/ccmd)
-[![Open Issues](https://img.shields.io/github/issues-raw/SSMV01/ccmd?style=flat-square)](https://github.com/SSMV01/ccmd/issues)
-[![License](https://img.shields.io/github/license/SSMV01/ccmd?color=blue&style=flat-square)](https://github.com/SSMV01/ccmd/)
+[![Open Issues](https://img.shields.io/github/issues-raw/SSMV01/ccmd)](https://github.com/SSMV01/ccmd/issues)
+[![License](https://img.shields.io/github/license/SSMV01/ccmd?color=blue)](https://github.com/SSMV01/ccmd/)
 ### customcmd
 
 ### This program is under development and has not been tested completely.
