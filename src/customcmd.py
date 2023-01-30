@@ -2,7 +2,7 @@
 import os
 import sys
 import logging
-from libry import (create_command, set_target_file,  run_command, help)
+from libry import (create_command, set_target_file, run_command, help)
 # Initialize logging
 logging.basicConfig(format="%(levelname)s: %(message)s")
 logging.getLogger().setLevel(logging.INFO)
