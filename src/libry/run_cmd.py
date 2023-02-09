@@ -71,6 +71,9 @@ def run_command(csv_file: str):
     except FileNotFoundError:
         logging.error(f"{csv_file}: File Not Found!")
         sys.exit(2)
+    
+    except IsADirectoryError:
+        logging.error(f"{csv_file}: File Not Found!")
 
     except KeyboardInterrupt:
         logging.info("Exiting...")
