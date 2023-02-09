@@ -17,9 +17,9 @@ def set_target_file(cmds_file):
             with open(f'/home/{username}/ccmd/bin/cmds_target.txt', 'w') as target_file:
                 target_file.write(cmds_file_location)
             if cmds_file_location == "default":
-                logging.info("Default set.")
+                logging.info("Default Set.")
                 sys.exit(0)
-            logging.info("Target File set.")
+            logging.info("Target File Set.")
             sys.exit(0)
 
         except PermissionError:
