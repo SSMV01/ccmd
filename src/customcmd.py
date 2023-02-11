@@ -48,7 +48,7 @@ def main():
         logging.info("Use '--target' to specify the location of the csv file.")
         sys.exit(2)
     elif args.opencsv:
-        os.system(f'xdg-open {csv_file}')
+        os.system(f'editor {csv_file}')
         sys.exit(0)
     elif args.new:
         create_command(csv_file)
