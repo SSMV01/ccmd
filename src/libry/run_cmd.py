@@ -46,11 +46,12 @@ def run_command(csv_file: str, o, oS):
                         continue
                     if usr_inp == row[1].strip():
                         if oS:
+                            o = None
                             write_to_file(oS, row[1], row[0])
-                            sys.exit(0)
                         elif o:
+                            oS = None
                             write_to_file(o, row[1], row[0])
-                        compile_command(row[0])
+                            compile_command(row[0])
                     else:
                         notfnd.append('e')
                     rowno += 1
