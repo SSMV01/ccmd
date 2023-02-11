@@ -251,6 +251,6 @@ Do not use _sudo_ here
 <br>
 
 ### Info
-_Version_: 0.2.5-alpha
+_Version_: 0.2.7-alpha
 _Author_: [SSMV01](https://github.com/SSMV01)
 MIT License
