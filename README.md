@@ -17,14 +17,12 @@
 
 
 # Installation
+
+Download the source from [releases](https://github.com/ssmv01/ccmd/releases) and save it at /home/(user) as ccmd
+
 Run the following in your terminal
-
 ```
-cd ~
-
-git clone https://github.com/ssmv01/ccmd
-
-cd ccmd
+cd ~/ccmd
 
 rm -rf .git
 
