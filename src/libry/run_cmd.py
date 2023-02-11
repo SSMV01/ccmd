@@ -23,25 +23,17 @@ def write_to_file(output_file: str, command_name: str, command: str):
         file.writelines('-' * 75)
 
 
-def run_command(csv_file: str):
+def run_command(csv_file: str, o, oS):
     try:
-        output_used = 0
-        output_silent_used = 0
-        output_file = sys.argv[-1]
-
-        if '-o' in sys.argv or '-oS' in sys.argv:
+        if o or oS:
             if len(sys.argv) <= 3:
                 logging.error("No commands OR file provided.")
                 sys.exit(2)
-            if '-o' in sys.argv:
-                output_used = 1
-            elif '-oS' in sys.argv:
-                output_silent_used = 1
             sys.argv.pop()
             sys.argv.pop()
 
         for arg in range(1, len(sys.argv)):
-            # Replace spaces with _ (underscores)
+            # Replaces space with _ (underscore)
             usr_inp = rm_space(sys.argv[arg]) if ' ' in sys.argv[arg] else sys.argv[arg]
             notfnd = []
             rowno = 0
@@ -53,11 +45,11 @@ def run_command(csv_file: str):
                     if len(row) < 2:
                         continue
                     if usr_inp == row[1].strip():
-                        if output_silent_used == 1:
-                            write_to_file(output_file, row[1], row[0])
+                        if oS:
+                            write_to_file(oS, row[1], row[0])
                             sys.exit(0)
-                        elif output_used == 1:
-                            write_to_file(output_file, row[1], row[0])
+                        elif o:
+                            write_to_file(o, row[1], row[0])
                         compile_command(row[0])
                     else:
                         notfnd.append('e')

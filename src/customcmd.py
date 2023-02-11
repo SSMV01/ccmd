@@ -30,6 +30,8 @@ parser.add_argument('-v', '--version', help="Display version number", action='st
 parser.add_argument('--opencsv', help="Open your csv file", action='store_true')
 parser.add_argument('--new', help="Create new custom command", action='store_true')
 parser.add_argument('--target', type=str, help="Set target csv file")
+parser.add_argument('-o', '--output', type=str, help="Write output to file and execute the command")
+parser.add_argument('-oS', '--output-silent', type=str, help="Write output to file")
 args, commands = parser.parse_known_args()
 
 def main():
@@ -51,7 +53,7 @@ def main():
     elif args.new:
         create_command(csv_file)
     elif commands:
-        run_command(csv_file)
+        run_command(csv_file, args.output, args.output_silent)
 
 
 if len(sys.argv) == 1:
