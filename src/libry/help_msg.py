@@ -16,29 +16,3 @@ def help():
     --version     Same as -v.
     \nSee: 'https://github.com/SSMV01/CustomCmd/blob/main/README.md' for more information.""")
     sys.exit(0)
-
-#For Later
-def new_help():
-    print("""Usage: ccmd --new
-Note: No other arguments are required.
-        """)
-
-def opencsv_help():
-    print("""Usage: ccmd --opencsv
-Note: No other arguments are required.
-        """)
-
-def target_help():
-    print("""Usage: ccmd --target [csv_file path]
-Note: Use "" (quotes) if the path contains a ' ' (space).
-        """)
-
-def output_help():
-    print("""Usage: ccmd [command(s)] -o [txt_file path]
-Note: Use "" (quotes) if the path contains a ' ' (space).
-        """)
-
-def output_silent_help():
-    print("""Usage: ccmd [command(s)] -oS [txt_file path]
-Note: Use "" (quotes) if the path contains a ' ' (space).
-        """)
