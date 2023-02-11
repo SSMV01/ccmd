@@ -45,7 +45,7 @@ And you're all set!
 Basic Usage:
 
 ```
-ccmd [command(s)] [option(s)]
+ccmd [command(s)] [option(s)...]
 ```
 
 ## Creating a New Custom Command
