@@ -11,9 +11,13 @@
 ### This program is under development
 
 ## Requirements
-
 - ### Python3
-- ### Linux
+- ### Linux based OS
+
+### Tested on
+- Linux mint
+- Arch Linux
+
 
 # Installation
 1: Download the source code from [releases](https://github.com/SSMV01/ccmd/releases) and save it at the _/home/(user)/_ directory as _ccmd_
