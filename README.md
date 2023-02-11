@@ -2,7 +2,7 @@
 
 [![Latest Release](https://img.shields.io/github/v/release/SSMV01/ccmd?display_name=tag&include_prereleases)](https://github.com/SSMV01/ccmd/releases)
 [![CodeFactor](https://www.codefactor.io/repository/github/ssmv01/ccmd/badge)](https://www.codefactor.io/repository/github/ssmv01/ccmd)
-[![CodeFactor](https://img.shields.io/github/actions/workflow/status/SSMV01/ccmd/pylint.yml)](https://github.com/SSMV01/ccmd/actions)
+[![Build](https://img.shields.io/github/actions/workflow/status/SSMV01/ccmd/pylint.yml)](https://github.com/SSMV01/ccmd/actions)
 [![Open Issues](https://img.shields.io/github/issues-raw/SSMV01/ccmd)](https://github.com/SSMV01/ccmd/issues)
 [![License](https://img.shields.io/github/license/SSMV01/ccmd?color=blue)](https://github.com/SSMV01/ccmd/)
 
