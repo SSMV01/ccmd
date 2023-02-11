@@ -7,16 +7,16 @@ logging.basicConfig(format="%(levelname)s: %(message)s")
 logging.getLogger().setLevel(logging.INFO)
 
 def create_command(csv_file):
-    try: 
+    try:
         actual_cmd = get_the_input("Actual Command")
         cmd_name = nospace_input("Command Name")
 
         cmd_lst = [actual_cmd, cmd_name]
 
-        with open(csv_file, 'a', newline='') as f:
-            csvwriter = csv.writer(f)
-
+        with open(csv_file, 'a', newline='', encoding='utf-8') as file:
+            csvwriter = csv.writer(file)
             csvwriter.writerow(cmd_lst)
+
             logging.info("Command created.")
 
         sys.exit(0)

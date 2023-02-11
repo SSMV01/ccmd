@@ -15,9 +15,8 @@ def get_and_check(msg):
     got_input = input().strip()
     if check_input(got_input) == 0:
         return got_input
-    else:
-        logging.error("This field cannot be empty.")
-        return ''
+    logging.error("This field cannot be empty.")
+    return ''
 
 def get_and_check_nospace(msg):
     print(f'{msg}: ')
@@ -26,9 +25,8 @@ def get_and_check_nospace(msg):
         if ' ' in got_input:
             got_input = rm_space(got_input)
         return got_input
-    else:
-        logging.error("This field cannot be empty.")
-        return ''
+    logging.error("This field cannot be empty.")
+    return ''
 
 def get_the_input(msg):
     got_input = get_and_check(msg)
