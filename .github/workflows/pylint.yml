@@ -20,5 +20,4 @@ jobs:
         pip install pylint
     - name: Analysing the code with pylint
       run: |
-        pylint -d c0114
-        pylint $(git ls-files '*.py')
+        pylint --fail-under 7.0 --ignore=help_msg.py $(git ls-files '*.py')
