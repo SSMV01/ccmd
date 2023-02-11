@@ -8,16 +8,20 @@ from libry import (create_command, set_target_file, run_command, help)
 logging.basicConfig(format='%(levelname)s: %(message)s')
 logging.getLogger().setLevel(logging.INFO)
 #Initialize argparse
-parser = argparse.ArgumentParser(prog='ccmd', description="command automation tool.", add_help=False)
+parser = argparse.ArgumentParser(
+    prog='ccmd',
+    description="command automation tool.",
+    add_help=False
+    )
 
-version = 'ccmd 0.2.5-alpha'
-username = os.environ.get('LOGNAME')
+VERSION = 'ccmd 0.2.5-alpha'
+USERNAME = os.environ.get('LOGNAME')
 
 try:
-    with open(f'/home/{username}/ccmd/bin/cmds_target.txt', 'r') as target_file:
+    with open(f'/home/{USERNAME}/ccmd/bin/cmds_target.txt', 'r', encoding='utf-8') as target_file:
         csv_file = target_file.read()
 except FileNotFoundError:
-    logging.error(f"Could not find 'cmds_target' at /home/{username}/customcmd/bin/cmds_target.")
+    logging.error(f"Could not find 'cmds_target' at /home/{USERNAME}/customcmd/bin/cmds_target.")
     logging.info("Check if file has been deleted or moved or renamed.")
     sys.exit(2)
 
@@ -32,7 +36,7 @@ def main():
     if args.help:
         help()
     elif args.version:
-        print(version)
+        print(VERSION)
         sys.exit(0)
     elif args.target:
         set_target_file(args.target)

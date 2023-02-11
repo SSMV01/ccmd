@@ -32,7 +32,7 @@ def target_help():
     print("""Usage: ccmd --target [csv_file path]
 Note: Use "" (quotes) if the path contains a ' ' (space).
         """)
-    
+
 def output_help():
     print("""Usage: ccmd [command(s)] -o [txt_file path]
 Note: Use "" (quotes) if the path contains a ' ' (space).

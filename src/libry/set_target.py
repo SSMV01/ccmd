@@ -14,7 +14,7 @@ def set_target_file(cmds_file):
             cmds_file_location = f'/home/{username}/ccmd/bin/cmds.csv'
 
         try:
-            with open(f'/home/{username}/ccmd/bin/cmds_target.txt', 'w') as target_file:
+            with open(f'/home/{username}/ccmd/bin/cmds_target.txt', 'w', encoding='utf-8') as target_file:
                 target_file.write(cmds_file_location)
             if cmds_file_location == "default":
                 logging.info("Default Set.")

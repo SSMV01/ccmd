@@ -12,15 +12,15 @@ def write_to_file(output_file: str, command_name: str, command: str):
     if output_file.isspace() or output_file == '' or output_file == '-o' or output_file == '-oS':
         logging.error("No output file given.")
         sys.exit(2)
-    with open(output_file, 'a') as f:
-        f.writelines('\n')
-        f.writelines('-' * 75)
-        f.writelines( '\n' + command_name + ':')
-        f.writelines(f"\nStart time: {datetime.now()}\n")
-        f.writelines('\n')
+    with open(output_file, 'a', encoding='utf-8') as file:
+        file.writelines('\n')
+        file.writelines('-' * 75)
+        file.writelines( '\n' + command_name + ':')
+        file.writelines(f"\nStart time: {datetime.now()}\n")
+        file.writelines('\n')
         output = compile_command_for_output(command)
-        f.writelines(output + '\n')
-        f.writelines('-' * 75)
+        file.writelines(output + '\n')
+        file.writelines('-' * 75)
 
 
 def run_command(csv_file: str):
@@ -46,7 +46,7 @@ def run_command(csv_file: str):
             notfnd = []
             rowno = 0
 
-            with open(csv_file, 'r') as f:
+            with open(csv_file, 'r', encoding='utf-8') as f:
                 csvreader = csv.reader(f)
 
                 for row in csvreader:
@@ -65,13 +65,13 @@ def run_command(csv_file: str):
             # if (command not found) error in every row
             if len(notfnd) == rowno:
                 logging.error(f"Command '{sys.argv[arg]}' not found!")
-                logging.info("Use '-new' to create commands")
+                logging.info("Use '--new' to create commands")
         sys.exit(0)
 
     except FileNotFoundError:
         logging.error(f"{csv_file}: File Not Found!")
         sys.exit(2)
-    
+
     except IsADirectoryError:
         logging.error(f"{csv_file}: File Not Found!")
 
