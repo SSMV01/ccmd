@@ -31,7 +31,7 @@ If you have an idea for a new feature, please submit a feature request to the is
 
 ### Code style
 
-Just make sure its readable!
+All files must have a pylint score of 7.0 and above
 
 ### Submitting a pull request
 
