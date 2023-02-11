@@ -14,7 +14,7 @@ parser = argparse.ArgumentParser(
     add_help=False
     )
 
-VERSION = 'ccmd 0.2.7-alpha'
+VERSION = 'ccmd 0.2.8-alpha'
 USERNAME = os.environ.get('LOGNAME')
 
 try:
