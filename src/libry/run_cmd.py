@@ -52,6 +52,8 @@ def run_command(csv_file: str, o, oS):
                             oS = None
                             write_to_file(o, row[1], row[0])
                             compile_command(row[0])
+                        else:
+                            compile_command(row[0])
                     else:
                         notfnd.append('e')
                     rowno += 1
