@@ -9,10 +9,11 @@
 ### customcmd (Under Development)
 ### Tested on
 - Linux mint
+- Arch Linux
 
 ## Requirements
+- ### Linux based OS
 - ### Python3
-- ### Ubuntu based OS
 #### Note: Other OSes will be supported very soon.
 
 
