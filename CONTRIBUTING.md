@@ -13,7 +13,7 @@ If you've found a bug in ccmd, please submit a report to our issue tracker. When
 
 ## Requesting a feature
 
-If you have an idea for a new feature, please submit a feature request to the issue tracker on our [second branch](https://github.com/SSMV01/ccmd/tree/argparse+helpmsg). When submitting a feature request, please include the following information:
+If you have an idea for a new feature, please submit a feature request to the issue tracker. When submitting a feature request, please include the following information:
 
 - A description of the feature
 - Use case(s) for the feature
@@ -34,8 +34,6 @@ If you have an idea for a new feature, please submit a feature request to the is
 All files must have a pylint score of 7.0 and above
 
 ### Submitting a pull request
-
-### Note: If it is a new feature then please submit a pull request on the [second branch](https://github.com/SSMV01/ccmd/tree/argparse+helpmsg)
 
 When submitting a pull request, please make sure to:
 
