@@ -12,5 +12,3 @@ def help():
     -v         --version         Display the version number.
     \nSee: 'https://github.com/SSMV01/CustomCmd/blob/main/README.md' for more information.""")
     sys.exit(0)
-
-help()
