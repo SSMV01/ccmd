@@ -1,9 +1,7 @@
 import sys
 
 def help():
-    print("""Basic Usage: ccmd [command(s)] [option(s)]
-    \nUsage: ccmd <option VALUE> [command(s)] [option(s)]
-    \nType: ccmd --help [option name]\nFor more information about the option.
+    print("""Usage: ccmd <option VALUE> [command(s)] [option(s)]
     \nOptions:
     --new                        Create a custom new command.
     --opencsv                    Open the cmds.csv file.
@@ -14,3 +12,5 @@ def help():
     -v         --version         Display the version number.
     \nSee: 'https://github.com/SSMV01/CustomCmd/blob/main/README.md' for more information.""")
     sys.exit(0)
+
+help()
