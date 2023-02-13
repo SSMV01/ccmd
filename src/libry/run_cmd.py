@@ -14,13 +14,12 @@ def write_to_file(output_file: str, command_name: str, command: str):
         sys.exit(2)
     with open(output_file, 'a', encoding='utf-8') as file:
         file.writelines('\n')
-        file.writelines('-' * 75)
-        file.writelines( '\n' + command_name + ':')
-        file.writelines(f"\nStart time: {datetime.now()}\n")
+        file.writelines(f'\nCommand {command_name}\n')
+        file.writelines(f'-' * 20)
+        file.writelines(f"\nStart time: {str(datetime.now()).split('.')[0]}\n")
         file.writelines('\n')
         output = compile_command_for_output(command)
         file.writelines(output + '\n')
-        file.writelines('-' * 75)
 
 
 def run_command(csv_file: str, o, oS):
