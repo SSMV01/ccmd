@@ -21,7 +21,7 @@ try:
     with open(f'/home/{USERNAME}/ccmd/bin/cmds_target.txt', 'r', encoding='utf-8') as target_file:
         csv_file = target_file.read()
 except FileNotFoundError:
-    logging.error(f"Could not find 'cmds_target' at /home/{USERNAME}/ccmd/bin/cmds_target.")
+    logging.error(f"Could not find 'cmds_target' at /home/{USERNAME}/ccmd/bin/.")
     logging.info("Check if file has been deleted or moved or renamed.")
     sys.exit(2)
 
