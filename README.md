@@ -1,6 +1,6 @@
 <img src="https://raw.githubusercontent.com/SSMV01/ccmd/main/CCMD.png"></img>
 
-## ccmd is a tool created to help you spend less time typing commands and more time getting things done.
+<span style="font-weight:300;font-size:20px;"> ccmd is a tool created to help you spend less time typing commands and more time getting things done. </span>
 
 ---
 
