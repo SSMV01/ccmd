@@ -100,8 +100,8 @@ ccmd --new
 2: Enter the values for the inputs:
 
 ```
-Actual Command: <Command To Replace>
-Command Name: <Your Command name>
+Actual Command: [Actual Command]
+Command Name: [Command name]
 ```
 
 Using `_` underscores here is not necessary
@@ -147,13 +147,13 @@ command ?: string || command , Command_name
 <br>
 
 ```
-ccmd <Command Name>
+ccmd [Command Name]
 ```
 
 ### Using multiple commands
 
 ```
-ccmd <command#1> <command#2> ...
+ccmd [command#1] [command#2] ...
 ```
 
 <br>
@@ -163,17 +163,17 @@ ccmd <command#1> <command#2> ...
 *--output* = write to file and execute
 
 ```
-ccmd <command(s)> --output <out_file>
+ccmd [command(s)] --output [path to file]
 ```
-You can replace *-output* with *-o*
+You can replace *-o-utput* with *-o*
 
 *--output-silent* = write to file
 
 ```
-ccmd <command(s)> --output-silent <out_file>
+ccmd [command(s)] --output-silent [path to file]
 ```
 
-You can replace *-output-silent* with *-oS*
+You can replace *--output-silent* with *-oS*
 
 <br>
 
@@ -188,7 +188,7 @@ ccmd --opencsv
 ## Setting the location of the csv file
 
 ```
-ccmd --target <Path to csv file>
+ccmd --target [Path to csv file]
 ```
 
 If you don't have a specific csv file you want to use:
