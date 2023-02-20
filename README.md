@@ -1,4 +1,4 @@
-[Logo](https://raw.githubusercontent.com/SSMV01/ccmd/main/CCMD.png)
+<img src="https://raw.githubusercontent.com/SSMV01/ccmd/main/CCMD.png"></img>
 
 [![Latest Release](https://img.shields.io/github/v/release/SSMV01/ccmd?display_name=tag&include_prereleases)](https://github.com/SSMV01/ccmd/releases)
 [![CodeFactor](https://www.codefactor.io/repository/github/SSMV01/ccmd/badge)](https://www.codefactor.io/repository/github/ssmv01/ccmd)
