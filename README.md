@@ -1,4 +1,5 @@
-<img src="https://raw.githubusercontent.com/SSMV01/ccmd/main/CCMD%20Logo.png"></img>
+<img style="display:block; margin-left:auto; margin-right:auto;"
+src="https://raw.githubusercontent.com/SSMV01/ccmd/main/CCMD%20Logo.png"></img>
 
 ### ccmd is a tool created to help you spend less time typing commands and more time getting things done.
 
