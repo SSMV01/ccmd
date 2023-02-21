@@ -1,26 +1,22 @@
 import sys
 import logging
 import os
+from pathlib import Path
 # Initialize logging
 logging.basicConfig(format="%(levelname)s: %(message)s")
 logging.getLogger().setLevel(logging.INFO)
 
 username = os.environ.get("LOGNAME")
 
-def set_csv_file(cmds_file):
-    cmds_file_location = cmds_file
-    if cmds_file_location == 'default':
-        cmds_file_location = f'/home/{username}/ccmd/bin/cmds.csv'
+def set_csv_file(csv_file_location):
+    if csv_file_location == 'default':
+        csv_file_location = f'/home/{username}/ccmd/bin/cmds.csv'
 
-    try:
+    if Path(csv_file_location).is_file():
         with open(f'/home/{username}/ccmd/bin/cmds_target.txt', 'w', encoding='utf-8') as target_file:
-            target_file.write(cmds_file_location)
-        if cmds_file_location == "default":
-            logging.info("Default Set.")
-            sys.exit(0)
-        logging.info("Target File Set.")
+            target_file.write(csv_file_location)
+        logging.info("csv file set.")
         sys.exit(0)
-
-    except PermissionError:
-        logging.error("Premission denied! Try using 'sudo'.")
+    else:
+        logging.error("%s: File Not Found!", csv_file_location)
         sys.exit(2)
