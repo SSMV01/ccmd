@@ -11,7 +11,7 @@ def rm_space(inp: str):
     return final_inp.join(inp)
 
 def get_and_check(msg):
-    print(f'{msg}: ')
+    print(f'{msg}: ', end='')
     got_input = input().strip()
     if check_input(got_input) == 0:
         return got_input
@@ -19,7 +19,7 @@ def get_and_check(msg):
     return ''
 
 def get_and_check_nospace(msg):
-    print(f'{msg}: ')
+    print(f'{msg}: ', end='')
     got_input = input().strip()
     if check_input(got_input) == 0:
         if ' ' in got_input:
