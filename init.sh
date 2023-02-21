@@ -1,5 +1,7 @@
 #!/usr/bin/bash
 
-sudo chmod +x bin/ccmd.sh
-sudo cp bin/ccmd.sh /bin/ccmd
-echo Sucessfully initialized.
+if chmod +x bin/ccmd.sh && cp bin/ccmd.sh ~/.local/bin/ccmd; then
+    echo Sucessfully initialized.
+else
+    echo initialization failed!
+fi

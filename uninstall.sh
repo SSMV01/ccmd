@@ -1,5 +1,7 @@
 #!/usr/bin/bash
 
-sudo rm /bin/ccmd
-username=$(whoami)
-sudo rm -r /home/$username/ccmd
+if rm ~/.local/bin/ccmd && rm -r ~/ccmd; then
+    echo Sucessfully uninstalled.
+else
+    echo uninstallation failed!
+fi
