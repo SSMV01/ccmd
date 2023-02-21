@@ -25,9 +25,9 @@ src="https://raw.githubusercontent.com/SSMV01/ccmd/main/CCMD%20logo.png"></img>
 
 # Installation
 
-Download the source from [releases](https://github.com/ssmv01/ccmd/releases) and save it at /home/(user) as ccmd
+Download the source from [releases](https://github.com/ssmv01/ccmd/releases) and save it at /home/{user} (~) as ccmd
 
-Run the following in your terminal
+Then run the following in your terminal
 ```
 cd ~/ccmd
 
@@ -35,7 +35,7 @@ rm -rf .git
 
 sudo bash init.sh
 
-ccmd --target default
+ccmd --setcsv default
 ```
 
 You can replace *default* with the path to your preferred csv file
@@ -66,7 +66,7 @@ USE `_` underscores for spaces in *command name*s
 
 <br>
 
-1: Open the csv file with:
+1: Open the csv file:
 
 ```
 ccmd --opencsv
@@ -92,7 +92,7 @@ USE `_` underscores for spaces in *Command names*
 ### Creating commands from terminal
 <br>
 
-1: Use _--new_:
+1: Use *--new*:
 
 ```
 ccmd --new
@@ -189,13 +189,13 @@ ccmd --opencsv
 ## Setting the location of the csv file
 
 ```
-ccmd --target [Path to csv file]
+ccmd --setcsv [Path to csv file]
 ```
 
 If you don't have a specific csv file you want to use:
 
 ```
-ccmd --target default
+ccmd --setcsv default
 ```
 
 <br>
@@ -240,6 +240,14 @@ Do not use _sudo_ here
 
 ---
 <br>
+
+# Exit codes
+
+`0`: Execution completed without errors
+
+`1`: Keyboard interrupt
+
+`2`: Execution failed
 
 ### Info
 
