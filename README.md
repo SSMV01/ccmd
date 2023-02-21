@@ -250,7 +250,7 @@ Do not use _sudo_ here
 
 ### Info
 
-_Version_: 0.2.10-alpha
+_Version_: 0.2.12-alpha
 
 _Author_: [SSMV01](https://github.com/SSMV01)
 
