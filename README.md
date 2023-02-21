@@ -19,7 +19,7 @@ src="https://raw.githubusercontent.com/SSMV01/ccmd/main/CCMD%20logo.png"></img>
 
 ## Requirements
 - ### Linux based OS
-- ### Python3
+- ### Python 3 (>= 3.10 recommend)
 #### Note: Other OSes will be supported very soon.
 
 
