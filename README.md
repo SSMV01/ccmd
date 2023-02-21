@@ -238,7 +238,6 @@ bash uninstall.sh
 
 Do not use _sudo_ here
 
----
 <br>
 
 # Exit codes
@@ -248,6 +247,10 @@ Do not use _sudo_ here
 `1`: Keyboard interrupt
 
 `2`: Execution failed
+
+---
+
+<br>
 
 ### Info
 
