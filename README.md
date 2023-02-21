@@ -31,8 +31,6 @@ Then run the following in your terminal
 ```
 cd ~/ccmd
 
-rm -rf .git
-
 sudo bash init.sh
 
 ccmd --setcsv default
