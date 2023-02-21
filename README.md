@@ -31,7 +31,7 @@ Then run the following in your terminal
 ```
 cd ~/ccmd
 
-sudo bash init.sh
+bash init.sh
 
 ccmd --setcsv default
 ```
