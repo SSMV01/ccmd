@@ -10,5 +10,5 @@ def help():
     -oS        --output-silent   Write output of command(s) to file.
     -h         --help            Displays this message.
     -v         --version         Display the version number.
-    \nSee: 'https://github.com/SSMV01/CustomCmd/blob/main/README.md' for more information.""")
+    \nSee: 'https://github.com/SSMV01/ccmd/blob/main/README.md' for more information.""")
     sys.exit(0)
