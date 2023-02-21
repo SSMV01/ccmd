@@ -38,9 +38,9 @@ def compile_command(cmd: str):
     elif '?:' in cmd and '||' in cmd:
         if_contains(cmd)
     elif '?=' in cmd or '?:' in cmd and '||' not in cmd:
-        logging.error(f"Syntax error in '{cmd}': missing ||")
+        logging.error("Syntax error in '%s': missing ||", cmd)
     elif '||' in cmd and '?:' not in cmd and '?=' not in cmd:
-        logging.error(f"Syntax error in '{cmd}': missing ?: OR ?=")
+        logging.error("Syntax error in '%s': missing ?: OR ?=", cmd)
     else:
         os.system(cmd)
 
@@ -60,7 +60,7 @@ def if_equals_for_output(cmd: str):
         output2 = check_out2.stdout.read()
         output2 = str(output2.strip(), 'utf-8')
     else:
-        output2 = f"ERROR: output is not equal to '{split_run[0].strip()}'"
+        output2 = f"output is not equal to '{split_run[0].strip()}'"
 
     return f"{output1}\n\n{output2}"
 
@@ -76,7 +76,7 @@ def if_contains_for_output(cmd: str):
         output2 = check_out2.stdout.read()
         output2 = str(output2.strip(), 'utf-8')
     else:
-        output2 = f"ERROR: output does not contain '{split_run[0].strip()}'"
+        output2 = f"output does not contain '{split_run[0].strip()}'"
 
     return f"{output1}\n\n{output2}"
 
