@@ -250,8 +250,6 @@ Do not use _sudo_ here
 
 ---
 
-<br>
-
 ### Info
 
 _Version_: 0.2.10-alpha
