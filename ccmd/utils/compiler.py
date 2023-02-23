@@ -1,6 +1,10 @@
 import os
 import logging
+import colorama
+from colorama import *
 from subprocess import Popen, PIPE
+# Initialize colorama
+colorama.init(autoreset=True)
 # Initialize logging
 logging.basicConfig(format="%(levelname)s: %(message)s")
 
@@ -11,22 +15,32 @@ def if_equals(cmd: str):
     split_if = cmd.split('?=') # ["first command", "string & second command"]
     split_run = split_if[1].split('||') # ["string", "second command"]
     check_out = Popen(split_if[0].split(), stdout=PIPE) # check output of first command
-    output = check_out.stdout.read() # read output
-    output = str(output.strip(), 'utf-8') # extract output
 
+    print(Fore.GREEN + split_if[0].strip()) # Print command
+    print(Fore.BLUE + '-' * 20)
     os.system(split_if[0].strip()) # run first command
+    output = check_out.stdout.read() # read output
+    output = str(output.strip(), 'utf-8') # remove unwanted chars
+    print('\n')
     if output == split_run[0].strip(): # if output  of first command == the string
+        print(Fore.GREEN + split_run[1].strip()) # Print command
+        print(Fore.BLUE + '-' * 20)
         os.system(split_run[1].strip()) # run second command
 
 def if_contains(cmd: str):
     split_if = cmd.split('?:')
     split_run = split_if[1].split('||')
     check_out = Popen(split_if[0].split(), stdout=PIPE)
+
+    print(Fore.GREEN + split_if[0].strip())
+    print(Fore.BLUE + '-' * 20)
+    os.system(split_if[0].strip())
     output = check_out.stdout.read()
     output = str(output.strip(), 'utf-8')
-
-    os.system(split_if[0].strip())
+    print('\n')
     if split_run[0].strip() in output: # if output  of first command contains the string
+        print(Fore.GREEN + split_run[1].strip())
+        print(Fore.BLUE + '-' * 20)
         os.system(split_run[1].strip())
 
 # if it is a complex command; make sure the syntax is correct
