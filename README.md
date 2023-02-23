@@ -53,8 +53,6 @@ And you're all set!
 
 ## Creating a New Custom Command
 
-<br>
-
 ### Writing your command directly into the cmds.csv file
 <br>
 
