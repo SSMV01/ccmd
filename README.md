@@ -11,9 +11,10 @@ src="https://raw.githubusercontent.com/SSMV01/ccmd/main/CCMD%20logo.png"></img>
 [![Open Issues](https://img.shields.io/github/issues-raw/SSMV01/ccmd)](https://github.com/SSMV01/ccmd/issues)
 [![License](https://img.shields.io/github/license/SSMV01/ccmd?color=blue)](https://github.com/SSMV01/ccmd/)
 
-#### This project is Under development. We would love to hear your opinion on this project.
-#### Read [CONTRIBUTING.md](https://github.com/SSMV01/ccmd/blob/main/CONTRIBUTING.md) if you want to help us make this project better
-#### or mail me at ssmvmails@gmail.com
+This project is Under development. We would love to hear your opinion on this project.
+Read [CONTRIBUTING.md](https://github.com/SSMV01/ccmd/blob/main/CONTRIBUTING.md) if you want to help us make this project better
+or mail me at ssmvmails@gmail.com
+report bugs at our [issue tracker](https://github.com/SSMV01/ccmd/issues)
 
 <br>
 
