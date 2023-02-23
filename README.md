@@ -197,7 +197,7 @@ OR
 ccmd -l
 ```
 
-If command names are in blue they are '[check_if commands](https://github.com/ssmv01/ccmd#Check-if-commands)'
+If command names are in blue they are '[check_if commands](https://github.com/ssmv01/ccmd#check-if-commands)'
 
 ## Removing Commands
 
