@@ -21,11 +21,11 @@ def if_equals(cmd: str):
     os.system(split_if[0].strip()) # run first command
     output = check_out.stdout.read() # read output
     output = str(output.strip(), 'utf-8') # remove unwanted chars
-    print('\n')
     if output == split_run[0].strip(): # if output  of first command == the string
         print(Fore.GREEN + split_run[1].strip()) # Print command
         print(Fore.BLUE + '-' * 20)
         os.system(split_run[1].strip()) # run second command
+        print()
 
 def if_contains(cmd: str):
     split_if = cmd.split('?:')
@@ -37,11 +37,11 @@ def if_contains(cmd: str):
     os.system(split_if[0].strip())
     output = check_out.stdout.read()
     output = str(output.strip(), 'utf-8')
-    print('\n')
     if split_run[0].strip() in output: # if output  of first command contains the string
         print(Fore.GREEN + split_run[1].strip())
         print(Fore.BLUE + '-' * 20)
         os.system(split_run[1].strip())
+        print()
 
 # if it is a complex command; make sure the syntax is correct
 # else just execute the command
@@ -56,7 +56,10 @@ def compile_command(cmd: str):
     elif '||' in cmd and '?:' not in cmd and '?=' not in cmd:
         logging.error("Syntax error in '%s': missing ?: OR ?=", cmd)
     else:
+        print(Fore.GREEN + cmd)
+        print(Fore.BLUE + '-' * 20)
         os.system(cmd)
+        print()
 
 # For -o and -oS
 # Returns output of the first command; then checks if the output is equal to/contains the user provided string
