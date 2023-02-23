@@ -102,7 +102,7 @@ Using `_` underscores here is not necessary
 
 <br>
 
-### Check Output and run commands
+### Check if commands
 
 
 If output is equal to:
@@ -184,6 +184,20 @@ ccmd --setcsv default
 ```
 
 <br>
+
+## List all commands
+
+```
+ccmd --list
+```
+
+OR
+
+```
+ccmd -l
+```
+
+If command names are in blue they are '[check_if commands](https://github.com/ssmv01/ccmd#Check-if-commands)'
 
 ## Removing Commands
 
