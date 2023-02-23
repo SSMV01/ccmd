@@ -12,7 +12,7 @@ def list_command_names(csv_file):
             if len(row) < 2:
                 continue
             if '?:' in row[0] or '?=' in row[0]:
-                print(Fore.GREEN + row[1])
+                print(Fore.BLUE + row[1])
             else:
                 print(row[1])
             row_no += 1
