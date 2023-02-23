@@ -1,23 +1,23 @@
 <img style="display:block; margin-left:auto; margin-right:auto;"
-src="https://raw.githubusercontent.com/SSMV01/ccmd/main/CCMD%20logo.png"></img>
+src="https://raw.githubusercontent.com/ssmv01/ccmd/main/CCMD%20logo.png"></img>
 
 <p style="font-size:18.2px;font-weight:300;"> Spend less time typing commands and more time <u>getting things done</u>.</p>
 
 ---
 
-[![Latest Release](https://img.shields.io/github/v/release/SSMV01/ccmd?display_name=tag&include_prereleases)](https://github.com/SSMV01/ccmd/releases)
-[![CodeFactor](https://www.codefactor.io/repository/github/SSMV01/ccmd/badge)](https://www.codefactor.io/repository/github/ssmv01/ccmd)
-[![Build](https://img.shields.io/github/actions/workflow/status/SSMV01/ccmd/pylint.yml)](https://github.com/SSMV01/ccmd/actions)
-[![Open Issues](https://img.shields.io/github/issues-raw/SSMV01/ccmd)](https://github.com/SSMV01/ccmd/issues)
-[![License](https://img.shields.io/github/license/SSMV01/ccmd?color=blue)](https://github.com/SSMV01/ccmd/)
+[![Latest Release](https://img.shields.io/github/v/release/ssmv01/ccmd?display_name=tag&include_prereleases)](https://github.com/ssmv01/ccmd/releases)
+[![CodeFactor](https://www.codefactor.io/repository/github/ssmv01/ccmd/badge)](https://www.codefactor.io/repository/github/ssmv01/ccmd)
+[![Build](https://img.shields.io/github/actions/workflow/status/ssmv01/ccmd/pylint.yml)](https://github.com/ssmv01/ccmd/actions)
+[![Open Issues](https://img.shields.io/github/issues-raw/ssmv01/ccmd)](https://github.com/ssmv01/ccmd/issues)
+[![License](https://img.shields.io/github/license/ssmv01/ccmd?color=blue)](https://github.com/ssmv01/ccmd/)
 
 This project is Under development. We would love to hear your opinion on this project.
 
-Read [CONTRIBUTING.md](https://github.com/SSMV01/ccmd/blob/main/CONTRIBUTING.md) if you want to help us make this project better
+Read [CONTRIBUTING.md](https://github.com/ssmv01/ccmd/blob/main/CONTRIBUTING.md) if you want to help us make this project better
 
 or mail me at ssmvmails@gmail.com
 
-report bugs at our [issue tracker](https://github.com/SSMV01/ccmd/issues)
+report bugs at our [issue tracker](https://github.com/ssmv01/ccmd/issues)
 
 <br>
 
@@ -34,7 +34,7 @@ Run the following commands in your terminal
 ```
 cd ~
 
-git clone https://github.com/SSMV01/ccmd.git
+git clone https://github.com/ssmv01/ccmd.git
 
 cd ~/ccmd
 
@@ -251,7 +251,7 @@ Do not use _sudo_ here
 
 ### Info
 
-*Version*: 0.2.12-alpha
+*Version*: 0.3.2-alpha
 
 *Author*: [SSMV01](https://github.com/SSMV01)
 
