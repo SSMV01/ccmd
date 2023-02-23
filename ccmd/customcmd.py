@@ -3,7 +3,7 @@ import os
 import sys
 import logging
 import argparse
-from libry import (create_command, set_csv_file, run_command, help)
+from libry import (create_command, set_csv_file, run_command, help, list_command_names)
 # Initialize logging
 logging.basicConfig(format='%(levelname)s: %(message)s')
 logging.getLogger().setLevel(logging.INFO)
@@ -26,9 +26,10 @@ except FileNotFoundError:
 
 parser.add_argument('-h', '--help', help="Display help message", action='store_true')
 parser.add_argument('-v', '--version', help="Display version number", action='store_true')
+parser.add_argument('-l', '--list', help="List all commands names in csv", action='store_true')
 parser.add_argument('--opencsv', help="Open your csv file", action='store_true')
-parser.add_argument('--new', help="Create new custom command", action='store_true')
 parser.add_argument('--setcsv', type=str, help="Set target csv file")
+parser.add_argument('--new', help="Create new custom command", action='store_true')
 parser.add_argument('-o', '--output', type=str, help="Write output to file and execute the command")
 parser.add_argument('-oS', '--output-silent', type=str, help="Write output to file")
 args, commands = parser.parse_known_args()
@@ -48,6 +49,8 @@ def main():
     elif args.opencsv:
         os.system(f'editor {csv_file}')
         sys.exit(0)
+    elif args.list:
+        list_command_names(csv_file)
     elif args.new:
         create_command(csv_file)
     elif commands:
