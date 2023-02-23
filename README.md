@@ -1,7 +1,7 @@
 <img style="display:block; margin-left:auto; margin-right:auto;"
 src="https://raw.githubusercontent.com/SSMV01/ccmd/main/CCMD%20logo.png"></img>
 
-### Spend less time typing commands and more time <u>getting things done</u>.
+<p style="font-size:18.2px;font-weight:300;"> Spend less time typing commands and more time <u>getting things done</u>.</p>
 
 ---
 
@@ -11,25 +11,30 @@ src="https://raw.githubusercontent.com/SSMV01/ccmd/main/CCMD%20logo.png"></img>
 [![Open Issues](https://img.shields.io/github/issues-raw/SSMV01/ccmd)](https://github.com/SSMV01/ccmd/issues)
 [![License](https://img.shields.io/github/license/SSMV01/ccmd?color=blue)](https://github.com/SSMV01/ccmd/)
 
+#### This project is Under development. We would love to hear your opinion on this project.
+#### Read [CONTRIBUTING.md](https://github.com/SSMV01/ccmd/blob/main/CONTRIBUTING.md) if you want to help us make this project better
+#### or mail me at ssmvmails@gmail.com
 
-### customcmd (Under Development)
-### Tested on
-- Linux mint
-- Arch Linux
+<br>
 
 ## Requirements
-- ### Linux based OS
-- ### Python 3 (>= 3.10 recommend)
+### - Linux based OS
+### - Python 3 (>= 3.10 recommend)
 #### Note: Other operating systems will be supported very soon.
 
+<br>
 
 # Installation
 
-Download the source from [releases](https://github.com/ssmv01/ccmd/releases) and save it at /home/{user} (~) as ccmd
-
-Then run the following in your terminal
+Run the following commands in your terminal
 ```
+cd ~
+
+git clone https://github.com/SSMV01/ccmd.git
+
 cd ~/ccmd
+
+rm -rf .git
 
 bash init.sh
 
@@ -42,26 +47,11 @@ And you're all set!
 
 # Usage
 
-```
-ccmd [command(s)] [option(s)...]
-```
-
 ## Creating a New Custom Command
-#### Note: If you create multiple commands with the same name they will all be executed when you run the command.
 
 <br>
 
 ### Writing your command directly into the cmds.csv file
-<br>
-
-### Syntax
-
-```
-Actual Command,Command_name
-```
-
-USE `_` underscores for spaces in *command name*s
-
 <br>
 
 1: Open the csv file:
@@ -79,9 +69,10 @@ Actual Command#2 , Command_name#2
 ...
 ...
 ```
+USE `_` underscores for spaces in *Command names*
+
 **Write only one pair of command per row.**
 
-USE `_` underscores for spaces in *Command names*
 
 3: Save and close the file once you are done.
 
@@ -146,12 +137,6 @@ command ?: string || command , Command_name
 <br>
 
 ```
-ccmd [Command Name]
-```
-
-### Using multiple commands
-
-```
 ccmd [command#1] [command#2] ...
 ```
 
@@ -159,20 +144,20 @@ ccmd [command#1] [command#2] ...
 
 ### Using --output and --output-silent
 
-*--output* = write to file and execute
+`--output` = write to file and execute
 
 ```
 ccmd [command(s)] --output [path to file]
 ```
-You can replace *-o-utput* with *-o*
+You can replace `--output` with `-o`
 
-*--output-silent* = write to file
+`--output-silent` = write to file
 
 ```
 ccmd [command(s)] --output-silent [path to file]
 ```
 
-You can replace *--output-silent* with *-oS*
+You can replace `--output-silent` with `-oS`
 
 <br>
 
@@ -208,7 +193,7 @@ For Now:
 ccmd --opencsv
 ```
 
-Find and Erase the row. (Try Ctrl + F)
+Find and Erase the row. (Try Ctrl + F if you are using a graphical editor)
 
 <br>
 
@@ -250,8 +235,8 @@ Do not use _sudo_ here
 
 ### Info
 
-_Version_: 0.2.12-alpha
+*Version*: 0.2.12-alpha
 
-_Author_: [SSMV01](https://github.com/SSMV01)
+*Author*: [SSMV01](https://github.com/SSMV01)
 
 MIT License
