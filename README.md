@@ -21,6 +21,26 @@ report bugs at our [issue tracker](https://github.com/ssmv01/ccmd/issues)
 
 <br>
 
+## Table of contents
+1. [Installation]()
+2. [Usage]()
+    - [Creating a new cutom command]()
+        - [Writing your commands directly into cmds.csv]()
+        - [Creating commands from terminal]()
+        - [Check if command]()
+    - [Using Your Commands]()
+        -[Using --output and --output-silent]()
+    - [Opening the csv file]()
+    - [Setting the location of the csv file]()
+    - [List commands]()
+    - [Removing commands]()
+    - [Display version]()
+3. [Uninstallation]()
+4. [Exit codes]()
+5. [Info]()
+
+<br>
+
 ## Requirements
 ### - Linux based OS
 ### - Python 3 (>= 3.10 recommend)
@@ -39,9 +59,9 @@ python3 get_ccmd.py
 
 # Usage
 
-## Creating a New Custom Command
+## Creating a new custom command
 
-### Writing your command directly into the cmds.csv file
+### Writing your commands directly into the cmds.csv file
 <br>
 
 1: Open the csv file:
@@ -105,7 +125,7 @@ If output contains:
 command ?: string || command , Command_name
 ```
 
-### Explaination
+#### Explaination
 - the first *command* is the command you want to initially run when you execute the custom command
 
 - *?=* checks if the output of the first *command* is equal to string passed after *?=*
@@ -121,7 +141,7 @@ command ?: string || command , Command_name
 
 <br>
 
-## Using Your Commands
+## Using your commands
 #### Note: All commands with the same name will be executed.
 
 <br>
@@ -173,7 +193,7 @@ ccmd --setcsv default
 
 <br>
 
-## List all commands
+## List commands
 
 ```
 ccmd --list
@@ -187,7 +207,7 @@ ccmd -l
 
 If command names are in blue they are '[check_if commands](https://github.com/ssmv01/ccmd#check-if-commands)'
 
-## Removing Commands
+## Removing commands
 
 #### This feature will be added very soon.
 
