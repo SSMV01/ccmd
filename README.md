@@ -260,8 +260,8 @@ Do not use _sudo_ here
 
 ### Info
 
-*Version*: 0.3.6-alpha
+Version: 0.3.6-alpha
 
-*Author*: [SSMV01](https://github.com/SSMV01)
+Author: [SSMV01](https://github.com/SSMV01)
 
 MIT License
