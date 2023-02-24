@@ -71,7 +71,8 @@ def setup():
     check_call('ccmd --setcsv default', shell=True)
     check_call('ccmd', shell=True)
 
-    logging.info("\nInstallation complete\n")
+    print()
+    logging.info("Installation complete\n")
     
 def main():
     if os.path.exists(f'/home/{USERNAME}/.ccmd'):
