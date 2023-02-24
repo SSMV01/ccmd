@@ -60,14 +60,17 @@ def rename():
     check_call('mv ccmd .ccmd', shell=True)
 
 def setup():
+    logging.info("Setting things up...")
     chdir(f'/home/{USERNAME}/.ccmd')
 
+    check_call('rm -rf .git', shell=True)
     check_call('chmod +x bin/ccmd.sh', shell=True)
     check_call('cp bin/ccmd.sh ~/.local/bin/ccmd', shell=True)
+    
+    check_call('ccmd --setcsv default', shell=True)
+    check_call('ccmd', shell=True)
 
     logging.info("Installation complete\n")
-
-    check_call('ccmd', shell=True)
     
 def main():
     if os.path.exists(f'/home/{USERNAME}/.ccmd'):
