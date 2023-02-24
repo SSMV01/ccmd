@@ -22,22 +22,23 @@ report bugs at our [issue tracker](https://github.com/ssmv01/ccmd/issues)
 <br>
 
 ## Table of contents
-1. [Installation]()
-2. [Usage]()
-    - [Creating a new cutom command]()
-        - [Writing your commands directly into cmds.csv]()
-        - [Creating commands from terminal]()
-        - [Check if command]()
-    - [Using Your Commands]()
-        -[Using --output and --output-silent]()
-    - [Opening the csv file]()
-    - [Setting the location of the csv file]()
-    - [List commands]()
-    - [Removing commands]()
-    - [Display version]()
-3. [Uninstallation]()
-4. [Exit codes]()
-5. [Info]()
+0. [Requirements](https://github.com/SSMV01/ccmd#requirements)
+1. [Installation](https://github.com/SSMV01/ccmd#installation)
+2. [Usage](https://github.com/SSMV01/ccmd#usage)
+    - [Creating a new cutom command](https://github.com/SSMV01/ccmd#creating-a-new-cutom-command)
+        - [Writing your commands directly into cmds.csv](https://github.com/SSMV01/ccmd#writing-your-commands-directly-into-the-cmdscsv-file)
+        - [Creating commands from terminal](https://github.com/SSMV01/ccmd#creating-commands-from-terminal)
+        - [Check if command](https://github.com/SSMV01/ccmd#check-if-commands)
+    - [Using Your Commands](https://github.com/SSMV01/ccmd#using-your-commands)
+        -[Using --output and --output-silent](https://github.com/SSMV01/ccmd#using---output-and---output-silent)
+    - [Opening the csv file](https://github.com/SSMV01/ccmd#opening-the-csv-file)
+    - [Setting the location of the csv file](https://github.com/SSMV01/ccmd#setting-the-location-of-the-csv-file)
+    - [List commands](https://github.com/SSMV01/ccmd#list-commands)
+    - [Removing commands](https://github.com/SSMV01/ccmd#removing-commands)
+    - [Display version](https://github.com/SSMV01/ccmd#display-version)
+3. [Uninstallation](https://github.com/SSMV01/ccmd#uninstallation)
+4. [Exit codes](https://github.com/SSMV01/ccmd#exit-codes)
+5. [Info](https://github.com/SSMV01/ccmd#info)
 
 <br>
 
@@ -50,7 +51,7 @@ report bugs at our [issue tracker](https://github.com/ssmv01/ccmd/issues)
 
 # Installation
 
-Go [here](https://raw.githubusercontent.com/SSMV01/ccmd/get_ccmd.py) and save the file in your preferred location with `Ctrl + S` or `right-click > Save as`.
+Go [here](https://raw.githubusercontent.com/SSMV01/ccmd/main/get_ccmd.py) and save the file in your preferred location with `Ctrl + S` or `right-click > Save as`.
 
 Then, execute the file
 ```
