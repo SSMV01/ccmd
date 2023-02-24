@@ -30,24 +30,12 @@ report bugs at our [issue tracker](https://github.com/ssmv01/ccmd/issues)
 
 # Installation
 
-Run the following commands in your terminal
+Go [here](https://raw.githubusercontent.com/SSMV01/ccmd/get_ccmd.py) and save the file in your preferred location with `Ctrl + S` or `right-click > Save as`.
+
+Then, execute the file
 ```
-cd ~
-
-git clone https://github.com/ssmv01/ccmd.git
-
-cd ~/ccmd
-
-rm -rf .git
-
-bash init.sh
-
-ccmd --setcsv default
+python3 get_ccmd.py
 ```
-
-You can replace *default* with the path to your preferred csv file
-
-And you're all set!
 
 # Usage
 
