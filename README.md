@@ -1,23 +1,43 @@
 <img style="display:block; margin-left:auto; margin-right:auto;"
-src="https://raw.githubusercontent.com/SSMV01/ccmd/main/CCMD%20logo.png"></img>
+src="https://raw.githubusercontent.com/ssmv01/ccmd/main/CCMD%20logo.png"></img>
 
 <p style="font-size:18.2px;font-weight:300;"> Spend less time typing commands and more time <u>getting things done</u>.</p>
 
 ---
 
-[![Latest Release](https://img.shields.io/github/v/release/SSMV01/ccmd?display_name=tag&include_prereleases)](https://github.com/SSMV01/ccmd/releases)
-[![CodeFactor](https://www.codefactor.io/repository/github/SSMV01/ccmd/badge)](https://www.codefactor.io/repository/github/ssmv01/ccmd)
-[![Build](https://img.shields.io/github/actions/workflow/status/SSMV01/ccmd/pylint.yml)](https://github.com/SSMV01/ccmd/actions)
-[![Open Issues](https://img.shields.io/github/issues-raw/SSMV01/ccmd)](https://github.com/SSMV01/ccmd/issues)
-[![License](https://img.shields.io/github/license/SSMV01/ccmd?color=blue)](https://github.com/SSMV01/ccmd/)
+[![Latest Release](https://img.shields.io/github/v/release/ssmv01/ccmd?display_name=tag&include_prereleases)](https://github.com/ssmv01/ccmd/releases)
+[![CodeFactor](https://www.codefactor.io/repository/github/ssmv01/ccmd/badge)](https://www.codefactor.io/repository/github/ssmv01/ccmd)
+[![Build](https://img.shields.io/github/actions/workflow/status/ssmv01/ccmd/pylint.yml)](https://github.com/ssmv01/ccmd/actions)
+[![Open Issues](https://img.shields.io/github/issues-raw/ssmv01/ccmd)](https://github.com/ssmv01/ccmd/issues)
+[![License](https://img.shields.io/github/license/ssmv01/ccmd?color=blue)](https://github.com/ssmv01/ccmd/)
 
 This project is Under development. We would love to hear your opinion on this project.
 
-Read [CONTRIBUTING.md](https://github.com/SSMV01/ccmd/blob/main/CONTRIBUTING.md) if you want to help us make this project better
+Read [CONTRIBUTING.md](https://github.com/ssmv01/ccmd/blob/main/CONTRIBUTING.md) if you want to help us make this project better
 
 or mail me at ssmvmails@gmail.com
 
-report bugs at our [issue tracker](https://github.com/SSMV01/ccmd/issues)
+report bugs at our [issue tracker](https://github.com/ssmv01/ccmd/issues)
+
+<br>
+
+## Table of contents
+1. [Installation]()
+2. [Usage]()
+    - [Creating a new cutom command]()
+        - [Writing your commands directly into cmds.csv]()
+        - [Creating commands from terminal]()
+        - [Check if command]()
+    - [Using Your Commands]()
+        -[Using --output and --output-silent]()
+    - [Opening the csv file]()
+    - [Setting the location of the csv file]()
+    - [List commands]()
+    - [Removing commands]()
+    - [Display version]()
+3. [Uninstallation]()
+4. [Exit codes]()
+5. [Info]()
 
 <br>
 
@@ -30,30 +50,18 @@ report bugs at our [issue tracker](https://github.com/SSMV01/ccmd/issues)
 
 # Installation
 
-Run the following commands in your terminal
+Go [here](https://raw.githubusercontent.com/SSMV01/ccmd/get_ccmd.py) and save the file in your preferred location with `Ctrl + S` or `right-click > Save as`.
+
+Then, execute the file
 ```
-cd ~
-
-git clone https://github.com/SSMV01/ccmd.git
-
-cd ~/ccmd
-
-rm -rf .git
-
-bash init.sh
-
-ccmd --setcsv default
+python3 get_ccmd.py
 ```
-
-You can replace *default* with the path to your preferred csv file
-
-And you're all set!
 
 # Usage
 
-## Creating a New Custom Command
+## Creating a new custom command
 
-### Writing your command directly into the cmds.csv file
+### Writing your commands directly into the cmds.csv file
 <br>
 
 1: Open the csv file:
@@ -102,7 +110,7 @@ Using `_` underscores here is not necessary
 
 <br>
 
-### Check Output and run commands
+### Check if commands
 
 
 If output is equal to:
@@ -117,7 +125,7 @@ If output contains:
 command ?: string || command , Command_name
 ```
 
-### Explaination
+#### Explaination
 - the first *command* is the command you want to initially run when you execute the custom command
 
 - *?=* checks if the output of the first *command* is equal to string passed after *?=*
@@ -133,7 +141,7 @@ command ?: string || command , Command_name
 
 <br>
 
-## Using Your Commands
+## Using your commands
 #### Note: All commands with the same name will be executed.
 
 <br>
@@ -185,7 +193,21 @@ ccmd --setcsv default
 
 <br>
 
-## Removing Commands
+## List commands
+
+```
+ccmd --list
+```
+
+OR
+
+```
+ccmd -l
+```
+
+If command names are in blue they are '[check_if commands](https://github.com/ssmv01/ccmd#check-if-commands)'
+
+## Removing commands
 
 #### This feature will be added very soon.
 
@@ -237,7 +259,7 @@ Do not use _sudo_ here
 
 ### Info
 
-*Version*: 0.2.12-alpha
+*Version*: 0.3.6-alpha
 
 *Author*: [SSMV01](https://github.com/SSMV01)
 

@@ -1,7 +1,2 @@
-#!/usr/bin/bash
-
-if chmod +x bin/ccmd.sh && cp bin/ccmd.sh ~/.local/bin/ccmd; then
-    echo Sucessfully initialized.
-else
-    echo initialization failed!
-fi
+# Deprecated
+# Use ccmd_install.py to install ccmd
