@@ -18,10 +18,10 @@ VERSION = 'ccmd 0.3.2-alpha'
 USERNAME = os.environ.get('LOGNAME')
 
 try:
-    with open(f'/home/{USERNAME}/ccmd/bin/cmds_target.txt', 'r', encoding='utf-8') as target_file:
+    with open(f'/home/{USERNAME}/.ccmd/bin/cmds_target.txt', 'r', encoding='utf-8') as target_file:
         csv_file = target_file.read()
 except FileNotFoundError:
-    logging.error("Could not find 'cmds_target' at /home/%s/ccmd/bin/.", USERNAME)
+    logging.error("Could not find 'cmds_target' at /home/%s/.ccmd/bin/.", USERNAME)
     sys.exit(2)
 
 parser.add_argument('-h', '--help', help="Display help message", action='store_true')
