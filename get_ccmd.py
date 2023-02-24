@@ -64,6 +64,8 @@ def setup():
     chdir(f'/home/{USERNAME}/.ccmd')
 
     check_call('rm -rf .git', shell=True)
+    check_call('rm -rf .github', shell=True)
+    check_call('rm .gitignore', shell=True)
     check_call('chmod +x bin/ccmd.sh', shell=True)
     check_call('cp bin/ccmd.sh ~/.local/bin/ccmd', shell=True)
     
