@@ -1,3 +1,4 @@
+import os
 import sys
 import logging
 from os import chdir, environ
@@ -16,6 +17,7 @@ chdir(f'/home/{USERNAME}')
 retry = 0
 
 def install_dependencies():
+    logging.info("Installing dependencies...")
     with Popen([sys.executable, '-m', 'pip', 'install', 'colorama'], stdout=PIPE, stderr=PIPE) as install_colorama:
         if b"No module named pip" in install_colorama.stderr.read():
             if retry == 1:
@@ -34,35 +36,51 @@ def install_dependencies():
                     logging.error("Failed to install pip")
                     logging.info("exiting...")
                     sys.exit(2)
-        elif install_colorama.stderr:
+        elif install_colorama.stderr.read() != b'':
             print(install_colorama.stderr.read())
         else:
             with Popen(['echo', '$PATH'], stdout=PIPE) as verify_path:
                 if b'/home/{USERNAME}/.local/bin' not in verify_path.stdout.read():
-                    check_call(f'export PATH=/home/{USERNAME}/.local/bin:$PATH')
+                    check_call(f'export PATH=/home/{USERNAME}/.local/bin:$PATH', shell=True)
             logging.info("Done.")
 
-logging.info("Installing dependencies...")
-install_dependencies()
+def clone():
+    logging.info("Cloning ccmd...")
+    try:
+        with Popen(['git', 'clone', 'https://github.com/ssmv01/ccmd'], stdout=PIPE, stderr=PIPE) as clone_ccmd:
+            if b"Could not resolve host: github.com" in clone_ccmd.stderr.read():
+                logging.error("Failed to access github.com")
+            else:
+                logging.info("Done.")
 
-logging.info("Cloning ccmd...")
-try:
-    with Popen(['git', 'clone', 'https://github.com/ssmv01/ccmd'], stdout=PIPE, stderr=PIPE) as clone_ccmd:
-        if "Could not resolve host: github.com" in clone_ccmd.stderr.read():
-            logging.error("Failed to access github.com")
+    except FileNotFoundError as exception:
+        print(exception)
+
+def rename():
+    check_call('mv ccmd .ccmd', shell=True)
+
+def setup():
+    chdir(f'/home/{USERNAME}/.ccmd')
+
+    check_call('chmod +x bin/ccmd.sh', shell=True)
+    check_call('cp bin/ccmd.sh ~/.local/bin/ccmd', shell=True)
+
+    logging.info("Installation complete\n")
+
+    check_call('ccmd', shell=True)
+    
+def main():
+    if os.path.exists(f'/home/{USERNAME}/.ccmd'):
+        if os.path.exists(f'/home/{USERNAME}/.local/bin/ccmd'):
+            logging.info("CCMD is already installed")
+            sys.exit(0)
         else:
-            logging.info("Done.")
+            setup()
+    else:
+        install_dependencies()
+        clone()
+        rename()
+        setup()
 
-except FileNotFoundError as exception:
-    print(exception)
-
-check_call('mv ccmd .ccmd', shell=True)
-
-chdir(f'/home/{USERNAME}/.ccmd')
-
-check_call('chmod +x bin/ccmd.sh', shell=True)
-check_call('cp bin/ccmd.sh ~/.local/bin/ccmd', shell=True)
-
-logging.info("Installation complete\n")
-
-check_call('ccmd', shell=True)
+if __name__ == '__main__':
+    main()
