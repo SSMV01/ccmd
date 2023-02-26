@@ -16,10 +16,9 @@ NON-PRODUCTION-READY
 This project is **Under development & testing**. We would love to hear your opinion on this project. Feel free to test it and provied us your feedback.
 
 Read [CONTRIBUTING.md](https://github.com/ssmv01/ccmd/blob/main/CONTRIBUTING.md) if you want to help us make this project better
+or mail me at ssmvmails@gmail.com.
 
-or mail me at ssmvmails@gmail.com
-
-report bugs at our [issue tracker](https://github.com/ssmv01/ccmd/issues)
+Report bugs at our [issue tracker](https://github.com/ssmv01/ccmd/issues).
 
 <br>
 
