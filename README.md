@@ -5,13 +5,15 @@ src="https://raw.githubusercontent.com/ssmv01/ccmd/main/CCMD%20logo.png"></img>
 
 ---
 
+NON-PRODUCTION-READY
+
 [![Latest Release](https://img.shields.io/github/v/release/ssmv01/ccmd?display_name=tag&include_prereleases)](https://github.com/ssmv01/ccmd/releases)
 [![CodeFactor](https://www.codefactor.io/repository/github/ssmv01/ccmd/badge)](https://www.codefactor.io/repository/github/ssmv01/ccmd)
 [![Build](https://img.shields.io/github/actions/workflow/status/ssmv01/ccmd/pylint.yml)](https://github.com/ssmv01/ccmd/actions)
 [![Open Issues](https://img.shields.io/github/issues-raw/ssmv01/ccmd)](https://github.com/ssmv01/ccmd/issues)
 [![License](https://img.shields.io/github/license/ssmv01/ccmd?color=blue)](https://github.com/ssmv01/ccmd/)
 
-This project is Under development. We would love to hear your opinion on this project.
+This project is **Under development & testing**. We would love to hear your opinion on this project. Feel free to test it and provied us your feedback.
 
 Read [CONTRIBUTING.md](https://github.com/ssmv01/ccmd/blob/main/CONTRIBUTING.md) if you want to help us make this project better
 
@@ -58,6 +60,8 @@ Then, open the terminal where you have the file stored and execute the file with
 ```
 python3 get_ccmd.py
 ```
+
+*This application is **not** production ready
 
 # Usage
 
