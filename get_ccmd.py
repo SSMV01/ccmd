@@ -54,6 +54,20 @@ def setup():
         check_call('rm -rf .git', shell=True)
         check_call('rm -rf .github', shell=True)
         check_call('rm .gitignore', shell=True)
+        setup_file()
+
+    except subprocess.CalledProcessError as exception:
+        print(exception)
+        sys.exit(2)
+
+    print()
+    logging.info("Installation complete")
+    print(f"**Add '/home/{USERNAME}/.local/bin' to your PATH variable**\n")
+
+def setup_file():
+    chdir(f'/home/{USERNAME}/.ccmd')
+
+    try:
         check_call('chmod +x bin/ccmd.sh', shell=True)
         check_call('cp bin/ccmd.sh ~/.local/bin/ccmd', shell=True)
 
@@ -61,17 +75,13 @@ def setup():
         print(exception)
         sys.exit(2)
 
-    print()
-    logging.info("Installation complete\n")
-    print(f"Add '/home/{USERNAME}/.local/bin' to your PATH variable")
-    
 def main():
     if os.path.exists(f'/home/{USERNAME}/.ccmd'):
         if os.path.exists(f'/home/{USERNAME}/.local/bin/ccmd'):
             logging.info("CCMD is already installed")
             sys.exit(0)
         else:
-            setup()
+            setup_file()
     else:
         install_dependencies()
         clone()
