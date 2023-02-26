@@ -29,7 +29,7 @@ Report bugs at our [issue tracker](https://github.com/ssmv01/ccmd/issues).
     - [Creating a new cutom command](https://github.com/SSMV01/ccmd#creating-a-new-custom-command)
         - [Writing your commands directly into cmds.csv](https://github.com/SSMV01/ccmd#writing-your-commands-directly-into-the-cmdscsv-file)
         - [Creating commands from terminal](https://github.com/SSMV01/ccmd#creating-commands-from-terminal)
-        - [Check if command](https://github.com/SSMV01/ccmd#check-if-commands)
+        - [Check-if commands](https://github.com/SSMV01/ccmd#check-if-commands)
     - [Using Your Commands](https://github.com/SSMV01/ccmd#using-your-commands)
         - [Using --output and --output-silent](https://github.com/SSMV01/ccmd#using---output-and---output-silent)
     - [Opening the csv file](https://github.com/SSMV01/ccmd#opening-the-csv-file)
@@ -115,7 +115,7 @@ Using `_` underscores here is not necessary
 
 <br>
 
-### Check if commands
+### Check-if commands
 
 
 If output is equal to:
