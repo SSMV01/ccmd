@@ -51,9 +51,10 @@ report bugs at our [issue tracker](https://github.com/ssmv01/ccmd/issues)
 
 # Installation
 
-Go [here](https://raw.githubusercontent.com/SSMV01/ccmd/main/get_ccmd.py) and save the file in your preferred location with `Ctrl + S` or `right-click > Save as`.
+Visit [https://ssmv01.github.io/getccmd](https://ssmv01.github.io/getccmd) and install the `get_ccmd.py` file
 
-Then, execute the file
+Then, open the terminal where you have the file stored and execute the file with:
+
 ```
 python3 get_ccmd.py
 ```
@@ -239,7 +240,7 @@ ccmd --version
 # Uninstallation
 
 ```
-cd ~/ccmd
+cd ~/.ccmd
 
 bash uninstall.sh
 ```
