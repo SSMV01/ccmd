@@ -1,6 +1,7 @@
 import os
 import sys
 import logging
+import subprocess
 from os import chdir, environ
 from subprocess import check_call, Popen, PIPE
 logging.basicConfig(format="%(levelname)s: %(message)s")
@@ -55,6 +56,7 @@ def clone():
 
     except FileNotFoundError as exception:
         print(exception)
+        sys.exit(2)
 
 def rename():
     check_call('mv ccmd .ccmd', shell=True)
@@ -63,15 +65,20 @@ def setup():
     logging.info("Setting things up...")
     chdir(f'/home/{USERNAME}/.ccmd')
 
-    check_call('rm -rf .git', shell=True)
-    check_call('rm -rf .github', shell=True)
-    check_call('rm .gitignore', shell=True)
-    check_call('chmod +x bin/ccmd.sh', shell=True)
-    check_call('cp bin/ccmd.sh ~/.local/bin/ccmd', shell=True)
-    
-    print()
-    check_call('ccmd --setcsv default', shell=True)
-    check_call('ccmd', shell=True)
+    try:
+        check_call('rm -rf .git', shell=True)
+        check_call('rm -rf .github', shell=True)
+        check_call('rm .gitignore', shell=True)
+        check_call('chmod +x bin/ccmd.sh', shell=True)
+        check_call('cp bin/ccmd.sh ~/.local/bin/ccmd', shell=True)
+        
+        print()
+        check_call('ccmd --setcsv default', shell=True)
+        check_call('ccmd', shell=True)
+
+    except subprocess.CalledProcessError as exception:
+        print(exception)
+        sys.exit(2)
 
     print()
     logging.info("Installation complete\n")
