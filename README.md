@@ -52,6 +52,8 @@ Report bugs at our [issue tracker](https://github.com/ssmv01/ccmd/issues).
 
 # Installation
 
+**Make sure git is installed**
+
 Visit [https://ssmv01.github.io/getccmd](https://ssmv01.github.io/getccmd) and install the `get_ccmd.py` file
 
 Then, open the terminal where you have the file stored and execute the file with:
