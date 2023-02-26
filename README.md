@@ -1,7 +1,7 @@
 <img style="display:block; margin-left:auto; margin-right:auto;"
 src="https://raw.githubusercontent.com/ssmv01/ccmd/main/CCMD%20logo.png"></img>
 
-<p style="font-size:18.2px;font-weight:300;"> Spend less time typing commands and more time <u>getting things done</u>.</p>
+## Spend less time typing commands and more time <u>getting things done</u>.
 
 ---
 
