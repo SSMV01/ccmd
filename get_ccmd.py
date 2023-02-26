@@ -21,28 +21,13 @@ def install_dependencies():
     logging.info("Installing dependencies...")
     with Popen([sys.executable, '-m', 'pip', 'install', 'colorama'], stdout=PIPE, stderr=PIPE) as install_colorama:
         if b"No module named pip" in install_colorama.stderr.read():
-            if retry == 1:
-                logging.error("Failed to install pip")
-                logging.info("exiting...")
-                sys.exit(2)
+            logging.error("pip not installed")
+            sys.exit(2)
 
-            logging.info("Installing pip...")
-            with Popen([ sys.executable ,'-m', 'ensurepip', '--upgrade'], stdout=PIPE, stderr=PIPE) as install_pip:
-                if install_pip.stderr.read() == None:
-                    logging.info("pip installed.")
-                    check_call(f'export PATH=/home/{USERNAME}/.local/bin:$PATH')
-                    retry += 1
-                    install_dependencies()
-                else:
-                    logging.error("Failed to install pip")
-                    logging.info("exiting...")
-                    sys.exit(2)
         elif install_colorama.stderr.read() != b'':
             print(install_colorama.stderr.read())
+
         else:
-            with Popen(['echo', '$PATH'], stdout=PIPE) as verify_path:
-                if b'/home/{USERNAME}/.local/bin' not in verify_path.stdout.read():
-                    check_call(f'export PATH=/home/{USERNAME}/.local/bin:$PATH', shell=True)
             logging.info("Done.")
 
 def clone():
@@ -71,10 +56,6 @@ def setup():
         check_call('rm .gitignore', shell=True)
         check_call('chmod +x bin/ccmd.sh', shell=True)
         check_call('cp bin/ccmd.sh ~/.local/bin/ccmd', shell=True)
-        
-        print()
-        check_call('ccmd --setcsv default', shell=True)
-        check_call('ccmd', shell=True)
 
     except subprocess.CalledProcessError as exception:
         print(exception)
@@ -82,6 +63,7 @@ def setup():
 
     print()
     logging.info("Installation complete\n")
+    print(f"Add '/home/{USERNAME}/.local/bin' to your PATH variable")
     
 def main():
     if os.path.exists(f'/home/{USERNAME}/.ccmd'):
