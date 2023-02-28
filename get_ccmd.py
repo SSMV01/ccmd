@@ -66,10 +66,12 @@ def setup():
 
 def setup_file():
     chdir(f'/home/{USERNAME}/.ccmd')
+    logging.info("Setting up the file...")
 
     try:
         check_call('chmod +x bin/ccmd.sh', shell=True)
         check_call('cp bin/ccmd.sh ~/.local/bin/ccmd', shell=True)
+        logging.info("Done.")
 
     except subprocess.CalledProcessError as exception:
         print(exception)
