@@ -52,7 +52,13 @@ Report bugs at our [issue tracker](https://github.com/ssmv01/ccmd/issues).
 
 # Installation
 
-**Make sure [git](https://git-scm.com/downloads) and [pip](https://pip.pypa.io/en/stable/installation/) are installed**
+**Make sure [git](https://git-scm.com/downloads) and [pip](https://bootstrap.pypa.io/get-pip.py) are installed**
+
+Install `get-pip.py` from the above link and execute the file with the following command in the folder where the file is stored:
+
+```
+python get-pip.py
+```
 
 Visit [https://ssmv01.github.io/getccmd](https://ssmv01.github.io/getccmd) and install the `get_ccmd.py` file
 
