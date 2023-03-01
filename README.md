@@ -25,6 +25,9 @@ Report bugs at our [issue tracker](https://github.com/ssmv01/ccmd/issues).
 ## Table of contents
 0. [Requirements](https://github.com/SSMV01/ccmd#requirements)
 1. [Installation](https://github.com/SSMV01/ccmd#installation)
+    - [git installation](https://github.com/SSMV01/ccmd#git-installation)
+    - [pip installation](https://github.com/SSMV01/ccmd#pip-installation)
+    - [ccmd installation](https://github.com/SSMV01/ccmd#ccmd-installation)
 2. [Usage](https://github.com/SSMV01/ccmd#usage)
     - [Creating a new cutom command](https://github.com/SSMV01/ccmd#creating-a-new-custom-command)
         - [Writing your commands directly into cmds.csv](https://github.com/SSMV01/ccmd#writing-your-commands-directly-into-the-cmdscsv-file)
@@ -52,13 +55,23 @@ Report bugs at our [issue tracker](https://github.com/ssmv01/ccmd/issues).
 
 # Installation
 
-**Make sure [git](https://git-scm.com/downloads) and [pip](https://bootstrap.pypa.io/get-pip.py) are installed**
+**Make sure git and pip are installed**
 
-Install `get-pip.py` from the above link and execute the file with the following command in the folder where the file is stored:
+### git installation
+
+Install git by executing the suitable command from the list given in the link below
+
+https://git-scm.com/download/linux
+
+### pip installation
+
+Install `get-pip.py` from the [here](https://bootstrap.pypa.io/get-pip.py) and execute the file with the following command in the folder where the file is stored:
 
 ```
 python get-pip.py
 ```
+
+### ccmd installation
 
 Visit [https://ssmv01.github.io/getccmd](https://ssmv01.github.io/getccmd) and install the `get_ccmd.py` file
 
