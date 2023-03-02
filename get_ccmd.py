@@ -8,6 +8,7 @@ logging.basicConfig(format="%(levelname)s: %(message)s")
 logging.getLogger().setLevel(logging.INFO)
 
 USERNAME = environ.get('LOGNAME')
+VERSION = "v0.3.7-alpha"
 
 print("CCMD")
 print('-' * 20)
@@ -89,6 +90,7 @@ def main():
         clone()
         rename()
         setup()
+        print(VERSION)
 
 if __name__ == '__main__':
     main()
