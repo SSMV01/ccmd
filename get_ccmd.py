@@ -29,8 +29,8 @@ def install_dependencies():
             print(install_colorama.stderr.read())
 
         else:
-            print(f"*Make sure '/home/{USERNAME}/.local/bin' is in PATH*\n")
             logging.info("Done.")
+            print(f"*Make sure '/home/{USERNAME}/.local/bin' is in PATH*")
 
 def clone():
     logging.info("Cloning ccmd...")
