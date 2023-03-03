@@ -59,7 +59,7 @@ Report bugs at our [issue tracker](https://github.com/ssmv01/ccmd/issues).
 
 ### git installation
 
-Install git by executing the suitable command from the list given in the link below
+Install git by executing the suitable command from the list given in the link below.
 
 https://git-scm.com/download/linux
 
@@ -73,7 +73,7 @@ python get-pip.py
 
 ### ccmd installation
 
-Visit [https://ssmv01.github.io/getccmd](https://ssmv01.github.io/getccmd) and install the `get_ccmd.py` file
+Once you have git and pip installed, visit [https://ssmv01.github.io/getccmd](https://ssmv01.github.io/getccmd) and install the `get_ccmd.py` file.
 
 Then, open the terminal where you have the file stored and execute the file with:
 
