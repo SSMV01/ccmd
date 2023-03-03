@@ -12,11 +12,9 @@ VERSION = "v0.3.7-alpha"
 
 print("CCMD")
 print('-' * 20)
-print("Starting installation\n")
+print("Starting installation...\n")
 
 chdir(f'/home/{USERNAME}')
-
-retry = 0
 
 def install_dependencies():
     logging.info("Installing dependencies...")
@@ -31,6 +29,7 @@ def install_dependencies():
         else:
             logging.info("Done.")
 
+
 def clone():
     logging.info("Cloning ccmd...")
     try:
@@ -44,8 +43,24 @@ def clone():
         print(exception)
         sys.exit(2)
 
+
 def rename():
     check_call('mv ccmd .ccmd', shell=True)
+
+
+def setup_file():
+    chdir(f'/home/{USERNAME}/.ccmd')
+    logging.info("Setting up the file...")
+
+    try:
+        check_call('chmod +x bin/ccmd.sh', shell=True)
+        check_call('cp bin/ccmd.sh ~/.local/bin/ccmd', shell=True)
+        logging.info("Done.")
+
+    except subprocess.CalledProcessError as exception:
+        print(exception)
+        sys.exit(2)
+
 
 def setup():
     logging.info("Setting things up...")
@@ -61,21 +76,8 @@ def setup():
         print(exception)
         sys.exit(2)
 
-    print()
-    logging.info("Installation complete")
+    logging.info("Installation complete.")
 
-def setup_file():
-    chdir(f'/home/{USERNAME}/.ccmd')
-    logging.info("Setting up the file...")
-
-    try:
-        check_call('chmod +x bin/ccmd.sh', shell=True)
-        check_call('cp bin/ccmd.sh ~/.local/bin/ccmd', shell=True)
-        logging.info("Done.")
-
-    except subprocess.CalledProcessError as exception:
-        print(exception)
-        sys.exit(2)
 
 def main():
     if os.path.exists(f'/home/{USERNAME}/.ccmd'):
@@ -91,6 +93,7 @@ def main():
         setup()
         print(f"\nMake sure '/home/{USERNAME}/.local/bin' is in PATH")
         print(VERSION)
+
 
 if __name__ == '__main__':
     main()
