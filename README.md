@@ -88,7 +88,7 @@ python3 get_ccmd.py
 
 # Updating
 
-Run the following commands in your terminal.
+Run the `get_update.py` file located in the *.ccmd* directory.
 
 ```
 cd ~/.ccmd
