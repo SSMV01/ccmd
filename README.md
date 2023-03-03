@@ -28,7 +28,8 @@ Report bugs at our [issue tracker](https://github.com/ssmv01/ccmd/issues).
     - [git installation](https://github.com/SSMV01/ccmd#git-installation)
     - [pip installation](https://github.com/SSMV01/ccmd#pip-installation)
     - [ccmd installation](https://github.com/SSMV01/ccmd#ccmd-installation)
-2. [Usage](https://github.com/SSMV01/ccmd#usage)
+2. [Updating](https://github.com/SSMV01/ccmd#updating)
+3. [Usage](https://github.com/SSMV01/ccmd#usage)
     - [Creating a new cutom command](https://github.com/SSMV01/ccmd#creating-a-new-custom-command)
         - [Writing your commands directly into cmds.csv](https://github.com/SSMV01/ccmd#writing-your-commands-directly-into-the-cmdscsv-file)
         - [Creating commands from terminal](https://github.com/SSMV01/ccmd#creating-commands-from-terminal)
@@ -40,9 +41,9 @@ Report bugs at our [issue tracker](https://github.com/ssmv01/ccmd/issues).
     - [List commands](https://github.com/SSMV01/ccmd#list-commands)
     - [Removing commands](https://github.com/SSMV01/ccmd#removing-commands)
     - [Display version](https://github.com/SSMV01/ccmd#display-version)
-3. [Uninstallation](https://github.com/SSMV01/ccmd#uninstallation)
-4. [Exit codes](https://github.com/SSMV01/ccmd#exit-codes)
-5. [Info](https://github.com/SSMV01/ccmd#info)
+4. [Uninstallation](https://github.com/SSMV01/ccmd#uninstallation)
+5. [Exit codes](https://github.com/SSMV01/ccmd#exit-codes)
+6. [Info](https://github.com/SSMV01/ccmd#info)
 
 <br>
 
@@ -82,6 +83,20 @@ python3 get_ccmd.py
 ```
 
 *This application is **not** production ready
+
+<br>
+
+# Updating
+
+Run the following commands in your terminal.
+
+```
+cd ~/.ccmd
+
+python3 get_update.py
+```
+
+<br>
 
 # Usage
 
