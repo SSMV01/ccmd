@@ -12,7 +12,7 @@ VERSION = "v0.3.7-alpha"
 
 print("CCMD")
 print('-' * 20)
-print("Starting installation")
+print("Starting installation\n")
 
 chdir(f'/home/{USERNAME}')
 
@@ -30,7 +30,6 @@ def install_dependencies():
 
         else:
             logging.info("Done.")
-            print(f"*Make sure '/home/{USERNAME}/.local/bin' is in PATH*")
 
 def clone():
     logging.info("Cloning ccmd...")
@@ -90,6 +89,7 @@ def main():
         clone()
         rename()
         setup()
+        print(f"\nMake sure '/home/{USERNAME}/.local/bin' is in PATH")
         print(VERSION)
 
 if __name__ == '__main__':
