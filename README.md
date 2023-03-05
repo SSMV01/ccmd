@@ -50,6 +50,8 @@ Report bugs at our [issue tracker](https://github.com/ssmv01/ccmd/issues).
 ## Requirements
 ### - Linux based OS
 ### - Python 3 (>= 3.10 recommended)
+### - Pip
+### - Git
 #### Note: Other operating systems will be supported very soon.
 
 <br>
