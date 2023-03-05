@@ -45,7 +45,7 @@ def clone():
 
 
 def rename():
-    check_call('mv ccmd .ccmd', shell=True)
+    check_call('/usr/bin/mv ccmd .ccmd', shell=True)
 
 
 def setup_file():
@@ -53,8 +53,8 @@ def setup_file():
     logging.info("Setting up the file...")
 
     try:
-        check_call('chmod +x bin/ccmd.sh', shell=True)
-        check_call('cp bin/ccmd.sh ~/.local/bin/ccmd', shell=True)
+        check_call('/usr/bin/chmod +x bin/ccmd.sh', shell=True)
+        check_call('/usr/bin/cp bin/ccmd.sh ~/.local/bin/ccmd', shell=True)
         logging.info("Done.")
 
     except subprocess.CalledProcessError as exception:
@@ -67,9 +67,9 @@ def setup():
     chdir(f'/home/{USERNAME}/.ccmd')
 
     try:
-        check_call('rm -rf .git', shell=True)
-        check_call('rm -rf .github', shell=True)
-        check_call('rm .gitignore', shell=True)
+        check_call('/usr/bin/rm -rf .git', shell=True)
+        check_call('/usr/bin/rm -rf .github', shell=True)
+        check_call('/usr/bin/rm .gitignore', shell=True)
         setup_file()
 
     except subprocess.CalledProcessError as exception:
