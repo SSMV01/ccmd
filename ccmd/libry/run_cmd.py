@@ -62,5 +62,5 @@ def run_command(commands, csv_file: str, output, output_silent):
         logging.error("%s: File Not Found!", csv_file)
 
     except KeyboardInterrupt:
-        logging.info("Exiting...")
+        logging.info("\nExiting...")
         sys.exit(1)
