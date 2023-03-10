@@ -13,27 +13,32 @@ VERSION = "v0.3.7-alpha"
 print("CCMD")
 print('-' * 20)
 print("Starting installation...\n")
+print("DO NOT USE KeyboardInterrupt")
 
 chdir(f'/home/{USERNAME}')
 
 def install_dependencies():
     logging.info("Installing dependencies...")
-    with Popen([sys.executable, '-m', 'pip', 'install', 'colorama'], stdout=PIPE, stderr=PIPE) as install_colorama:
-        if b"No module named pip" in install_colorama.stderr.read():
-            logging.error("pip not installed")
-            sys.exit(2)
+    try:
+        with Popen([sys.executable, '-m', 'pip', 'install', 'colorama'], stdout=PIPE, stderr=PIPE, start_new_session=True) as install_colorama:
+            if b"No module named pip" in install_colorama.stderr.read():
+                logging.error("pip not installed")
+                sys.exit(2)
 
-        elif install_colorama.stderr.read() != b'':
-            print(install_colorama.stderr.read())
+            elif install_colorama.stderr.read() != b'':
+                print(install_colorama.stderr.read())
 
-        else:
-            logging.info("Done.")
+            else:
+                logging.info("Done.")
 
+    except KeyboardInterrupt:
+        logging.info("\nExiting...")
+        sys.exit(1)
 
 def clone():
     logging.info("Cloning ccmd...")
     try:
-        with Popen(['git', 'clone', 'https://github.com/ssmv01/ccmd'], stdout=PIPE, stderr=PIPE) as clone_ccmd:
+        with Popen(['git', 'clone', 'https://github.com/ssmv01/ccmd'], stdout=PIPE, stderr=PIPE, start_new_session=True) as clone_ccmd:
             if b"Could not resolve host: github.com" in clone_ccmd.stderr.read():
                 logging.error("Failed to access github.com")
             else:
@@ -42,6 +47,9 @@ def clone():
     except FileNotFoundError as exception:
         print(exception)
         sys.exit(2)
+    except KeyboardInterrupt:
+        logging.info("\nExiting...")
+        sys.exit(1)
 
 
 def rename():
@@ -80,19 +88,25 @@ def setup():
 
 
 def main():
-    if os.path.exists(f'/home/{USERNAME}/.ccmd'):
-        if os.path.exists(f'/home/{USERNAME}/.local/bin/ccmd'):
-            logging.info("CCMD is already installed")
-            sys.exit(0)
+    try:
+        if os.path.exists(f'/home/{USERNAME}/.ccmd'):
+            if os.path.exists(f'/home/{USERNAME}/.local/bin/ccmd'):
+                print(f"\nMake sure '/home/{USERNAME}/.local/bin' is in PATH")
+                logging.info("CCMD is already installed")
+                sys.exit(0)
+            else:
+                setup_file()
         else:
-            setup_file()
-    else:
-        install_dependencies()
-        clone()
-        rename()
-        setup()
-        print(f"\nMake sure '/home/{USERNAME}/.local/bin' is in PATH")
-        print(VERSION)
+            install_dependencies()
+            clone()
+            rename()
+            setup()
+            print(f"\nMake sure '/home/{USERNAME}/.local/bin' is in PATH")
+            print(VERSION)
+
+    except KeyboardInterrupt:
+        logging.info("\nExiting...")
+        sys.exit(1)
 
 
 if __name__ == '__main__':
