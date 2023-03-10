@@ -41,9 +41,10 @@ Report bugs at our [issue tracker](https://github.com/ssmv01/ccmd/issues).
     - [List commands](https://github.com/SSMV01/ccmd#list-commands)
     - [Removing commands](https://github.com/SSMV01/ccmd#removing-commands)
     - [Display version](https://github.com/SSMV01/ccmd#display-version)
-4. [Uninstallation](https://github.com/SSMV01/ccmd#uninstallation)
-5. [Exit codes](https://github.com/SSMV01/ccmd#exit-codes)
-6. [Info](https://github.com/SSMV01/ccmd#info)
+4. [Updating](https://github.com/SSMV01/ccmd#updating)
+5. [Uninstallation](https://github.com/SSMV01/ccmd#uninstallation)
+6. [Exit codes](https://github.com/SSMV01/ccmd#exit-codes)
+7. [Info](https://github.com/SSMV01/ccmd#info)
 
 <br>
 
@@ -238,6 +239,8 @@ ccmd --setcsv default
 
 ## List commands
 
+If the command name is highlighted in Blue then it is a [check-if](https://github.com/ssmv01/ccmd#check-if-commands) command.
+
 ```
 ccmd --list
 ```
@@ -247,8 +250,6 @@ OR
 ```
 ccmd -l
 ```
-
-If command names are in blue they are '[check_if commands](https://github.com/ssmv01/ccmd#check-if-commands)'
 
 ## Removing commands
 
@@ -277,6 +278,14 @@ ccmd --version
 ```
 
 <br>
+
+# Updating
+
+Use the `--update` option to get the latest changes made to the repo:
+
+```
+ccmd --update
+```
 
 # Uninstallation
 

@@ -6,6 +6,7 @@ def help():
     --new                        Create a custom new command.
     --opencsv                    Open the cmds.csv file.
     --target                     Set the location of the csv file.
+    --update                     Get the latest changes made to the repo.
     -o         --output          Write output of command(s) to file AND execute them.
     -oS        --output-silent   Write output of command(s) to file.
     -h         --help            Displays this message.
