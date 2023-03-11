@@ -165,23 +165,23 @@ Using `_` underscores here is not necessary
 If output is equal to:
 
 ```
-command ?= string |=| command , Command_Name
+command if= string |=| command , Command_Name
 ```
 
 If output contains:
 
 ```
-command ?: string |=| command , Command_name
+command if: string |=| command , Command_name
 ```
 
 #### Explaination
 - the first *command* is the command you want to initially run when you execute the custom command
 
-- *?=* checks if the output of the first *command* is equal to string passed after *?=*
+- *if=* checks if the output of the first *command* is equal to string passed after *if=*
 
-- *?:* checks if the output of the first *command* contains the string passed after *?:*
+- *if:* checks if the output of the first *command* contains the string passed after *if:*
 
-- After the *?= or ?:* give the string that you want to check in *or* compare with the output
+- After the *if= or if:* give the string that you want to check in *or* compare with the output
 
 - |=| executes the command given after it IF the condition is True
 

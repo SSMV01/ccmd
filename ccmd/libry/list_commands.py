@@ -11,7 +11,7 @@ def list_command_names(csv_file):
         for row in file_content:
             if len(row) < 2:
                 continue
-            if '?:' in row[0] or '?=' in row[0]:
+            if 'if:' in row[0] or 'if=' in row[0]:
                 print(Fore.LIGHTBLUE_EX + row[1])
             else:
                 print(row[1])
