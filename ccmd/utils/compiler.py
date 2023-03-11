@@ -13,7 +13,7 @@ logging.basicConfig(format="%(levelname)s: %(message)s")
 
 def if_equals(cmd: str):
     split_if = cmd.split('?=') # ["first command", "string & second command"]
-    split_run = split_if[1].split('||') # ["string", "second command"]
+    split_run = split_if[1].split('|=|') # ["string", "second command"]
     check_out = Popen(split_if[0].split(), stdout=PIPE) # check output of first command
 
     print(Fore.GREEN + split_if[0].strip()) # Print command
@@ -29,7 +29,7 @@ def if_equals(cmd: str):
 
 def if_contains(cmd: str):
     split_if = cmd.split('?:')
-    split_run = split_if[1].split('||')
+    split_run = split_if[1].split('|=|')
     check_out = Popen(split_if[0].split(), stdout=PIPE)
 
     print(Fore.GREEN + split_if[0].strip())
@@ -47,13 +47,13 @@ def if_contains(cmd: str):
 # else just execute the command
 
 def compile_command(cmd: str):
-    if '?=' in cmd and '||' in cmd:
+    if '?=' in cmd and '|=|' in cmd:
         if_equals(cmd)
-    elif '?:' in cmd and '||' in cmd:
+    elif '?:' in cmd and '|=|' in cmd:
         if_contains(cmd)
-    elif '?=' in cmd or '?:' in cmd and '||' not in cmd:
-        logging.error("Syntax error in '%s': missing ||", cmd)
-    elif '||' in cmd and '?:' not in cmd and '?=' not in cmd:
+    elif '?=' in cmd or '?:' in cmd and '|=|' not in cmd:
+        logging.error("Syntax error in '%s': missing |=|", cmd)
+    elif '|=|' in cmd and '?:' not in cmd and '?=' not in cmd:
         logging.error("Syntax error in '%s': missing ?: OR ?=", cmd)
     else:
         print(Fore.GREEN + cmd)
@@ -67,7 +67,7 @@ def compile_command(cmd: str):
 
 def if_equals_for_output(cmd: str):
     split_if = cmd.split('?=')
-    split_run = split_if[1].split('||')
+    split_run = split_if[1].split('|=|')
     with Popen(split_if[0].split(), stdout=PIPE) as check_out1:
         output1 = check_out1.stdout.read()
         output1 = str(output1.strip(), 'utf-8')
@@ -83,7 +83,7 @@ def if_equals_for_output(cmd: str):
 
 def if_contains_for_output(cmd: str):
     split_if = cmd.split('?:')
-    split_run = split_if[1].split('||')
+    split_run = split_if[1].split('|=|')
     with Popen(split_if[0].split(), stdout=PIPE) as check_out1:
         output1 = check_out1.stdout.read()
         output1 = str(output1.strip(), 'utf-8')
@@ -101,13 +101,13 @@ def if_contains_for_output(cmd: str):
 # else just return the output
 
 def compile_command_for_output(cmd: str):
-    if '?=' in cmd and '||' in cmd:
+    if '?=' in cmd and '|=|' in cmd:
         return if_equals_for_output(cmd)
-    if '?:' in cmd and '||' in cmd:
+    if '?:' in cmd and '|=|' in cmd:
         return if_contains_for_output(cmd)
-    if '?=' in cmd or '?:' in cmd and '||' not in cmd:
-        return "[-] Syntax Err: missing ||"
-    if '||' in cmd and '?:' not in cmd and '?=' not in cmd:
+    if '?=' in cmd or '?:' in cmd and '|=|' not in cmd:
+        return "[-] Syntax Err: missing |=|"
+    if '|=|' in cmd and '?:' not in cmd and '?=' not in cmd:
         return "[-] Syntax Err: missing ?: OR ?="
     with Popen(cmd.split(), stdout=PIPE) as output:
         output = output.stdout.read()
