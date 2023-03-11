@@ -12,8 +12,8 @@ VERSION = "v0.3.7-alpha"
 
 print("CCMD")
 print('-' * 20)
-print("Starting installation...\n")
-print("DO NOT USE KeyboardInterrupt")
+print("Starting installation...")
+print("DO NOT USE KeyboardInterrupt\n")
 
 chdir(f'/home/{USERNAME}')
 
