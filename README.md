@@ -5,6 +5,12 @@ src="https://raw.githubusercontent.com/ssmv01/ccmd/main/CCMD%20logo.png"></img>
 
 ---
 
+NOTICE: This tool is intended for use in automating commands. However, the use of this tool for malicious 
+or illegal purposes is strictly prohibited. As the creator of this 
+tool, I do not condone or support any illegal activities. Please use 
+this tool responsibly and ethically, ensuring that it's not used for 
+any harmful purposes.
+
 NON-PRODUCTION-READY
 
 [![Latest Release](https://img.shields.io/github/v/release/ssmv01/ccmd?display_name=tag&include_prereleases)](https://github.com/ssmv01/ccmd/releases)
