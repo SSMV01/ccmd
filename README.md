@@ -13,7 +13,7 @@ src="https://raw.githubusercontent.com/ssmv01/ccmd/main/CCMD%20logo.png"></img>
 [![License](https://img.shields.io/github/license/ssmv01/ccmd?color=blue)](https://github.com/ssmv01/ccmd/)
 
 NOTICE: This tool is intended for use in automating commands. However, the use of this tool for malicious 
-or illegal purposes is strictly prohibited. As the creator of this 
+or illegal purposes is **strictly prohibited**. As the creator of this 
 tool, I do not condone or support any illegal activities. Please use 
 this tool responsibly and ethically, ensuring that it's not used for 
 any harmful purposes.
