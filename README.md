@@ -5,19 +5,18 @@ src="https://raw.githubusercontent.com/ssmv01/ccmd/main/CCMD%20logo.png"></img>
 
 ---
 
-NOTICE: This tool is intended for use in automating commands. However, the use of this tool for malicious 
-or illegal purposes is strictly prohibited. As the creator of this 
-tool, I do not condone or support any illegal activities. Please use 
-this tool responsibly and ethically, ensuring that it's not used for 
-any harmful purposes.
-
-NON-PRODUCTION-READY
 
 [![Latest Release](https://img.shields.io/github/v/release/ssmv01/ccmd?display_name=tag&include_prereleases)](https://github.com/ssmv01/ccmd/releases)
 [![CodeFactor](https://www.codefactor.io/repository/github/ssmv01/ccmd/badge)](https://www.codefactor.io/repository/github/ssmv01/ccmd)
 [![Build](https://img.shields.io/github/actions/workflow/status/ssmv01/ccmd/pylint.yml)](https://github.com/ssmv01/ccmd/actions)
 [![Open Issues](https://img.shields.io/github/issues-raw/ssmv01/ccmd)](https://github.com/ssmv01/ccmd/issues)
 [![License](https://img.shields.io/github/license/ssmv01/ccmd?color=blue)](https://github.com/ssmv01/ccmd/)
+
+NOTICE: This tool is intended for use in automating commands. However, the use of this tool for malicious 
+or illegal purposes is strictly prohibited. As the creator of this 
+tool, I do not condone or support any illegal activities. Please use 
+this tool responsibly and ethically, ensuring that it's not used for 
+any harmful purposes.
 
 This project is **Under development & testing**. We would love to hear your opinion on this project. Feel free to test it and provied us your feedback.
 
