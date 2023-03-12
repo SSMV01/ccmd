@@ -1,4 +1,5 @@
 import logging
+import readline
 # Initialize logging
 logging.basicConfig(format="%(levelname)s: %(message)s")
 
