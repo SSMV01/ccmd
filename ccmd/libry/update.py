@@ -14,5 +14,6 @@ def get_update():
         logging.error("get_ccmd.py not found!")
     
     except KeyboardInterrupt:
-        logging.info("\nExiting...")
+        print()
+        logging.info("Exiting...")
         sys.exit(1)

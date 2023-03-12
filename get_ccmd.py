@@ -32,7 +32,8 @@ def install_dependencies():
                 logging.info("Done.")
 
     except KeyboardInterrupt:
-        logging.info("\nExiting...")
+        print()
+        logging.info("Exiting...")
         sys.exit(1)
 
 def clone():
@@ -48,7 +49,8 @@ def clone():
         print(exception)
         sys.exit(2)
     except KeyboardInterrupt:
-        logging.info("\nExiting...")
+        print()
+        logging.info("Exiting...")
         sys.exit(1)
 
 
@@ -105,7 +107,8 @@ def main():
             print(VERSION)
 
     except KeyboardInterrupt:
-        logging.info("\nExiting...")
+        print()
+        logging.info("Exiting...")
         sys.exit(1)
 
 

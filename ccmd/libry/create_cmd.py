@@ -27,5 +27,6 @@ def create_command(csv_file):
             logging.error('%s: File Not found!', csv_file)
 
     except KeyboardInterrupt:
-        logging.info("\nExiting...")
+        print()
+        logging.info("Exiting...")
         sys.exit(1)

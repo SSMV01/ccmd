@@ -30,5 +30,6 @@ try:
     os.system('rm -rf ccmd_tmp_folder')
 
 except KeyboardInterrupt:
-    logging.info("\nExiting...")
+    print()
+    logging.info("Exiting...")
     sys.exit(1)
