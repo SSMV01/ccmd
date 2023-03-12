@@ -12,16 +12,15 @@ def rm_space(inp: str):
     return final_inp.join(inp)
 
 def get_and_check(msg):
-    print(f'{msg}: ', end='')
-    got_input = input().strip()
+    got_input = input(f'{msg}: ').strip()
+    readline.add_history(got_input)
     if check_input(got_input) == 0:
         return got_input
     logging.error("This field cannot be empty.")
     return ''
 
 def get_and_check_nospace(msg):
-    print(f'{msg}: ', end='')
-    got_input = input().strip()
+    got_input = input(f'{msg}: ').strip()
     if check_input(got_input) == 0:
         if ' ' in got_input:
             got_input = rm_space(got_input)
