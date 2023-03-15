@@ -3,7 +3,7 @@ import os
 import sys
 import logging
 import argparse
-from libry import (get_update, help, set_csv_file, list_command_names, create_command, run_command)
+from libry import (uninstall, get_update, help, set_csv_file, list_command_names, create_command, run_command)
 # Initialize logging
 logging.basicConfig(format='%(levelname)s: %(message)s')
 logging.getLogger().setLevel(logging.INFO)
@@ -14,7 +14,7 @@ parser = argparse.ArgumentParser(
     add_help=False
     )
 
-VERSION = 'ccmd 0.3.7-alpha'
+VERSION = 'ccmd 0.3.9-alpha'
 USERNAME = os.environ.get('LOGNAME')
 
 try:
@@ -24,6 +24,7 @@ except FileNotFoundError:
     logging.error("Could not find 'cmds_target' at /home/%s/.ccmd/bin/.", USERNAME)
     sys.exit(2)
 
+parser.add_argument('--uninstall', help="Uninstall ccmd", action='store_true')
 parser.add_argument('--update', help="Update ccmd to latest release", action='store_true')
 parser.add_argument('-h', '--help', help="Display help message", action='store_true')
 parser.add_argument('-v', '--version', help="Display version number", action='store_true')
@@ -36,7 +37,9 @@ parser.add_argument('-oS', '--output-silent', type=str, help="Write output to fi
 args, commands = parser.parse_known_args()
 
 def main():
-    if args.update:
+    if args.uninstall:
+        uninstall()
+    elif args.update:
         get_update()
     elif args.help:
         help()

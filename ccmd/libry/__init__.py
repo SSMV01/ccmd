@@ -8,3 +8,4 @@ from .create_cmd import create_command
 from .set_csv import set_csv_file
 from .list_commands import list_command_names
 from .update import get_update
+from .uninstall_ccmd import uninstall
