@@ -9,20 +9,20 @@ colorama.init(autoreset=True)
 logging.basicConfig(format="%(levelname)s: %(message)s")
 
 # Executes the first command; then checks if the output is equal to/contains the user provided string
-# if yes then executes the second command too.
+# if yes, then executes the second command too.
 
 def if_equals(cmd: str):
     split_if = cmd.split('if=') # ["first command", "string & second command"]
     split_run = split_if[1].split('|=|') # ["string", "second command"]
     check_out = Popen(split_if[0].split(), stdout=PIPE) # check output of first command
 
-    print(Fore.GREEN + split_if[0].strip()) # Print command
+    print(Fore.GREEN + split_if[0].strip()) # Print command name
     print(Fore.BLUE + '-' * 20)
     os.system(split_if[0].strip()) # run first command
     output = check_out.stdout.read() # read output
     output = str(output.strip(), 'utf-8') # remove unwanted chars
     if output == split_run[0].strip(): # if output  of first command == the string
-        print(Fore.GREEN + split_run[1].strip()) # Print command
+        print(Fore.GREEN + split_run[1].strip()) # Print command name
         print(Fore.BLUE + '-' * 20)
         os.system(split_run[1].strip()) # run second command
         print()
@@ -37,13 +37,13 @@ def if_contains(cmd: str):
     os.system(split_if[0].strip())
     output = check_out.stdout.read()
     output = str(output.strip(), 'utf-8')
-    if split_run[0].strip() in output: # if output  of first command contains the string
+    if split_run[0].strip() in output: # if output of first command contains the string
         print(Fore.GREEN + split_run[1].strip())
         print(Fore.BLUE + '-' * 20)
         os.system(split_run[1].strip())
         print()
 
-# if it is a complex command; make sure the syntax is correct
+# if it is a check-if command; make sure the syntax is correct
 # else just execute the command
 
 def compile_command(cmd: str):
@@ -63,7 +63,7 @@ def compile_command(cmd: str):
 
 # For -o and -oS
 # Returns output of the first command; then checks if the output is equal to/contains the user provided string
-# if yes then returns the output of second command too.
+# if yes, then returns the output of second command too.
 
 def if_equals_for_output(cmd: str):
     split_if = cmd.split('if=')
@@ -97,7 +97,7 @@ def if_contains_for_output(cmd: str):
 
     return f"{output1}\n\n{output2}"
 
-# if it is a complex command; make sure the syntax is correct
+# if it is a check-if command; make sure the syntax is correct
 # else just return the output
 
 def compile_command_for_output(cmd: str):
