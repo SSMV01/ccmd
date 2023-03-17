@@ -27,8 +27,7 @@ Report bugs at our [issue tracker](https://github.com/ssmv01/ccmd/issues).
     - [git installation](https://github.com/SSMV01/ccmd#git-installation)
     - [pip installation](https://github.com/SSMV01/ccmd#pip-installation)
     - [ccmd installation](https://github.com/SSMV01/ccmd#ccmd-installation)
-2. [Updating](https://github.com/SSMV01/ccmd#updating)
-3. [Usage](https://github.com/SSMV01/ccmd#usage)
+2. [Usage](https://github.com/SSMV01/ccmd#usage)
     - [Creating a new cutom command](https://github.com/SSMV01/ccmd#creating-a-new-custom-command)
         - [Writing your commands directly into cmds.csv](https://github.com/SSMV01/ccmd#writing-your-commands-directly-into-the-cmdscsv-file)
         - [Creating commands from terminal](https://github.com/SSMV01/ccmd#creating-commands-from-terminal)
@@ -40,10 +39,10 @@ Report bugs at our [issue tracker](https://github.com/ssmv01/ccmd/issues).
     - [List commands](https://github.com/SSMV01/ccmd#list-commands)
     - [Removing commands](https://github.com/SSMV01/ccmd#removing-commands)
     - [Display version](https://github.com/SSMV01/ccmd#display-version)
-4. [Updating](https://github.com/SSMV01/ccmd#updating)
-5. [Uninstallation](https://github.com/SSMV01/ccmd#uninstallation)
-6. [Exit codes](https://github.com/SSMV01/ccmd#exit-codes)
-7. [Info](https://github.com/SSMV01/ccmd#info)
+3. [Updating](https://github.com/SSMV01/ccmd#updating)
+4. [Uninstallation](https://github.com/SSMV01/ccmd#uninstallation)
+5. [Exit codes](https://github.com/SSMV01/ccmd#exit-codes)
+6. [Info](https://github.com/SSMV01/ccmd#info)
 
 <br>
 
@@ -68,7 +67,7 @@ https://git-scm.com/download/linux
 
 ### pip installation
 
-Install `get-pip.py` from the [here](https://bootstrap.pypa.io/get-pip.py) and execute the file with the following command in the folder where the file is stored:
+Install `get-pip.py` from [https://bootstrap.pypa.io/get-pip.py](https://bootstrap.pypa.io/get-pip.py) and execute the file with the following command in the folder where the file is stored:
 
 ```
 python get-pip.py
@@ -78,25 +77,13 @@ python get-pip.py
 
 Once you have git and pip installed, visit [https://ssmv01.github.io/getccmd](https://ssmv01.github.io/getccmd) and install the `get_ccmd.py` file.
 
-Then, open the terminal where you have the file stored and execute the file with:
+Then, open the terminal where you have the file stored and execute the file with `python3`:
 
 ```
 python3 get_ccmd.py
 ```
 
 *This application is **not** production ready
-
-<br>
-
-# Updating
-
-Run the `get_update.py` file located in the *.ccmd* directory.
-
-```
-cd ~/.ccmd
-
-python3 get_update.py
-```
 
 <br>
 
