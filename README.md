@@ -151,6 +151,8 @@ Don't forget to give the project a star! Thanks again!
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
+For more information view [CONTRIBUTING.md](https://github.com/ssmv01/ccmd/blob/main/CONTRIBUTING.md)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
