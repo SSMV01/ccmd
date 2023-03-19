@@ -160,7 +160,7 @@ For more information view [CONTRIBUTING.md](https://github.com/ssmv01/ccmd/blob/
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.md` for more information.
+Distributed under the MIT License. See [LICENSE.md](https://github.com/ssmv01/ccmd/blob/main/LICENSE.md) for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
