@@ -52,9 +52,6 @@
   <ol>
     <li>
       <a href="https://github.com/ssmv01/ccmd#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="https://github.com/ssmv01/ccmd#built-with">Built With</a></li>
-      </ul>
     </li>
     <li>
       <a href="https://github.com/ssmv01/ccmd#getting-started">Getting Started</a>
@@ -64,11 +61,9 @@
       </ul>
     </li>
     <li><a href="https://github.com/ssmv01/ccmd#usage">Usage</a></li>
-    <li><a href="https://github.com/ssmv01/ccmd#roadmap">Roadmap</a></li>
     <li><a href="https://github.com/ssmv01/ccmd#contributing">Contributing</a></li>
     <li><a href="https://github.com/ssmv01/ccmd#license">License</a></li>
     <li><a href="https://github.com/ssmv01/ccmd#contact">Contact</a></li>
-    <li><a href="https://github.com/ssmv01/ccmd#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
