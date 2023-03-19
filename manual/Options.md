@@ -1,3 +1,15 @@
+<details>
+    <summary>Table of contents</summary>
+    <ol>
+        <li><a href="#opening-the-csv-file">Opening the csv file</a></li>
+        <li><a href="#list-commands">List commands</a></li>
+        <li><a href="#remoing-commands">Removing commands</a></li>
+        <li><a href="#display-version">Display version</a></li>
+        <li><a href="#updating">Updating</a></li>
+        <li><a href="#uninstalling">Uninstalling</a></li>
+    </ol>
+</details>
+
 ## Opening the csv file
 
 ```
@@ -62,7 +74,7 @@ ccmd --version
 
 <br>
 
-# Updating
+## Updating
 
 Use the `--update` option to get the latest changes made to the repo:
 
@@ -70,7 +82,7 @@ Use the `--update` option to get the latest changes made to the repo:
 ccmd --update
 ```
 
-# Uninstallation
+## Uninstalling
 
 Use the `--uninstall` option:
 
