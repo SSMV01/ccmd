@@ -1,302 +1,188 @@
-<img style="display:block; margin-left:auto; margin-right:auto;"
-src="https://raw.githubusercontent.com/ssmv01/ccmd/main/CCMD%20logo.png"></img>
+<a name="readme-top"></a>
 
-### Spend less time typing commands and more time <u>getting things done</u>.
 
----
 
+<!-- PROJECT SHIELDS -->
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
 
-[![Latest Release](https://img.shields.io/github/v/release/ssmv01/ccmd?display_name=tag&include_prereleases)](https://github.com/ssmv01/ccmd/releases)
-[![CodeFactor](https://www.codefactor.io/repository/github/ssmv01/ccmd/badge)](https://www.codefactor.io/repository/github/ssmv01/ccmd)
-[![Build](https://img.shields.io/github/actions/workflow/status/ssmv01/ccmd/pylint.yml)](https://github.com/ssmv01/ccmd/actions)
-[![Open Issues](https://img.shields.io/github/issues-raw/ssmv01/ccmd)](https://github.com/ssmv01/ccmd/issues)
-[![License](https://img.shields.io/github/license/ssmv01/ccmd?color=blue)](https://github.com/ssmv01/ccmd/)
 
-This project is **Under development & testing**. We would love to hear your opinion on this project. Feel free to test it and provied us your feedback.
+<div align="center">
+  <strong>Under Development</strong>
 
-Read [CONTRIBUTING.md](https://github.com/ssmv01/ccmd/blob/main/CONTRIBUTING.md) if you want to help us make this project better
-or mail me at ssmvmails@gmail.com.
+  Currently compatible with Linux only
+</div>
 
-Report bugs at our [issue tracker](https://github.com/ssmv01/ccmd/issues).
 
-<br>
 
-## Table of contents
-0. [Requirements](https://github.com/SSMV01/ccmd#requirements)
-1. [Installation](https://github.com/SSMV01/ccmd#installation)
-    - [git installation](https://github.com/SSMV01/ccmd#git-installation)
-    - [pip installation](https://github.com/SSMV01/ccmd#pip-installation)
-    - [ccmd installation](https://github.com/SSMV01/ccmd#ccmd-installation)
-2. [Usage](https://github.com/SSMV01/ccmd#usage)
-    - [Creating a new cutom command](https://github.com/SSMV01/ccmd#creating-a-new-custom-command)
-        - [Writing your commands directly into cmds.csv](https://github.com/SSMV01/ccmd#writing-your-commands-directly-into-the-cmdscsv-file)
-        - [Creating commands from terminal](https://github.com/SSMV01/ccmd#creating-commands-from-terminal)
-        - [Check-if commands](https://github.com/SSMV01/ccmd#check-if-commands)
-    - [Using Your Commands](https://github.com/SSMV01/ccmd#using-your-commands)
-        - [Using --output and --output-silent](https://github.com/SSMV01/ccmd#using---output-and---output-silent)
-    - [Opening the csv file](https://github.com/SSMV01/ccmd#opening-the-csv-file)
-    - [Setting the location of the csv file](https://github.com/SSMV01/ccmd#setting-the-location-of-the-csv-file)
-    - [List commands](https://github.com/SSMV01/ccmd#list-commands)
-    - [Removing commands](https://github.com/SSMV01/ccmd#removing-commands)
-    - [Display version](https://github.com/SSMV01/ccmd#display-version)
-3. [Updating](https://github.com/SSMV01/ccmd#updating)
-4. [Uninstallation](https://github.com/SSMV01/ccmd#uninstallation)
-5. [Exit codes](https://github.com/SSMV01/ccmd#exit-codes)
-6. [Info](https://github.com/SSMV01/ccmd#info)
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/ssmv01/ccmd">
+    <img src="CCMD logo.png" alt="Logo" width="" height="200">
+  </a>
 
-<br>
+<h3 align="center">CCMD</h3>
+  <p align="center">
+    Spend less time typing commands and more time getting things done.
+    <br />
+    <a href="https://github.com/ssmv01/ccmd/tree/main/manual"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/ssmv01/ccmd#contributing">Contribute</a>
+    ·
+    <a href="https://github.com/ssmv01/ccmd/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/ssmv01/ccmd/issues">Request Feature</a>
+  </p>
+</div>
 
-## Requirements
-### - Linux based OS
-### - Python 3 (>= 3.10 recommended)
-### - Pip
-### - Git
-#### Note: Other operating systems will be supported very soon.
 
-<br>
 
-# Installation
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="https://github.com/ssmv01/ccmd#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="https://github.com/ssmv01/ccmd#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="https://github.com/ssmv01/ccmd#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="https://github.com/ssmv01/ccmd#prerequisites">Prerequisites</a></li>
+        <li><a href="https://github.com/ssmv01/ccmd#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="https://github.com/ssmv01/ccmd#usage">Usage</a></li>
+    <li><a href="https://github.com/ssmv01/ccmd#roadmap">Roadmap</a></li>
+    <li><a href="https://github.com/ssmv01/ccmd#contributing">Contributing</a></li>
+    <li><a href="https://github.com/ssmv01/ccmd#license">License</a></li>
+    <li><a href="https://github.com/ssmv01/ccmd#contact">Contact</a></li>
+    <li><a href="https://github.com/ssmv01/ccmd#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
-**Make sure git and pip are installed**
 
-### git installation
 
-Install git by executing the suitable command from the list given in the link below.
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-https://git-scm.com/download/linux
+<!-- [![Product Name Screen Shot][product-screenshot]](https://ssmv01.github.io/getccmd) -->
 
-### pip installation
+CCMD, your ultimate tool for automating command-line operations. CCMD makes your life easier by eliminating the need for manually typing repetitive 
+commands, checking their output, and executing another command based on that output.
 
-Install `get-pip.py` from [https://bootstrap.pypa.io/get-pip.py](https://bootstrap.pypa.io/get-pip.py) and execute the file with the following command in the folder where the file is stored:
+With CCMD, you can easily automate complex command sequences by defining conditions for command execution based on the output of the preceding commands. 
+Simply specify the target string in the output, and CCMD will execute the next command only if that string is present in or equal to the output.
 
-```
-python get-pip.py
-```
+Whether you are a penetration tester, developer, sysadmin, or a power user, CCMD is an indispensable tool that simplifies your workflow and streamlines 
+your productivity. With its simple yet powerful automation capabilities, CCMD is the ultimate tool for anyone who wants to take their command-line 
+operations to the next level.
 
-### ccmd installation
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Once you have git and pip installed, visit [https://ssmv01.github.io/getccmd](https://ssmv01.github.io/getccmd) and install the `get_ccmd.py` file.
 
-Then, open the terminal where you have the file stored and execute the file with `python3`:
 
-```
-python3 get_ccmd.py
-```
+<!-- ### Built With
 
-*This application is **not** production ready
+* [![Python][Python.org]][Python-url]
 
-<br>
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
-# Usage
 
-## Creating a new custom command
 
-### Writing your commands directly into the cmds.csv file
-<br>
+<!-- GETTING STARTED -->
+## Getting Started
 
-1: Open the csv file:
+Follow these few simple steps to get ccmd up and working.
 
-```
-ccmd --opencsv
-```
+### Prerequisites
 
-2: Write the Actual Commands first, then the Command Name seperated by a comma as shown below:
+<strong>This application is under Development and is currently compatible with Linux only</strong>
 
+* git
 
-```
-Actual Command#1 , Command_name#1
-Actual Command#2 , Command_name#2
-...
-...
-```
-USE `_` underscores for spaces in *Command names*
+  Install git by executing the suitable command from the list provided here: https://git-scm.com/download/linux
+* pip
 
-**Write only one pair of command per row.**
+  1. Install the `get_pip` file from here: https://bootstrap.pypa.io/get-pip.py
 
+  2. Execute the file
+      ```sh
+      python3 get_pip.py
+      ```
 
-3: Save and close the file once you are done.
+### Installation
 
-<br>
+1. Download the `get_ccmd` file from here: https://ssmv01.github.io/getccmd
 
-### Creating commands from terminal
-<br>
+2. Execute the file
+   ```sh
+   python3 get_ccmd.py
+   ```
 
-1: Use *--new*:
 
-```
-ccmd --new
-```
 
-2: Enter the values for the inputs:
+<!-- USAGE EXAMPLES -->
+## Usage
 
-```
-Actual Command: [Actual Command]
-Command Name: [Command name]
-```
+For Usage information view the [manual](https://github.com/ssmv01/ccmd/tree/main/manual)
 
-Using `_` underscores here is not necessary
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-3: Press **Enter** to save
 
-<br>
 
-### Check-if commands
+<!-- CONTRIBUTING -->
+## Contributing
 
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-If output is equal to:
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
 
-```
-command if= string |=| command , Command_Name
-```
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-If output contains:
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-```
-command if: string |=| command , Command_name
-```
 
-#### Explaination
-- the first *command* is the command you want to initially run when you execute the custom command
 
-- *if=* checks if the output of the first *command* is equal to string passed after *if=*
+<!-- LICENSE -->
+## License
 
-- *if:* checks if the output of the first *command* contains the string passed after *if:*
+Distributed under the MIT License. See `LICENSE.md` for more information.
 
-- After the *if= or if:* give the string that you want to check in *or* compare with the output
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-- |=| executes the command given after it IF the condition is True
 
-- Finally, write the command that you want to execute if the condition is true
 
+<!-- CONTACT -->
+## Contact
 
-<br>
+SSMV - [@SSMV01](https://twitter.com/@SSMV01) - ssmvmails@gmail.com
 
-## Using your commands
-#### Note: All commands with the same name will be executed.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<br>
 
-```
-ccmd [command#1] [command#2] ...
-```
 
-<br>
-
-### Using --output and --output-silent
-
-`--output` = write to file and execute
-
-```
-ccmd [command(s)] --output [path to file]
-```
-You can replace `--output` with `-o`
-
-`--output-silent` = write to file
-
-```
-ccmd [command(s)] --output-silent [path to file]
-```
-
-You can replace `--output-silent` with `-oS`
-
-<br>
-
-## Opening the csv file
-
-```
-ccmd --opencsv
-```
-
-<br>
-
-## Setting the location of the csv file
-
-```
-ccmd --setcsv [Path to csv file]
-```
-
-If you don't have a specific csv file you want to use:
-
-```
-ccmd --setcsv default
-```
-
-<br>
-
-## List commands
-
-If the command name is highlighted in Blue then it is a [check-if](https://github.com/ssmv01/ccmd#check-if-commands) command.
-
-```
-ccmd --list
-```
-
-OR
-
-```
-ccmd -l
-```
-
-## Removing commands
-
-#### This feature will be added very soon.
-
-For Now:
-
-```
-ccmd --opencsv
-```
-
-Find and Erase the row. (Try Ctrl + F if you are using a graphical editor)
-
-<br>
-
-## Display version
-
-```
-ccmd -v
-```
-
-OR
-
-```
-ccmd --version
-```
-
-<br>
-
-# Updating
-
-Use the `--update` option to get the latest changes made to the repo:
-
-```
-ccmd --update
-```
-
-# Uninstallation
-
-Use the `--uninstall` option:
-
-```
-ccmd --uninstall
-```
-
-<br>
-
-# Exit codes
-
-`0`: Execution completed without errors
-
-`1`: Keyboard interrupt
-
-`2`: Execution failed
-
----
-
-### Info
-
-Version: 0.3.9-alpha
-
-Author: [SSMV01](https://github.com/SSMV01)
-
-MIT License
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/ssmv01/ccmd.svg?style=for-the-badge
+[contributors-url]: https://github.com/ssmv01/ccmd/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/ssmv01/ccmd.svg?style=for-the-badge
+[forks-url]: https://github.com/ssmv01/ccmd/network/members
+[stars-shield]: https://img.shields.io/github/stars/ssmv01/ccmd.svg?style=for-the-badge
+[stars-url]: https://github.com/ssmv01/ccmd/stargazers
+[issues-shield]: https://img.shields.io/github/issues/ssmv01/ccmd.svg?style=for-the-badge
+[issues-url]: https://github.com/ssmv01/ccmd/issues
+[license-shield]: https://img.shields.io/github/license/ssmv01/ccmd.svg?style=for-the-badge
+[license-url]: https://github.com/ssmv01/ccmd/blob/master/LICENSE.txt
