@@ -26,7 +26,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/ssmv01/ccmd">
-    <img src="CCMD Logo.png" alt="Logo" width="" height="200">
+    <img src="CCMD logo.png" alt="Logo" width="" height="200">
   </a>
 
 <h3 align="center">CCMD</h3>
