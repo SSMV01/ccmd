@@ -3,16 +3,24 @@ import os
 import sys
 import logging
 import argparse
-from libry import (uninstall, get_update, help, set_csv_file, list_command_names, create_command, run_command)
+from uninstall_ccmd import uninstall
+from update import get_update
+from help_msg import help
+from set_csv import set_csv_file
+from list_commands import list_command_names
+from create_cmd import create_command
+from run_cmd import run_command
+
 # Initialize logging
 logging.basicConfig(format='%(levelname)s: %(message)s')
 logging.getLogger().setLevel(logging.INFO)
+
 #Initialize argparse
 parser = argparse.ArgumentParser(
     prog='ccmd',
     description="command automation tool.",
     add_help=False
-    )
+)
 
 VERSION = 'ccmd 0.3.9-alpha'
 USERNAME = os.environ.get('LOGNAME')
