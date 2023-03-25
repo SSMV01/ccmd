@@ -29,7 +29,8 @@
     <img src="CCMD logo.png" alt="Logo" width="" height="200">
   </a>
 
-<h3 align="center">CCMD</h3>
+  <h3 align="center">CCMD</h3>
+  <h4 align="center">(customcmd)</h4>
   <p align="center">
     Spend less time typing commands and more time getting things done.
     <br />
