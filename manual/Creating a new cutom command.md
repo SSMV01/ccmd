@@ -76,3 +76,11 @@ command if: string |=| command , Command_name
 - |=| executes the command given after it IF the condition is True
 
 - Finally, write the command that you want to execute if the condition is true
+
+### next> command
+
+The `next>` command is used to separate two or more commands that are to be executed sequentially:
+
+```
+command#1 next> command#2 next> command#3 , command_name
+```
