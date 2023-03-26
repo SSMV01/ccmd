@@ -12,6 +12,6 @@ def help():
     -v         --version         Display the version number.
     --update                     Get the latest changes made to the repository.
     --uninstall                  Uninstall ccmd.
-    \nSee: 'https://github.com/SSMV01/ccmd/tree/main/manual' for more information.
+    \nSee 'manual' folder located in '.ccmd' folder for more information.
     \nv0.4.0-alpha""")
     sys.exit(0)
