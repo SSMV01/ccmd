@@ -2,7 +2,9 @@ import sys
 import csv
 import logging
 from pathlib import Path
-from utils import (get_the_input, nospace_input)
+from utils import get_the_input, nospace_input, exception_handler
+
+
 # Initialize logging
 logging.basicConfig(format="%(levelname)s: %(message)s")
 logging.getLogger().setLevel(logging.INFO)
@@ -24,9 +26,7 @@ def create_command(csv_file):
             sys.exit(0)
 
         else:
-            logging.error('%s: File Not found!', csv_file)
+            exception_handler.file_not_found(csv_file)
 
     except KeyboardInterrupt:
-        print()
-        logging.info("Exiting...")
-        sys.exit(1)
+        exception_handler.keyboard_interrupt()

@@ -1,10 +1,14 @@
 import os
 import sys
 import logging
+
 from datetime import datetime
 from subprocess import Popen, PIPE
 import colorama
 from colorama import Fore
+from utils import exception_handler
+
+
 # Initialize colorama
 colorama.init(autoreset=True)
 # Initialize logging
@@ -58,17 +62,22 @@ def if_contains(cmd: str):
 
 def compile_command(cmd: str):
     cmd = split_next(cmd)
-    print(cmd)
 
     for command in cmd:
-        if 'if=' in command and '|=|' in command:
+        if ('if=' in command and
+            '|=|' in command):
             if_equals(command)
-        elif 'if:' in command and '|=|' in command:
+        elif ('if:' in command and
+              '|=|' in command):
             if_contains(command)
-        elif 'if=' in command or 'if:' in command and '|=|' not in command:
-            logging.error("Syntax error in '%s': missing |=|", command)
-        elif '|=|' in command and 'if:' not in command and 'if=' not in command:
-            logging.error("Syntax error in '%s': missing if: OR if=", command)
+        elif ('if=' in command or
+              'if:' in command and
+              '|=|' not in command):
+            exception_handler.se_missing_run(command)
+        elif ('|=|' in command and
+              'if:' not in command and
+              'if=' not in command):
+            exception_handler.se_missing_if(command)
         else:
             print(Fore.GREEN + command)
             print(Fore.BLUE + '-' * 20)
@@ -120,9 +129,6 @@ def if_contains_for_output(cmd: str):
 # else just return the output
 
 def write_to_file(output_file: str, command_name: str, output: str):
-    if output_file.isspace() or output_file == '' or output_file == '-o' or output_file == '-oS':
-        logging.error("No output file given.")
-        sys.exit(2)
     with open(output_file, 'a', encoding='utf-8') as file:
         file.writelines('\n')
         file.writelines(f'\nCommand {command_name}\n')

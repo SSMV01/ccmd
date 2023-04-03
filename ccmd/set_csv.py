@@ -2,6 +2,9 @@ import sys
 import logging
 import os
 from pathlib import Path
+from utils import exception_handler
+
+
 # Initialize logging
 logging.basicConfig(format="%(levelname)s: %(message)s")
 logging.getLogger().setLevel(logging.INFO)
@@ -18,5 +21,4 @@ def set_csv_file(csv_file_location):
         logging.info("csv file set.")
         sys.exit(0)
     else:
-        logging.error("%s: File Not Found!", csv_file_location)
-        sys.exit(2)
+        exception_handler.file_not_found(csv_file_location)

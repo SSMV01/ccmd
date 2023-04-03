@@ -1,5 +1,8 @@
 import logging
 import readline
+from utils import exception_handler
+
+
 # Initialize logging
 logging.basicConfig(format="%(levelname)s: %(message)s")
 
@@ -16,7 +19,7 @@ def get_and_check(msg):
     readline.add_history(got_input)
     if check_input(got_input) == 0:
         return got_input
-    logging.error("This field cannot be empty.")
+    exception_handler.empty_field()
     return ''
 
 def get_and_check_nospace(msg):
@@ -25,7 +28,7 @@ def get_and_check_nospace(msg):
         if ' ' in got_input:
             got_input = rm_space(got_input)
         return got_input
-    logging.error("This field cannot be empty.")
+    exception_handler.empty_field()
     return ''
 
 def get_the_input(msg):
