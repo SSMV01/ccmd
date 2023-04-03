@@ -3,13 +3,15 @@ import os
 import sys
 import logging
 import argparse
+
 from uninstall_ccmd import uninstall
 from update import get_update
-from help_msg import help
+from help_msg import help_message
 from set_csv import set_csv_file
 from list_commands import list_command_names
 from create_cmd import create_command
 from run_cmd import run_command
+
 
 # Initialize logging
 logging.basicConfig(format='%(levelname)s: %(message)s')
@@ -42,33 +44,34 @@ parser.add_argument('-l', '--list', help="List all commands names in csv", actio
 parser.add_argument('--new', help="Create new custom command", action='store_true')
 parser.add_argument('-o', '--output', type=str, help="Write output to file and execute the command")
 parser.add_argument('-oS', '--output-silent', type=str, help="Write output to file")
-args, commands = parser.parse_known_args()
+options, commands = parser.parse_known_args()
 
 def main():
-    if args.uninstall:
+    if options.uninstall:
         uninstall()
-    elif args.update:
+    elif options.update:
         get_update()
-    elif args.help:
-        help()
-    elif args.version:
+    elif options.help:
+        help_message()
+    elif options.version:
         print(VERSION)
         sys.exit(0)
-    elif args.setcsv:
-        set_csv_file(args.setcsv)
+    elif options.setcsv:
+        set_csv_file(options.setcsv)
 
     if csv_file.isspace() or csv_file == '':
         logging.error("No file specified in 'cmds_target.txt'.")
         sys.exit(2)
-    elif args.opencsv:
+    elif options.opencsv:
         os.system(f'editor {csv_file}')
         sys.exit(0)
-    elif args.list:
+    elif options.list:
         list_command_names(csv_file)
-    elif args.new:
+    elif options.new:
         create_command(csv_file)
     elif commands:
-        run_command(commands, csv_file, args.output, args.output_silent)
+        # Note: we are providing the values passed with -o or -oS here
+        run_command(commands, csv_file, options.output, options.output_silent)
 
 
 if len(sys.argv) == 1:

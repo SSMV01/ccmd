@@ -1,6 +1,7 @@
 import sys
 
-def help():
+
+def help_message():
     print("""Usage: ccmd <option VALUE> [command(s)] [option(s)]
     \nOptions:
     --new                        Create a custom new command.
