@@ -67,6 +67,12 @@
     <li><a href="https://github.com/ssmv01/ccmd#contact">Contact</a></li>
   </ol>
 </details>
+<br />
+
+
+CCMD is currently **under development** and contributions you make are **greatly appreciated**! [<a href="https://github.com/ssmv01/ccmd#contributing">Contribute Now!</a>]
+
+Reporting the bugs that you might come across makes the application a lot better! [<a href="https://github.com/ssmv01/ccmd/issue">Report Bug</a>]
 
 
 
@@ -74,8 +80,6 @@
 ## About The Project
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://ssmv01.github.io/getccmd) -->
-
-CCMD is currently **under development** and contributions you make are **greatly appreciated**! · <a href="https://github.com/ssmv01/ccmd#contributing">Contribute</a>
 
 CCMD, your ultimate tool for automating command-line operations. CCMD makes your life easier by eliminating the need for manually typing repetitive 
 commands, checking their output, and executing another command based on that output.
