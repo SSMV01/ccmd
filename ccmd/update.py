@@ -2,6 +2,7 @@ import os
 import sys
 import logging
 
+
 USERNAME = os.environ.get('LOGNAME')
 
 def get_update():

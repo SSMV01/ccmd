@@ -7,6 +7,7 @@ from subprocess import check_call, Popen, PIPE
 logging.basicConfig(format="%(levelname)s: %(message)s")
 logging.getLogger().setLevel(logging.INFO)
 
+
 USERNAME = environ.get('LOGNAME')
 VERSION = "v0.4.0-alpha"
 

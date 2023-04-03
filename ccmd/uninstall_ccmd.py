@@ -1,6 +1,7 @@
 import os
 import logging
 
+
 USERNAME = os.environ.get('LOGNAME')
 
 def uninstall():

@@ -3,6 +3,7 @@ import os
 import sys
 import logging
 
+
 USERNAME = os.environ.get('LOGNAME')
 
 try:
