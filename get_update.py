@@ -2,7 +2,7 @@
 import os
 import sys
 import logging
-
+import subprocess
 
 USERNAME = os.environ.get('LOGNAME')
 
@@ -11,26 +11,31 @@ try:
     os.makedirs('ccmd_tmp_folder')
 
     # Copy necessary files
-    os.system('cp .ccmd/get_ccmd.py ./ccmd_tmp_folder')
-    os.system('cp .ccmd/bin/cmds.csv ./ccmd_tmp_folder')
-    os.system('cp .ccmd/bin/cmds_target.txt ./ccmd_tmp_folder')
+    subprocess.check_call(['cp', '.ccmd/get_ccmd.py', './ccmd_tmp_folder'], shell=False)
+    subprocess.check_call(['cp', '.ccmd/bin/cmds.csv', './ccmd_tmp_folder'], shell=False)
+    subprocess.check_call(['cp', '.ccmd/bin/cmds_target.txt', './ccmd_tmp_folder'], shell=False)
 
     # Remove folder
-    os.system('rm -rf .ccmd')
+    subprocess.check_call(['rm', '-rf', '.ccmd'], shell=False)
 
     # Reinstall ccmd
-    os.system(f'{sys.executable} ccmd_tmp_folder/get_ccmd.py')
+    subprocess.check_call([sys.executable, 'ccmd_tmp_folder/get_ccmd.py'], shell=False)
 
     # Replace necessary files
-    os.system('rm -rf .ccmd/bin/cmds.csv')
-    os.system('rm -rf .ccmd/bin/cmds_target.txt')
-    os.system('cp ccmd_tmp_folder/cmds.csv .ccmd/bin')
-    os.system('cp ccmd_tmp_folder/cmds_target.txt .ccmd/bin')
+    subprocess.check_call(['rm', '-rf', '.ccmd/bin/cmds.csv'], shell=False)
+    subprocess.check_call(['rm', '-rf', '.ccmd/bin/cmds_target.txt'], shell=False)
+    subprocess.check_call(['cp', 'ccmd_tmp_folder/cmds.csv', '.ccmd/bin'], shell=False)
+    subprocess.check_call(['cp', 'ccmd_tmp_folder/cmds_target.txt', '.ccmd/bin'], shell=False)
 
-    # Remove tmp folder
-    os.system('rm -rf ccmd_tmp_folder')
+except subprocess.CalledProcessError as e:
+    print(e)
+    sys.exit(2)
 
 except KeyboardInterrupt:
     print()
     logging.info("Exiting...")
     sys.exit(1)
+
+finally:
+    # Remove tmp folder
+    subprocess.check_call(['rm', '-rf', 'ccmd_tmp_folder'])
