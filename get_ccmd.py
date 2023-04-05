@@ -49,6 +49,7 @@ def clone():
     except FileNotFoundError as exception:
         print(exception)
         sys.exit(2)
+
     except KeyboardInterrupt:
         print()
         logging.info("Exiting...")
