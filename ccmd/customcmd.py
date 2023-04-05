@@ -75,7 +75,7 @@ def main():
 
 
 if len(sys.argv) == 1:
-    help()
+    help_message()
 else:
     if __name__ == '__main__':
         main()
