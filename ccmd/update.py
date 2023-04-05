@@ -1,6 +1,6 @@
 import os
 import sys
-import logging
+from utils import exception_handler
 
 
 USERNAME = os.environ.get('LOGNAME')
@@ -10,11 +10,9 @@ def get_update():
         os.chdir(f'/home/{USERNAME}/.ccmd')
         os.system(f'{sys.executable} get_update.py')
         sys.exit(0)
-    
+
     except FileNotFoundError:
-        logging.error("get_ccmd.py not found!")
-    
+        exception_handler.file_not_found('get_ccmd.py')
+
     except KeyboardInterrupt:
-        print()
-        logging.info("Exiting...")
-        sys.exit(1)
+        exception_handler.keyboard_interrupt()
