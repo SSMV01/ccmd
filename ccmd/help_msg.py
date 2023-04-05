@@ -14,5 +14,5 @@ def help_message():
     --update                     Get the latest changes made to the repository.
     --uninstall                  Uninstall ccmd.
     \nSee 'manual' folder located in '.ccmd' folder for more information.
-    \nv0.4.1-alpha""")
+    \nv0.4.3-alpha""")
     sys.exit(0)
