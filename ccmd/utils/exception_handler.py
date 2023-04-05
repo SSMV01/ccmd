@@ -4,7 +4,8 @@ import logging
 
 # global
 def keyboard_interrupt():
-    logging.info("\nExiting...")
+    print()
+    logging.info("Exiting...")
     sys.exit(1)
 
 
