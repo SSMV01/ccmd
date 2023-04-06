@@ -21,7 +21,7 @@ ccmd --opencsv
 ## Setting the location of the csv file
 
 ```
-ccmd --setcsv [Path to csv file]
+ccmd --setcsv <absolute_path_to_csv_file>
 ```
 
 If you don't have a specific csv file you want to use:
