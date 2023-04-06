@@ -129,9 +129,19 @@ Follow these few simple steps to get ccmd up and working.
 1. Download the `get_ccmd` file from here: https://ssmv01.github.io/getccmd
 
 2. Execute the file
-   ```sh
-   python3 get_ccmd.py
-   ```
+    ```sh
+    python3 get_ccmd.py
+    ```
+
+3. Set the csv file location by using the `--setcsv` option
+    ```sh
+    ccmd --setcsv <absolute_path_to_csv_file>
+    ```
+
+    If you dont have a specific csv file you want to use, use the `default` csv file
+    ```sh
+    ccmd --setcsv default
+    ```
 
 
 
