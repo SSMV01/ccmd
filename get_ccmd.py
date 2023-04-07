@@ -9,7 +9,7 @@ logging.getLogger().setLevel(logging.INFO)
 
 
 USERNAME = environ.get('LOGNAME')
-VERSION = "v0.4.3-alpha"
+VERSION = "v0.4.4-alpha"
 
 print("CCMD")
 print('-' * 20)
