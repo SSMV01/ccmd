@@ -12,12 +12,11 @@ from list_commands import list_command_names
 from create_cmd import create_command
 from run_cmd import run_command
 
-
 # Initialize logging
 logging.basicConfig(format='%(levelname)s: %(message)s')
 logging.getLogger().setLevel(logging.INFO)
 
-#Initialize argparse
+# Initialize argparse
 parser = argparse.ArgumentParser(
     prog='ccmd',
     description="command automation tool.",
@@ -45,6 +44,7 @@ parser.add_argument('--new', help="Create new custom command", action='store_tru
 parser.add_argument('-o', '--output', type=str, help="Write output to file and execute the command")
 parser.add_argument('-oS', '--output-silent', type=str, help="Write output to file")
 options, commands = parser.parse_known_args()
+
 
 def main():
     if options.uninstall:

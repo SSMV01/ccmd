@@ -2,8 +2,8 @@ import os
 import sys
 from utils import exception_handler
 
-
 USERNAME = os.environ.get('LOGNAME')
+
 
 def get_update():
     try:

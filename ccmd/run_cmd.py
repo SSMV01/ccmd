@@ -3,10 +3,10 @@ import csv
 import logging
 from utils import rm_space, compile_command, compile_command_for_output, exception_handler
 
-
 # Initialize logging
 logging.basicConfig(format="%(levelname)s: %(message)s")
 logging.getLogger().setLevel(logging.INFO)
+
 
 def run_command(commands, csv_file: str, output, output_silent):
     try:

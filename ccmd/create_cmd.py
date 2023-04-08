@@ -4,10 +4,10 @@ import logging
 from pathlib import Path
 from utils import get_the_input, nospace_input, exception_handler
 
-
 # Initialize logging
 logging.basicConfig(format="%(levelname)s: %(message)s")
 logging.getLogger().setLevel(logging.INFO)
+
 
 def create_command(csv_file):
     try:

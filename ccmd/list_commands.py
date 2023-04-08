@@ -2,8 +2,9 @@ import csv
 import colorama
 from colorama import Fore
 
-# Initialzie colorama
+# Initialize colorama
 colorama.init(autoreset=True)
+
 
 def list_command_names(csv_file):
     with open(csv_file, 'r', encoding='utf-8') as csvfile:

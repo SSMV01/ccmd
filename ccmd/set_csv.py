@@ -4,12 +4,12 @@ import os
 from pathlib import Path
 from utils import exception_handler
 
-
 # Initialize logging
 logging.basicConfig(format="%(levelname)s: %(message)s")
 logging.getLogger().setLevel(logging.INFO)
 
 username = os.environ.get("LOGNAME")
+
 
 def set_csv_file(csv_file_location):
     if csv_file_location == 'default':

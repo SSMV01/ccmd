@@ -1,3 +1,3 @@
 #!/usr/bin/bash
 
-python3 ~/.ccmd/ccmd/customcmd.py $@
+python3 ~/.ccmd/ccmd/customcmd.py "$@"
