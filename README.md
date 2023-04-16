@@ -29,10 +29,9 @@
     <img src="CCMD logo.png" alt="Logo" width="" height="200">
   </a>
 
-  <h3 align="center">CCMD</h3>
-  <h4 align="center">(customcmd)</h4>
+  <h2 align="center">CCMD</h2>
   <p align="center">
-    Spend less time typing commands and more time getting things done.
+    <h3>Spend less time typing commands and more time getting things done.</h3>
     <br />
     <a href="https://github.com/ssmv01/ccmd/tree/main/manual"><strong>Explore the docs »</strong></a>
     <br />
@@ -95,6 +94,14 @@ operations to the next level.
 
 
 
+## Why use CCMD over bash?
+Because CCMD is
+1. way faster
+2. as simple as command automation can get
+3. BUILT for command automation
+4. multi-line scripts to-> one-liners
+5. All your commands at one place for easy modification
+
 <!-- ### Built With
 
 * [![Python][Python.org]][Python-url]
@@ -138,7 +145,7 @@ Follow these few simple steps to get ccmd up and working.
     ccmd --setcsv <absolute_path_to_csv_file>
     ```
 
-    If you dont have a specific csv file you want to use, use the `default` csv file
+    If you don't have a specific csv file you want to use, use the `default` csv file
     ```sh
     ccmd --setcsv default
     ```
