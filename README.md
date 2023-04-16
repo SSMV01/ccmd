@@ -29,7 +29,7 @@
     <img src="CCMD logo.png" alt="Logo" width="" height="200">
   </a>
 
-  <h2 align="center">CCMD</h2>
+  <h3 align="center">CCMD</h3>
   <p align="center">
     <h3>Spend less time typing commands and more time getting things done.</h3>
     <br />
