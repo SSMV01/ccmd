@@ -12,7 +12,7 @@ logging.getLogger().setLevel(logging.INFO)
 def create_command(csv_file):
     try:
         if Path(csv_file).is_file():
-            actual_cmd = get_the_input("Actual Command")
+            actual_cmd = get_the_input("Command")
             cmd_name = nospace_input("Command Name")
 
             cmd_lst = [actual_cmd, cmd_name]
