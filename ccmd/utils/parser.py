@@ -23,7 +23,7 @@ def split_next(cmd: str):
 
 def if_equals(cmd: str):
     split_if = cmd.split('if=') # ["first command", "string & second command"]
-    split_run = split_if[1].split('|=|') # ["string", "second command"]
+    split_run = split_if[1].split('run:') # ["string", "second command"]
     check_out = Popen(split_if[0].split(), stdout=PIPE) # check output of first command
 
     print(Fore.GREEN + split_if[0].strip()) # Print command name
@@ -41,7 +41,7 @@ def if_equals(cmd: str):
 
 def if_contains(cmd: str):
     split_if = cmd.split('if:')
-    split_run = split_if[1].split('|=|')
+    split_run = split_if[1].split('run:')
     check_out = Popen(split_if[0].split(), stdout=PIPE)
 
     print(Fore.GREEN + split_if[0].strip())
@@ -65,16 +65,16 @@ def compile_command(cmd: str):
 
     for command in cmd:
         if ('if=' in command and
-            '|=|' in command):
+            'run:' in command):
             if_equals(command)
         elif ('if:' in command and
-              '|=|' in command):
+              'run:' in command):
             if_contains(command)
         elif ('if=' in command or
               'if:' in command and
-              '|=|' not in command):
+              'run:' not in command):
             exception_handler.se_missing_run(command)
-        elif ('|=|' in command and
+        elif ('run:' in command and
               'if:' not in command and
               'if=' not in command):
             exception_handler.se_missing_if(command)
@@ -91,7 +91,7 @@ def compile_command(cmd: str):
 
 def if_equals_for_output(cmd: str):
     split_if = cmd.split('if=')
-    split_run = split_if[1].split('|=|')
+    split_run = split_if[1].split('run:')
 
     with Popen(split_if[0].split(), stdout=PIPE) as check_out1:
         output1 = check_out1.stdout.read()
@@ -109,7 +109,7 @@ def if_equals_for_output(cmd: str):
 
 def if_contains_for_output(cmd: str):
     split_if = cmd.split('if:')
-    split_run = split_if[1].split('|=|')
+    split_run = split_if[1].split('run:')
 
     with Popen(split_if[0].split(), stdout=PIPE) as check_out1:
         output1 = check_out1.stdout.read()
@@ -142,17 +142,17 @@ def compile_command_for_output(output_file: str, command_name: str, cmd: str):
     cmd = cmd.split('next>')
 
     for command in cmd:
-        if 'if=' in command and '|=|' in command:
+        if 'if=' in command and 'run:' in command:
             output = if_equals_for_output(command)
             write_to_file(output_file, command_name, output)
-        elif 'if:' in command and '|=|' in command:
+        elif 'if:' in command and 'run:' in command:
             output = if_contains_for_output(command)
             write_to_file(output_file, command_name, output)
-        elif 'if=' in command or 'if:' in command and '|=|' not in command:
-            output = "[-] Syntax Err: missing |=|"
+        elif 'if=' in command or 'if:' in command and 'run:' not in command:
+            output = "ERROR: syntax error: missing run:"
             write_to_file(output_file, command_name, output)
-        elif '|=|' in command and 'if:' not in command and 'if=' not in command:
-            output = "[-] Syntax Err: missing if: OR if="
+        elif 'run:' in command and 'if:' not in command and 'if=' not in command:
+            output = "ERROR: syntax error: missing if: OR if="
             write_to_file(output_file, command_name, output)
         else:
             with Popen(command.split(), stdout=PIPE) as check_output:

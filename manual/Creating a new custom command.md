@@ -55,13 +55,13 @@ Using `_` underscores here is not necessary
 If output is equal to:
 
 ```
-command if= string |=| command , Command_Name
+command if= string run: command , Command_Name
 ```
 
 If output contains:
 
 ```
-command if: string |=| command , Command_name
+command if: string run: command , Command_name
 ```
 
 #### Explaination
@@ -73,7 +73,7 @@ command if: string |=| command , Command_name
 
 - After the *if= or if:* give the string that you want to check in *or* compare with the output
 
-- |=| executes the command given after it IF the condition is True
+- run: executes the command given after it IF the condition is True
 
 - Finally, write the command that you want to execute if the condition is true
 
