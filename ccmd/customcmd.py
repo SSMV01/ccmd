@@ -60,7 +60,7 @@ def main():
         set_csv_file(options.setcsv)
 
     if csv_file.isspace() or csv_file == '':
-        logging.error("No file specified in 'cmds_target.txt'.")
+        logging.error("csv file not specified")
         sys.exit(2)
     elif options.opencsv:
         os.system(f'editor {csv_file}')
