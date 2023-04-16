@@ -93,14 +93,20 @@ operations to the next level.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+[//]: # ()
+[//]: # (## Why use CCMD over bash?)
 
-## Why use CCMD over bash?
-Because CCMD is
-1. way faster
-2. as simple as command automation can get
-3. BUILT for command automation
-4. multi-line scripts to-> one-liners
-5. All your commands at one place for easy modification
+[//]: # (Because CCMD is)
+
+[//]: # (1. way faster)
+
+[//]: # (2. as simple as command automation can get)
+
+[//]: # (3. BUILT for command automation)
+
+[//]: # (4. multi-line scripts to-> one-liners)
+
+[//]: # (5. All your commands at one place for easy modification)
 
 <!-- ### Built With
 
