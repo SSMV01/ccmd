@@ -26,4 +26,4 @@ You can replace `--output` with `-o`
 ccmd [command(s)] --output-silent [path to file]
 ```
 
-You can replace `--output-silent` with `-oS`
+You can replace `--output-silent` with `-os`
