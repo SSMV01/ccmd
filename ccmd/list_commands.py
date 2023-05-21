@@ -2,6 +2,7 @@ import csv
 import colorama
 from colorama import Fore
 
+
 # Initialize colorama
 colorama.init(autoreset=True)
 
@@ -15,7 +16,7 @@ def list_command_names(csv_file):
             if len(row) < 2:
                 continue
             if 'if:' in row[0] or 'if=' in row[0]:
-                print(Fore.LIGHTBLUE_EX + row[1])
+                print(Fore.CYAN + row[1])
             else:
                 print(row[1])
             row_no += 1
