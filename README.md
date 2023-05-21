@@ -69,7 +69,9 @@
 <br />
 
 
-CCMD is currently **under development** and contributions you make are **greatly appreciated**! [<a href="https://github.com/ssmv01/ccmd#contributing">Contribute Now!</a>]
+CCMD is currently **under development** and contributions you make are **greatly appreciated**!
+
+[<a href="https://github.com/ssmv01/ccmd#contributing">Contribute Now!</a>]
 
 Reporting the bugs that you might come across makes the application a lot better! [<a href="https://github.com/ssmv01/ccmd/issue">Report Bug</a>]
 
