@@ -12,8 +12,10 @@
 
 ## Opening the csv file
 
+Executing ccmd without any arguments will open the csv file:
+
 ```
-ccmd --opencsv
+ccmd
 ```
 
 <br>
@@ -53,10 +55,10 @@ ccmd -l
 For Now:
 
 ```
-ccmd --opencsv
+ccmd
 ```
 
-Find and Erase the row. (Try Ctrl + F if you are using a graphical editor)
+Find and Erase the row. (Try `Ctrl + F if` you are using a graphical editor)
 
 <br>
 

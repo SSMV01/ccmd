@@ -1,12 +1,12 @@
 ## Creating a new custom command
 
-### Writing your commands directly into the cmds.csv file
+### Writing your commands directly into the commands.csv file
 <br>
 
 1: Open the csv file:
 
 ```
-ccmd --opencsv
+ccmd
 ```
 
 2: Write the Actual Commands first, then the Command Name seperated by a comma as shown below:
