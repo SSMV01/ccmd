@@ -1,10 +1,6 @@
-import logging
 import readline
 from utils import exception_handler
 
-
-# Initialize logging
-logging.basicConfig(format="%(levelname)s: %(message)s")
 
 def check_input(inp: str):
     return 1 if inp == '' or inp.isspace() else 0
