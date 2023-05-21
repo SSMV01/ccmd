@@ -1,4 +1,5 @@
 import os
+import sys
 import colorama
 
 from datetime import datetime
@@ -18,41 +19,53 @@ def split_next(cmd: str):
 # if yes, then executes the second command too.
 
 def if_equals(cmd: str):
-    split_if = cmd.split('if=') # ["first command", "string & second command"]
-    split_run = split_if[1].split('run:') # ["string", "second command"]
-    check_out = Popen(split_if[0].split(), stdout=PIPE) # check output of first command
+    try:
+        split_if = cmd.split('if=') # ["first command", "string & second command"]
+        split_run = split_if[1].split('run:') # ["string", "second command"]
+        check_out = Popen(split_if[0].split(), stdout=PIPE) # check output of first command
 
-    print(Fore.GREEN + split_if[0].strip()) # Print command name
-    print(Fore.BLUE + '─' * 20)
-    os.system(split_if[0].strip()) # run first command
-    output = check_out.stdout.read() # read output
-    output = str(output.strip(), 'utf-8') # remove unwanted chars
-
-    if output == split_run[0].strip(): # if output  of first command == the string
-        print()
-        print(Fore.GREEN + split_run[1].strip()) # Print command name
+        print(Fore.GREEN + split_if[0].strip()) # Print command name
         print(Fore.BLUE + '─' * 20)
-        os.system(split_run[1].strip()) # run second command
-        print()
+        os.system(split_if[0].strip()) # run first command
+        output = check_out.stdout.read() # read output
+        output = str(output.strip(), 'utf-8') # remove unwanted chars
+
+        if output == split_run[0].strip(): # if output  of first command == the string
+            print()
+            print(Fore.GREEN + split_run[1].strip()) # Print command name
+            print(Fore.BLUE + '─' * 20)
+            os.system(split_run[1].strip()) # run second command
+            print()
+
+    except FileNotFoundError as e:
+        err_cmd = str(e).split(':')[1].strip()
+        exception_handler.command_not_found(err_cmd)
+        sys.exit(2)
 
 
 def if_contains(cmd: str):
-    split_if = cmd.split('if:')
-    split_run = split_if[1].split('run:')
-    check_out = Popen(split_if[0].split(), stdout=PIPE)
+    try:
+        split_if = cmd.split('if:')
+        split_run = split_if[1].split('run:')
+        check_out = Popen(split_if[0].split(), stdout=PIPE)
 
-    print(Fore.GREEN + split_if[0].strip())
-    print(Fore.BLUE + '─' * 20)
-    os.system(split_if[0].strip())
-    output = check_out.stdout.read()
-    output = str(output.strip(), 'utf-8')
-
-    if split_run[0].strip() in output: # if output of first command contains the string
-        print()
-        print(Fore.GREEN + split_run[1].strip())
+        print(Fore.GREEN + split_if[0].strip())
         print(Fore.BLUE + '─' * 20)
-        os.system(split_run[1].strip())
-        print()
+        os.system(split_if[0].strip())
+        output = check_out.stdout.read()
+        output = str(output.strip(), 'utf-8')
+
+        if split_run[0].strip() in output: # if output of first command contains the string
+            print()
+            print(Fore.GREEN + split_run[1].strip())
+            print(Fore.BLUE + '─' * 20)
+            os.system(split_run[1].strip())
+            print()
+    
+    except FileNotFoundError as e:
+        err_cmd = str(e).split(':')[1].strip()
+        exception_handler.command_not_found(err_cmd)
+        sys.exit(2)
 
 
 # if it is a check-if command; if the syntax is correct: execute the command
@@ -88,39 +101,49 @@ def compile_command(cmd: str):
 # if yes, then returns the output of second command too.
 
 def if_equals_for_output(cmd: str):
-    split_if = cmd.split('if=')
-    split_run = split_if[1].split('run:')
+    try:
+        split_if = cmd.split('if=')
+        split_run = split_if[1].split('run:')
 
-    with Popen(split_if[0].split(), stdout=PIPE) as check_out1:
-        output1 = check_out1.stdout.read()
-        output1 = str(output1.strip(), 'utf-8')
+        with Popen(split_if[0].split(), stdout=PIPE) as check_out1:
+            output1 = check_out1.stdout.read()
+            output1 = str(output1.strip(), 'utf-8')
 
-    if output1 == split_run[0].strip():
-        with Popen(split_run[1].split(), stdout=PIPE) as check_out2:
-            output2 = check_out2.stdout.read()
-            output2 = str(output2.strip(), 'utf-8')
-    else:
-        output2 = f"output is not equal to '{split_run[0].strip()}'"
+        if output1 == split_run[0].strip():
+            with Popen(split_run[1].split(), stdout=PIPE) as check_out2:
+                output2 = check_out2.stdout.read()
+                output2 = str(output2.strip(), 'utf-8')
+        else:
+            output2 = f"output is not equal to '{split_run[0].strip()}'"
 
-    return f"{output1}\n\n{output2}"
+        return f"{output1}\n\n{output2}"
+    
+    except FileNotFoundError as e:
+        err_cmd = str(e).split(':')[1].strip()
+        return f"{err_cmd}: command not found"
 
 
 def if_contains_for_output(cmd: str):
-    split_if = cmd.split('if:')
-    split_run = split_if[1].split('run:')
+    try:
+        split_if = cmd.split('if:')
+        split_run = split_if[1].split('run:')
 
-    with Popen(split_if[0].split(), stdout=PIPE) as check_out1:
-        output1 = check_out1.stdout.read()
-        output1 = str(output1.strip(), 'utf-8')
+        with Popen(split_if[0].split(), stdout=PIPE) as check_out1:
+            output1 = check_out1.stdout.read()
+            output1 = str(output1.strip(), 'utf-8')
 
-    if split_run[0].strip() in output1:
-        with Popen(split_run[1].split(), stdout=PIPE) as check_out2:
-            output2 = check_out2.stdout.read()
-            output2 = str(output2.strip(), 'utf-8')
-    else:
-        output2 = f"output does not contain '{split_run[0].strip()}'"
+        if split_run[0].strip() in output1:
+            with Popen(split_run[1].split(), stdout=PIPE) as check_out2:
+                output2 = check_out2.stdout.read()
+                output2 = str(output2.strip(), 'utf-8')
+        else:
+            output2 = f"output does not contain '{split_run[0].strip()}'"
 
-    return f"{output1}\n\n{output2}"
+        return f"{output1}\n\n{output2}"
+
+    except FileNotFoundError as e:
+        err_cmd = str(e).split(':')[1].strip()
+        return f"{err_cmd}: command not found"
 
 
 # if it is a check-if command; if the syntax is correct: return output
@@ -153,7 +176,13 @@ def compile_command_for_output(output_file: str, command_name: str, cmd: str):
             output = "ERROR: syntax error: missing if: OR if="
             write_to_file(output_file, command_name, output)
         else:
-            with Popen(command.split(), stdout=PIPE) as check_output:
-                output = check_output.stdout.read()
-                output = str(output.strip(), 'utf-8')
-            write_to_file(output_file, command_name, output)
+            try:
+                with Popen(command.split(), stdout=PIPE) as check_output:
+                    output = check_output.stdout.read()
+                    output = str(output.strip(), 'utf-8')
+                write_to_file(output_file, command_name, output)
+
+            except FileNotFoundError as e:
+                err_cmd = str(e).split(':')[1].strip()
+                output = f"{err_cmd}: command not found"
+                write_to_file(output_file, command_name, output)
