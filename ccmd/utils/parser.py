@@ -1,18 +1,14 @@
 import os
-import sys
-import logging
+import colorama
 
 from datetime import datetime
 from subprocess import Popen, PIPE
-import colorama
 from colorama import Fore
 from utils import exception_handler
 
 
 # Initialize colorama
 colorama.init(autoreset=True)
-# Initialize logging
-logging.basicConfig(format="%(levelname)s: %(message)s")
 
 def split_next(cmd: str):
     return cmd.split('next>')
@@ -27,14 +23,15 @@ def if_equals(cmd: str):
     check_out = Popen(split_if[0].split(), stdout=PIPE) # check output of first command
 
     print(Fore.GREEN + split_if[0].strip()) # Print command name
-    print(Fore.BLUE + '-' * 20)
+    print(Fore.BLUE + '─' * 20)
     os.system(split_if[0].strip()) # run first command
     output = check_out.stdout.read() # read output
     output = str(output.strip(), 'utf-8') # remove unwanted chars
 
     if output == split_run[0].strip(): # if output  of first command == the string
+        print()
         print(Fore.GREEN + split_run[1].strip()) # Print command name
-        print(Fore.BLUE + '-' * 20)
+        print(Fore.BLUE + '─' * 20)
         os.system(split_run[1].strip()) # run second command
         print()
 
@@ -45,14 +42,15 @@ def if_contains(cmd: str):
     check_out = Popen(split_if[0].split(), stdout=PIPE)
 
     print(Fore.GREEN + split_if[0].strip())
-    print(Fore.BLUE + '-' * 20)
+    print(Fore.BLUE + '─' * 20)
     os.system(split_if[0].strip())
     output = check_out.stdout.read()
     output = str(output.strip(), 'utf-8')
 
     if split_run[0].strip() in output: # if output of first command contains the string
+        print()
         print(Fore.GREEN + split_run[1].strip())
-        print(Fore.BLUE + '-' * 20)
+        print(Fore.BLUE + '─' * 20)
         os.system(split_run[1].strip())
         print()
 
@@ -80,7 +78,7 @@ def compile_command(cmd: str):
             exception_handler.se_missing_if(command)
         else:
             print(Fore.GREEN + command)
-            print(Fore.BLUE + '-' * 20)
+            print(Fore.BLUE + '─' * 20)
             os.system(command)
             print()
 
@@ -132,8 +130,8 @@ def write_to_file(output_file: str, command_name: str, output: str):
     with open(output_file, 'a', encoding='utf-8') as file:
         file.writelines('\n')
         file.writelines(f'\nCommand {command_name}\n')
-        file.writelines('-' * 20)
-        file.writelines(f"\nStart time: {str(datetime.now()).split('.', maxsplit=1)[0]}\n")
+        file.writelines('─' * 20)
+        file.writelines(f"\nStart: {str(datetime.now()).split('.', maxsplit=1)[0]}\n")
         file.writelines('\n')
         file.writelines(output + '\n')
 
