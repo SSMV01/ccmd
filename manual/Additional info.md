@@ -8,4 +8,4 @@
 
 # Color code in --list
 
-Command name in blue represents a Check-if command
+Command names in cyan represent a Check-if command
