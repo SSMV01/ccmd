@@ -202,7 +202,7 @@ Distributed under the MIT License. See [LICENSE.md](https://github.com/ssmv01/cc
 <!-- CONTACT -->
 ## Contact
 
-SSMV - [@SSMV01](https://twitter.com/@SSMV01) - ssmvmails@gmail.com
+SSMV - ssmvmails@gmail.com
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
