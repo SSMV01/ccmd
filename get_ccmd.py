@@ -43,7 +43,7 @@ def install_dependencies():
 def clone():
     logging.info("Cloning ccmd...")
     try:
-        with Popen(['git', 'clone', 'https://github.com/ssmv01/ccmd'], stdout=PIPE, stderr=PIPE,
+        with Popen(['git', 'clone', 'https://github.com/ssmv01/ccmd', f'/home/{USERNAME}/.ccmd'], stdout=PIPE, stderr=PIPE,
                    start_new_session=True) as clone_ccmd:
             if b"Could not resolve host: github.com" in clone_ccmd.stderr.read():
                 logging.error("Failed to access github.com")
@@ -60,13 +60,9 @@ def clone():
         sys.exit(1)
 
 
-def rename():
-    check_call(['/usr/bin/mv', 'ccmd', '.ccmd'], shell=False)
-
-
 def setup_file():
     chdir(f'/home/{USERNAME}/.ccmd')
-    logging.info("Setting up the file...")
+    logging.info("Setting up files...")
 
     try:
         check_call(['/usr/bin/chmod', '+x', 'bin/ccmd.sh'], shell=False)
@@ -79,7 +75,7 @@ def setup_file():
 
 
 def setup():
-    logging.info("Setting things up...")
+    logging.info("Clearing things up...")
     chdir(f'/home/{USERNAME}/.ccmd')
 
     try:
@@ -107,7 +103,6 @@ def main():
         else:
             install_dependencies()
             clone()
-            rename()
             setup()
             print(f"\nMake sure '/home/{USERNAME}/.local/bin' is in PATH")
             print(VERSION)
