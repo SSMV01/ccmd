@@ -1,6 +1,6 @@
 ## Creating a new custom command
 
-### Writing your custom commands directly into the commands.csv file
+### Writing your custom commands directly into the csv file
 <br>
 
 1: Open the csv file:
