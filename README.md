@@ -80,41 +80,10 @@ Reporting the bugs that you might come across makes the application a lot better
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<!-- [![Product Name Screen Shot][product-screenshot]](https://ssmv01.github.io/getccmd) -->
-
 CCMD, your ultimate tool for automating command-line operations. CCMD makes your life easier by eliminating the need for manually typing repetitive 
-commands, checking their output, and executing another command based on that output.
-
-With CCMD, you can easily automate complex command sequences by defining conditions for command execution based on the output of the preceding commands. 
-Simply specify the target string in the output, and CCMD will execute the next command only if that string is present in or equal to the output.
-
-Whether you are a penetration tester, developer, sysadmin, or a power user, CCMD is an indispensable tool that simplifies your workflow and streamlines 
-your productivity. With its simple yet powerful automation capabilities, CCMD is the ultimate tool for anyone who wants to take their command-line 
-operations to the next level.
+sequences of commands.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-[//]: # ()
-[//]: # (## Why use CCMD over bash?)
-
-[//]: # (Because CCMD is)
-
-[//]: # (1. way faster)
-
-[//]: # (2. as simple as command automation can get)
-
-[//]: # (3. BUILT for command automation)
-
-[//]: # (4. multi-line scripts to-> one-liners)
-
-[//]: # (5. All your commands at one place for easy modification)
-
-<!-- ### Built With
-
-* [![Python][Python.org]][Python-url]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 
 
