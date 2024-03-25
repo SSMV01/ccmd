@@ -65,8 +65,13 @@ def setup_file():
     logging.info("Setting up files...")
 
     try:
-        check_call(['/usr/bin/chmod', '+x', 'bin/ccmd.sh'], shell=False)
-        check_call('/usr/bin/cp bin/ccmd.sh ~/.local/bin/ccmd', shell=True)
+        check_call(['/usr/bin/chmod', '+x', 'data/ccmd.sh'], shell=False)
+        check_call(['/usr/bin/cp', 'data/ccmd.sh', f'/home/{USERNAME}/.local/bin/ccmd'], shell=False)
+        SHELL = os.getenv('SHELL')
+        SHELL = SHELL.split("/")[-1]
+        with open(f'/home/{USERNAME}/.{SHELL}rc', 'a', encoding='utf-8') as rc:
+            rc.write("\n#CCMD")
+            rc.write("\nexport PATH=$PATH:/home/ssmv/.local/bin")
         logging.info("Done.")
 
     except subprocess.CalledProcessError as exception:
@@ -82,6 +87,7 @@ def setup():
         check_call(['/usr/bin/rm', '-rf', '.git'], shell=False)
         check_call(['/usr/bin/rm', '-rf', '.github'], shell=False)
         check_call(['/usr/bin/rm', '.gitignore'], shell=False)
+        check_call([f'/home/{USERNAME}/.local/bin/ccmd', '--setcsv', 'default'], shell=False)
         setup_file()
 
     except subprocess.CalledProcessError as exception:
@@ -103,9 +109,9 @@ def main():
         else:
             install_dependencies()
             clone()
+            setup_file()
             setup()
-            print(f"\nMake sure '/home/{USERNAME}/.local/bin' is in PATH")
-            print(VERSION)
+            print(f'\n{VERSION}')
 
     except KeyboardInterrupt:
         print()
