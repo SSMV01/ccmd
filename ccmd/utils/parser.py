@@ -146,8 +146,7 @@ def if_contains_for_output(cmd: str):
         return f"{err_cmd}: command not found"
 
 
-# if it is a check-if command; if the syntax is correct: return output
-# else just return the output
+# if it is a check-if command, verify syntax
 
 def write_to_file(output_file: str, command_name: str, output: str):
     with open(output_file, 'a', encoding='utf-8') as file:
