@@ -1,5 +1,5 @@
 ## Using your commands
-#### Note: All commands with the same name will be executed.
+#### Note: In case multiple commands are named the same, all of them will be executed.
 
 <br>
 
