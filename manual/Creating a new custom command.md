@@ -81,7 +81,7 @@ command if: string run: command , Command_name
 
 - *if:* checks if the output of the first *command* contains the string passed after *if:*
 
-- After the *if= or if:* is string that you want to check in *or* compare with the output
+- After *if= or if:* is the string that you want to check in *or* compare with the output
 
 - *run:* executes the command written after it IF the condition is True
 
