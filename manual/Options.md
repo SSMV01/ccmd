@@ -58,7 +58,7 @@ For Now:
 ccmd
 ```
 
-Find and Erase the row. (Try `Ctrl + F if` you are using a graphical editor)
+Find and Erase the row. (Try `Ctrl + F` if you are using a graphical editor)
 
 <br>
 
