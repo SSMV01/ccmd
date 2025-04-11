@@ -28,7 +28,7 @@ try:
     with open(f'/home/{USERNAME}/.ccmd/data/cmds_target.txt', 'r', encoding='utf-8') as target_file:
         csv_file = target_file.read()
 except FileNotFoundError:
-    exception_handler.print_err("could not find 'cmds_target' at /home/%s/.ccmd/data/.".format(USERNAME))
+    exception_handler.print_err(f"could not find 'cmds_target' at /home/{USERNAME}/.ccmd/data/.")
     sys.exit(2)
 
 parser.add_argument('--uninstall', help="Uninstall ccmd", action='store_true')
